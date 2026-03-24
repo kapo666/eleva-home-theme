@@ -1,0 +1,6 @@
+[environments.live]
+store = "hzztt2-21.myshopify.com"
+theme = "196279632220"
+
+[environments.dev]
+store = "hzztt2-21.myshopify.com"
