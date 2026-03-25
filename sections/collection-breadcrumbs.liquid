@@ -1,0 +1,83 @@
+<nav class="collection-breadcrumbs page-width" aria-label="{{ 'general.breadcrumbs' | t | default: 'Breadcrumbs' }}">
+  <ol class="collection-breadcrumbs__list list-unstyled" role="list">
+    <li class="collection-breadcrumbs__item">
+      <a href="{{ routes.root_url }}">{{ 'general.home' | t | default: 'Home' }}</a>
+    </li>
+    {%- if section.settings.show_collections_link -%}
+      <li class="collection-breadcrumbs__item" aria-hidden="true">/</li>
+      <li class="collection-breadcrumbs__item">
+        <a href="{{ routes.collections_url }}">{{ 'templates.search.collections' | t | default: 'Collections' }}</a>
+      </li>
+    {%- endif -%}
+    <li class="collection-breadcrumbs__item" aria-hidden="true">/</li>
+    <li class="collection-breadcrumbs__item" aria-current="page">{{ collection.title | escape }}</li>
+  </ol>
+</nav>
+
+{%- style -%}
+  .collection-breadcrumbs {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .collection-breadcrumbs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    color: rgba(var(--color-foreground), 0.75);
+    font-size: 1.2rem;
+  }
+
+  .collection-breadcrumbs__item a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .collection-breadcrumbs__item a:hover,
+  .collection-breadcrumbs__item a:focus-visible {
+    text-decoration: underline;
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Collection breadcrumbs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_collections_link",
+      "default": true,
+      "label": "Show collections link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection breadcrumbs"
+    }
+  ]
+}
+{% endschema %}
