@@ -1,0 +1,11 @@
+.DS_Store
+*.csv
+*_report.txt
+*report.txt
+*.py
+products_*.csv
+cleanup_*.txt
+inventory_*.txt
+tag_system_*.txt
+all_parts_*.txt
+SHOPIFY_IMPORT_*.txt
