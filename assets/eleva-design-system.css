@@ -1,0 +1,207 @@
+:root {
+  --eleva-color-warm-white: #f8f5ef;
+  --eleva-color-soft-black: #1e1a17;
+  --eleva-color-warm-beige: #e9dfd2;
+  --eleva-color-greige: #b7ac9f;
+  --eleva-color-light-stone: #f1ece4;
+  --eleva-color-muted-sage: #8e9b87;
+  --eleva-color-soft-terracotta: #b97b62;
+  --eleva-color-champagne: #d4bf9d;
+  --eleva-color-border: #ddd3c7;
+  --eleva-color-text-muted: #746b63;
+  --eleva-color-surface: #fffdf9;
+
+  --eleva-font-size-xs: 1.2rem;
+  --eleva-font-size-sm: 1.4rem;
+  --eleva-font-size-md: 1.6rem;
+  --eleva-font-size-lg: 2rem;
+  --eleva-font-size-xl: clamp(2.6rem, 4vw, 4rem);
+  --eleva-font-size-2xl: clamp(3.2rem, 5vw, 5.6rem);
+
+  --eleva-line-height-tight: 1.15;
+  --eleva-line-height-base: 1.55;
+  --eleva-line-height-relaxed: 1.7;
+  --eleva-letter-spacing-soft: 0.02em;
+  --eleva-letter-spacing-wide: 0.14em;
+
+  --eleva-space-1: 0.4rem;
+  --eleva-space-2: 0.8rem;
+  --eleva-space-3: 1.2rem;
+  --eleva-space-4: 1.6rem;
+  --eleva-space-5: 2.4rem;
+  --eleva-space-6: 3.2rem;
+  --eleva-space-7: 4.8rem;
+  --eleva-space-8: 6.4rem;
+  --eleva-space-9: 9.6rem;
+
+  --eleva-radius-sm: 0.8rem;
+  --eleva-radius-md: 1.6rem;
+  --eleva-radius-lg: 2.4rem;
+  --eleva-radius-pill: 999px;
+
+  --eleva-shadow-soft: 0 1.2rem 2.8rem rgba(30, 26, 23, 0.06);
+  --eleva-shadow-card: 0 0.8rem 2rem rgba(30, 26, 23, 0.05);
+  --eleva-shadow-border: 0 0 0 1px rgba(30, 26, 23, 0.05);
+
+  --eleva-transition-fast: 160ms ease;
+  --eleva-transition-base: 220ms ease;
+}
+
+.eleva-container {
+  width: min(100% - 3.2rem, 128rem);
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 750px) {
+  .eleva-container {
+    width: min(100% - 6.4rem, 128rem);
+  }
+}
+
+.eleva-section {
+  padding-block: var(--eleva-space-7);
+}
+
+.eleva-section--soft {
+  background: linear-gradient(180deg, rgba(248, 245, 239, 0.9), rgba(255, 253, 249, 0.98));
+}
+
+@media screen and (min-width: 990px) {
+  .eleva-section {
+    padding-block: var(--eleva-space-8);
+  }
+}
+
+.eleva-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--eleva-space-2);
+  margin: 0 0 var(--eleva-space-3);
+  color: var(--eleva-color-text-muted);
+  font-size: var(--eleva-font-size-xs);
+  font-weight: 600;
+  letter-spacing: var(--eleva-letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.eleva-heading {
+  margin: 0;
+  color: var(--eleva-color-soft-black);
+  font-size: var(--eleva-font-size-xl);
+  line-height: var(--eleva-line-height-tight);
+  letter-spacing: -0.02em;
+}
+
+.eleva-text {
+  margin: 0;
+  color: var(--eleva-color-soft-black);
+  font-size: var(--eleva-font-size-md);
+  line-height: var(--eleva-line-height-base);
+}
+
+.eleva-muted {
+  color: var(--eleva-color-text-muted);
+}
+
+.eleva-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--eleva-space-2);
+  min-height: 4.8rem;
+  padding: 0 var(--eleva-space-5);
+  border-radius: var(--eleva-radius-pill);
+  border: 1px solid transparent;
+  font-size: var(--eleva-font-size-sm);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition:
+    background-color var(--eleva-transition-base),
+    color var(--eleva-transition-base),
+    border-color var(--eleva-transition-base),
+    transform var(--eleva-transition-fast),
+    box-shadow var(--eleva-transition-base);
+}
+
+.eleva-btn:hover {
+  transform: translateY(-1px);
+}
+
+.eleva-btn--primary {
+  color: #fff;
+  background-color: var(--eleva-color-soft-black);
+  box-shadow: var(--eleva-shadow-card);
+}
+
+.eleva-btn--primary:hover {
+  background-color: #2b2521;
+}
+
+.eleva-btn--secondary {
+  color: var(--eleva-color-soft-black);
+  background-color: rgba(255, 253, 249, 0.85);
+  border-color: var(--eleva-color-border);
+}
+
+.eleva-btn--secondary:hover {
+  background-color: var(--eleva-color-light-stone);
+  border-color: var(--eleva-color-greige);
+}
+
+.eleva-card {
+  background-color: var(--eleva-color-surface);
+  border: 1px solid rgba(183, 172, 159, 0.22);
+  border-radius: var(--eleva-radius-lg);
+  box-shadow: var(--eleva-shadow-border);
+  overflow: hidden;
+}
+
+.eleva-card--soft {
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(248, 245, 239, 0.86));
+  box-shadow: var(--eleva-shadow-soft);
+}
+
+.eleva-grid {
+  display: grid;
+  gap: var(--eleva-space-5);
+}
+
+@media screen and (min-width: 750px) {
+  .eleva-grid {
+    gap: var(--eleva-space-6);
+  }
+}
+
+.eleva-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3.4rem;
+  padding: 0 1.4rem;
+  border: 1px solid rgba(183, 172, 159, 0.35);
+  border-radius: var(--eleva-radius-pill);
+  background-color: rgba(255, 253, 249, 0.9);
+  color: var(--eleva-color-soft-black);
+  font-size: var(--eleva-font-size-xs);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.eleva-trust-row {
+  display: grid;
+  gap: var(--eleva-space-3);
+  padding: var(--eleva-space-4);
+  border: 1px solid rgba(183, 172, 159, 0.22);
+  border-radius: var(--eleva-radius-md);
+  background-color: rgba(255, 253, 249, 0.72);
+}
+
+@media screen and (min-width: 750px) {
+  .eleva-trust-row {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    gap: var(--eleva-space-4);
+  }
+}
