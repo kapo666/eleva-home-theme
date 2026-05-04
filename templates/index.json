@@ -67,72 +67,7 @@
     },
     "eleva_collections_featured": {
       "type": "eleva-collections-featured",
-      "blocks": {
-        "collection_1": {
-          "type": "card",
-          "settings": {
-            "collection": "accessori-bagno",
-            "custom_title": "Accessori Bagno",
-            "custom_image": "",
-            "custom_link": ""
-          }
-        },
-        "collection_2": {
-          "type": "card",
-          "settings": {
-            "collection": "cucina-tavola",
-            "custom_title": "Cucina e Tavola",
-            "custom_image": "",
-            "custom_link": ""
-          }
-        },
-        "collection_3": {
-          "type": "card",
-          "settings": {
-            "collection": "organizzazione-casa",
-            "custom_title": "Organizzazione Casa",
-            "custom_image": "",
-            "custom_link": ""
-          }
-        },
-        "collection_4": {
-          "type": "card",
-          "settings": {
-            "collection": "decorazione-casa",
-            "custom_title": "Decorazione Casa",
-            "custom_image": "",
-            "custom_link": ""
-          }
-        },
-        "collection_5": {
-          "type": "card",
-          "settings": {
-            "collection": "illuminazione-casa",
-            "custom_title": "Illuminazione Casa",
-            "custom_image": "",
-            "custom_link": ""
-          }
-        },
-        "collection_6": {
-          "type": "card",
-          "settings": {
-            "collection": "tessili-casa",
-            "custom_title": "Tessili Casa",
-            "custom_image": "",
-            "custom_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_1",
-        "collection_2",
-        "collection_3",
-        "collection_4",
-        "collection_5",
-        "collection_6"
-      ],
       "settings": {
-        "eyebrow": "Collezioni",
         "heading": "Esplora le nostre collezioni"
       }
     },

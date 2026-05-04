@@ -29,9 +29,9 @@
 - Homepage styles are isolated to `eleva-` prefixed classes only
 
 ## Module 2 Fixes
-- Fixed the missing `ELEVA Featured Collections` issue by rebuilding the section with a more robust Shopify schema based on `collection` blocks.
-- Simplified the section again for maximum customizer compatibility: each card now uses only `collection`, optional `custom_title`, and optional `custom_image`.
-- Added a save-safe `custom_link` text fallback for cards without a selected collection, avoiding `url` settings with defaults.
+- Replaced `ELEVA Collections Featured` with an ultra-simple save-safe version to isolate the Customizer visibility issue.
+- The section now uses a minimal schema with no blocks, one text setting, and a clean preset.
+- The rendered content is static: 6 collection cards with fixed collection links and gradient placeholders.
 - Confirmed the homepage template still places `ELEVA Collections Featured` between `ELEVA USP Bar` and `ELEVA Statement`.
 - Confirmed `collection-breadcrumbs` is not present in `templates/index.json`.
 - Confirmed the default Dawn newsletter is not present in `templates/index.json`.
@@ -67,8 +67,9 @@
 - `templates/index.json` JSON structure validated locally: `PASS`
 - Homepage sections are in the correct order: `PASS`
 - `collection-breadcrumbs` removed from homepage composition: `PASS`
-- `ELEVA Featured Collections` schema/template wiring corrected: `PASS`
-- `ELEVA Featured Collections` schema contains valid `presets`: `PASS`
+- `ELEVA Collections Featured` schema is now minimal and save-safe: `PASS`
+- `ELEVA Collections Featured` schema contains valid `presets`: `PASS`
+- `ELEVA Collections Featured` schema contains no blocks: `PASS`
 - Default Dawn newsletter removed from homepage composition and hidden from homepage footer view: `PASS`
 - No dangerous product/cart/variant files modified: `PASS`
 - No CSV, product, inventory, variant or collection template files touched: `PASS`

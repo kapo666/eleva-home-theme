@@ -1,46 +1,25 @@
+{% assign eleva_collection_titles = 'Accessori Bagno|Cucina e Tavola|Organizzazione Casa|Decorazione Casa|Illuminazione Casa|Tessili Casa' | split: '|' %}
+{% assign eleva_collection_links = '/collections/accessori-bagno|/collections/cucina-tavola|/collections/organizzazione-casa|/collections/decorazione-casa|/collections/illuminazione-casa|/collections/tessili-casa' | split: '|' %}
+
 <section class="eleva-homepage eleva-collections-section eleva-section">
   <div class="eleva-container">
     <div class="eleva-section-head">
-      <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+      <p class="eleva-eyebrow">Collezioni</p>
       <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
     </div>
 
     <div class="eleva-collections-grid">
-      {% for block in section.blocks %}
-        {% assign collection = collections[block.settings.collection] %}
-        {% assign custom_link = block.settings.custom_link | strip %}
-        {% assign image = block.settings.custom_image | default: collection.image | default: collection.featured_image %}
-        {% assign fallback_title = block.settings.custom_title | default: collection.title %}
-        {% assign card_title = fallback_title | default: 'Collezione ELEVA' %}
-        {% assign card_url = collection.url %}
-        {% if card_url == blank %}
-          {% assign card_url = custom_link %}
-        {% endif %}
-        {% if card_url == blank %}
-          {% assign card_url = routes.collections_url %}
-        {% endif %}
-        <a class="eleva-collection-card eleva-card" href="{{ card_url }}" {{ block.shopify_attributes }}>
-          <div class="eleva-collection-card__media{% if image == blank %} eleva-collection-card__media--placeholder{% endif %}">
-            {% if image != blank %}
-              {{
-                image
-                | image_url: width: 900
-                | image_tag:
-                  class: 'eleva-collection-card__image',
-                  widths: '320, 480, 640, 900',
-                  sizes: '(min-width: 990px) 33vw, 50vw',
-                  loading: 'lazy',
-                  alt: card_title
-              }}
-            {% else %}
-              <div class="eleva-collection-card__placeholder">
-                <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
-                <strong>{{ card_title }}</strong>
-              </div>
-            {% endif %}
+      {% for title in eleva_collection_titles %}
+        {% assign card_link = eleva_collection_links[forloop.index0] %}
+        <a class="eleva-collection-card eleva-card" href="{{ card_link }}">
+          <div class="eleva-collection-card__media eleva-collection-card__media--placeholder">
+            <div class="eleva-collection-card__placeholder">
+              <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
+              <strong>{{ title }}</strong>
+            </div>
           </div>
           <div class="eleva-collection-card__body">
-            <h3 class="eleva-collection-card__title">{{ card_title }}</h3>
+            <h3 class="eleva-collection-card__title">{{ title }}</h3>
             <span class="eleva-collection-card__link">Esplora</span>
           </div>
         </a>
@@ -51,53 +30,12 @@
 
 {% schema %}
 {
-  "name": "ELEVA Featured Collections",
+  "name": "ELEVA Collections Featured",
   "tag": "section",
   "class": "section",
-  "max_blocks": 6,
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "blocks": [
-    {
-      "type": "card",
-      "name": "Collection card",
-      "limit": 6,
-      "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Collection"
-        },
-        {
-          "type": "text",
-          "id": "custom_title",
-          "label": "Custom title",
-          "default": ""
-        },
-        {
-          "type": "image_picker",
-          "id": "custom_image",
-          "label": "Custom image"
-        },
-        {
-          "type": "text",
-          "id": "custom_link",
-          "label": "Custom link",
-          "default": ""
-        }
-      ]
-    }
-  ],
   "settings": [
     {
       "type": "text",
-      "id": "eyebrow",
-      "label": "Eyebrow",
-      "default": "Collezioni"
-    },
-    {
-      "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
       "default": "Esplora le nostre collezioni"
@@ -105,27 +43,7 @@
   ],
   "presets": [
     {
-      "name": "ELEVA Featured Collections",
-      "blocks": [
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        },
-        {
-          "type": "card"
-        }
-      ]
+      "name": "ELEVA Collections Featured"
     }
   ]
 }
