@@ -64,10 +64,69 @@
       ],
       "name": "ELEVA USP Bar",
       "settings": {}
+    },
+    "eleva_statement_CQXCAd": {
+      "type": "eleva-statement",
+      "name": "ELEVA Statement",
+      "settings": {
+        "quote": "Ogni prodotto è scelto per trasformare gli spazi quotidiani in ambienti di ordine, comfort ed eleganza.",
+        "signature": "ELEVA HOME"
+      }
+    },
+    "eleva_brand_proof_z3M4kV": {
+      "type": "eleva-brand-proof",
+      "blocks": {
+        "card_wphwzt": {
+          "type": "card",
+          "settings": {
+            "title": "Selezione curata",
+            "text": "Prodotti scelti per funzionalità, estetica e uso quotidiano."
+          }
+        },
+        "card_kCNYkc": {
+          "type": "card",
+          "settings": {
+            "title": "Design per ogni ambiente",
+            "text": "Soluzioni per cucina, bagno, organizzazione, tessili e decorazione."
+          }
+        },
+        "card_4jCCN4": {
+          "type": "card",
+          "settings": {
+            "title": "Esperienza semplice",
+            "text": "Navigazione chiara, pagamenti sicuri e assistenza dedicata."
+          }
+        }
+      },
+      "block_order": [
+        "card_wphwzt",
+        "card_kCNYkc",
+        "card_4jCCN4"
+      ],
+      "name": "ELEVA Brand Proof",
+      "settings": {
+        "eyebrow": "Perché ELEVA HOME",
+        "heading": "Perché scegliere ELEVA HOME"
+      }
+    },
+    "eleva_newsletter_8pbJTb": {
+      "type": "eleva-newsletter",
+      "name": "ELEVA Newsletter",
+      "settings": {
+        "eyebrow": "Newsletter",
+        "heading": "Resta aggiornato sulle novità",
+        "subheading": "Ricevi in anteprima nuovi prodotti e offerte esclusive",
+        "placeholder": "La tua email",
+        "button_label": "Iscriviti",
+        "privacy_note": "Rispettiamo la tua privacy. Nessuno spam, promesso."
+      }
     }
   },
   "order": [
     "eleva_hero_wmT8gq",
-    "eleva_usp_bar_MM6yrw"
+    "eleva_usp_bar_MM6yrw",
+    "eleva_statement_CQXCAd",
+    "eleva_brand_proof_z3M4kV",
+    "eleva_newsletter_8pbJTb"
   ]
 }
