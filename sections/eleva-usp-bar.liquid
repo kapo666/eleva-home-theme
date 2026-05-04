@@ -1,0 +1,106 @@
+<section class="eleva-homepage eleva-usp-section">
+  <div class="eleva-container">
+    <div class="eleva-usp-grid" role="list">
+      {% for block in section.blocks %}
+        <div class="eleva-usp-card eleva-card" role="listitem" {{ block.shopify_attributes }}>
+          <div class="eleva-usp-card__icon" aria-hidden="true">
+            {% case block.settings.icon %}
+              {% when 'truck' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h11v8H3z"/><path d="M14 10h3l4 3v2h-7z"/><circle cx="7" cy="17" r="1.7"/><circle cx="17" cy="17" r="1.7"/></svg>
+              {% when 'return' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 7H4v4"/><path d="M4 11a8 8 0 1 0 2.3-5.7L4 7"/></svg>
+              {% when 'shield' %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 5-3.4 8.4-7 10-3.6-1.6-7-5-7-10V6l7-3z"/><path d="m9.5 12 1.8 1.8 3.7-3.7"/></svg>
+              {% else %}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V8a4 4 0 0 1 8 0v2"/></svg>
+            {% endcase %}
+          </div>
+          <div>
+            <h2 class="eleva-usp-card__title">{{ block.settings.title }}</h2>
+            <p class="eleva-usp-card__text">{{ block.settings.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA USP Bar",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "USP",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "truck", "label": "Truck" },
+            { "value": "return", "label": "Return" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "lock", "label": "Lock" }
+          ],
+          "default": "truck"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Spedizione gratuita oltre 50€"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Consegna rapida e tracciata in tutta Italia."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA USP Bar",
+      "blocks": [
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "truck",
+            "title": "Spedizione gratuita oltre 50€",
+            "text": "Consegna rapida e tracciata in tutta Italia."
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "return",
+            "title": "Reso gratuito entro 30 giorni",
+            "text": "Acquisti sereni con una procedura semplice."
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "shield",
+            "title": "Garanzia prodotto 2 anni",
+            "text": "Qualità pensata per accompagnare ogni ambiente."
+          }
+        },
+        {
+          "type": "usp",
+          "settings": {
+            "icon": "lock",
+            "title": "Pagamento sicuro SSL",
+            "text": "Protezione completa durante tutto il checkout."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

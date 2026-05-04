@@ -1,0 +1,72 @@
+{% assign collection_handles = 'accessori-bagno|cucina-tavola|organizzazione-casa|decorazione-casa|illuminazione-casa|tessili-casa' | split: '|' %}
+
+<section class="eleva-homepage eleva-collections-section eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-section-head">
+      <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="eleva-collections-grid">
+      {% for handle in collection_handles %}
+        {% assign collection = collections[handle] %}
+        {% assign image = collection.image | default: collection.featured_image %}
+        <a class="eleva-collection-card eleva-card" href="{{ collection.url | default: '/collections/' | append: handle }}">
+          <div class="eleva-collection-card__media{% if image == blank %} eleva-collection-card__media--placeholder{% endif %}">
+            {% if image != blank %}
+              {{
+                image
+                | image_url: width: 900
+                | image_tag:
+                  class: 'eleva-collection-card__image',
+                  widths: '320, 480, 640, 900',
+                  sizes: '(min-width: 990px) 33vw, 50vw',
+                  loading: 'lazy',
+                  alt: collection.title
+              }}
+            {% else %}
+              <div class="eleva-collection-card__placeholder">
+                <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
+                <strong>{{ collection.title | default: handle | replace: '-', ' ' }}</strong>
+              </div>
+            {% endif %}
+          </div>
+          <div class="eleva-collection-card__body">
+            <h3 class="eleva-collection-card__title">{{ collection.title | default: handle | replace: '-', ' ' }}</h3>
+            <span class="eleva-collection-card__link">Esplora</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Featured Collections",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Collezioni"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Esplora le nostre collezioni"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Featured Collections"
+    }
+  ]
+}
+{% endschema %}

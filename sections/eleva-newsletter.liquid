@@ -1,0 +1,125 @@
+<section class="eleva-homepage eleva-newsletter-section eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-newsletter eleva-card eleva-card--soft">
+      <div class="eleva-newsletter__intro">
+        <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
+        <p class="eleva-text eleva-muted">{{ section.settings.subheading }}</p>
+      </div>
+
+      {% form 'customer', class: 'eleva-newsletter-form newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="eleva-newsletter-form__field-wrapper">
+          <div class="field eleva-newsletter-form__field">
+            <input
+              id="ElevaNewsletterForm--{{ section.id }}"
+              type="email"
+              name="contact[email]"
+              class="field__input"
+              value="{{ form.email }}"
+              aria-required="true"
+              autocorrect="off"
+              autocapitalize="off"
+              autocomplete="email"
+              {% if form.errors %}
+                autofocus
+                aria-invalid="true"
+                aria-describedby="ElevaNewsletter-error--{{ section.id }}"
+              {% elsif form.posted_successfully? %}
+                aria-describedby="ElevaNewsletter-success--{{ section.id }}"
+              {% endif %}
+              placeholder="{{ section.settings.placeholder }}"
+              required
+            >
+            <label class="field__label" for="ElevaNewsletterForm--{{ section.id }}">
+              {{ section.settings.placeholder }}
+            </label>
+            <button
+              type="submit"
+              class="eleva-btn eleva-btn--primary eleva-newsletter-form__button"
+              name="commit"
+              aria-label="{{ section.settings.button_label }}"
+            >
+              {{ section.settings.button_label }}
+            </button>
+          </div>
+
+          {% if form.errors %}
+            <small class="newsletter-form__message form__message" id="ElevaNewsletter-error--{{ section.id }}">
+              <span class="svg-wrapper">{{ 'icon-error.svg' | inline_asset_content }}</span>
+              {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+            </small>
+          {% endif %}
+        </div>
+
+        {% if form.posted_successfully? %}
+          <h3
+            class="newsletter-form__message newsletter-form__message--success form__message"
+            id="ElevaNewsletter-success--{{ section.id }}"
+            tabindex="-1"
+            autofocus
+          >
+            <span class="svg-wrapper">{{ 'icon-success.svg' | inline_asset_content }}</span>
+            {{ 'newsletter.success' | t }}
+          </h3>
+        {% endif %}
+      {% endform %}
+
+      <p class="eleva-newsletter__privacy eleva-muted">{{ section.settings.privacy_note }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Newsletter",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Newsletter"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Resta aggiornato sulle novità"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Ricevi in anteprima nuovi prodotti e offerte esclusive"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder",
+      "default": "La tua email"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Iscriviti"
+    },
+    {
+      "type": "text",
+      "id": "privacy_note",
+      "label": "Privacy note",
+      "default": "Rispettiamo la tua privacy. Nessuno spam, promesso."
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Newsletter"
+    }
+  ]
+}
+{% endschema %}

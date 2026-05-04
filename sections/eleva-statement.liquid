@@ -1,0 +1,37 @@
+<section class="eleva-homepage eleva-statement-section eleva-section eleva-section--soft">
+  <div class="eleva-container">
+    <div class="eleva-statement eleva-card eleva-card--soft">
+      <blockquote class="eleva-statement__quote">
+        {{ section.settings.quote }}
+      </blockquote>
+      <p class="eleva-statement__signature">{{ section.settings.signature }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Statement",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Ogni prodotto è scelto per trasformare gli spazi quotidiani in ambienti di ordine, comfort ed eleganza."
+    },
+    {
+      "type": "text",
+      "id": "signature",
+      "label": "Signature",
+      "default": "ELEVA HOME"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Statement"
+    }
+  ]
+}
+{% endschema %}

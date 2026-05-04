@@ -1,0 +1,61 @@
+<section class="eleva-homepage eleva-hero-section">
+  <div class="eleva-container">
+    <div class="eleva-hero eleva-card eleva-card--soft">
+      <div class="eleva-hero__inner">
+        <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h1 class="eleva-heading eleva-hero__title">{{ section.settings.heading }}</h1>
+        <p class="eleva-text eleva-muted eleva-hero__subtitle">{{ section.settings.subheading }}</p>
+        <a class="eleva-btn eleva-btn--primary eleva-hero__cta" href="{{ section.settings.button_link | default: '/collections' }}">
+          {{ section.settings.button_label }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Hero",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "ELEVA HOME"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "La touche che trasforma"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Design moderno per la casa contemporanea"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Scopri le collezioni"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Hero"
+    }
+  ]
+}
+{% endschema %}
