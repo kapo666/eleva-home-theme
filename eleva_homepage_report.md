@@ -31,6 +31,7 @@
 ## Module 2 Fixes
 - Fixed the missing `ELEVA Featured Collections` issue by rebuilding the section with a more robust Shopify schema based on `collection` blocks.
 - Simplified the section again for maximum customizer compatibility: each card now uses only `collection`, optional `custom_title`, and optional `custom_image`.
+- Added a save-safe `custom_link` text fallback for cards without a selected collection, avoiding `url` settings with defaults.
 - Confirmed the homepage template still places `ELEVA Collections Featured` between `ELEVA USP Bar` and `ELEVA Statement`.
 - Confirmed `collection-breadcrumbs` is not present in `templates/index.json`.
 - Confirmed the default Dawn newsletter is not present in `templates/index.json`.

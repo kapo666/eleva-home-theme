@@ -8,10 +8,17 @@
     <div class="eleva-collections-grid">
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
+        {% assign custom_link = block.settings.custom_link | strip %}
         {% assign image = block.settings.custom_image | default: collection.image | default: collection.featured_image %}
         {% assign fallback_title = block.settings.custom_title | default: collection.title %}
         {% assign card_title = fallback_title | default: 'Collezione ELEVA' %}
-        {% assign card_url = collection.url | default: routes.collections_url %}
+        {% assign card_url = collection.url %}
+        {% if card_url == blank %}
+          {% assign card_url = custom_link %}
+        {% endif %}
+        {% if card_url == blank %}
+          {% assign card_url = routes.collections_url %}
+        {% endif %}
         <a class="eleva-collection-card eleva-card" href="{{ card_url }}" {{ block.shopify_attributes }}>
           <div class="eleva-collection-card__media{% if image == blank %} eleva-collection-card__media--placeholder{% endif %}">
             {% if image != blank %}
@@ -72,6 +79,12 @@
           "type": "image_picker",
           "id": "custom_image",
           "label": "Custom image"
+        },
+        {
+          "type": "text",
+          "id": "custom_link",
+          "label": "Custom link",
+          "default": ""
         }
       ]
     }

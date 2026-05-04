@@ -73,7 +73,8 @@
           "settings": {
             "collection": "accessori-bagno",
             "custom_title": "Accessori Bagno",
-            "custom_image": ""
+            "custom_image": "",
+            "custom_link": ""
           }
         },
         "collection_2": {
@@ -81,7 +82,8 @@
           "settings": {
             "collection": "cucina-tavola",
             "custom_title": "Cucina e Tavola",
-            "custom_image": ""
+            "custom_image": "",
+            "custom_link": ""
           }
         },
         "collection_3": {
@@ -89,7 +91,8 @@
           "settings": {
             "collection": "organizzazione-casa",
             "custom_title": "Organizzazione Casa",
-            "custom_image": ""
+            "custom_image": "",
+            "custom_link": ""
           }
         },
         "collection_4": {
@@ -97,7 +100,8 @@
           "settings": {
             "collection": "decorazione-casa",
             "custom_title": "Decorazione Casa",
-            "custom_image": ""
+            "custom_image": "",
+            "custom_link": ""
           }
         },
         "collection_5": {
@@ -105,7 +109,8 @@
           "settings": {
             "collection": "illuminazione-casa",
             "custom_title": "Illuminazione Casa",
-            "custom_image": ""
+            "custom_image": "",
+            "custom_link": ""
           }
         },
         "collection_6": {
@@ -113,7 +118,8 @@
           "settings": {
             "collection": "tessili-casa",
             "custom_title": "Tessili Casa",
-            "custom_image": ""
+            "custom_image": "",
+            "custom_link": ""
           }
         }
       },
