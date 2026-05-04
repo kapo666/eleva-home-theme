@@ -69,45 +69,51 @@
       "type": "eleva-collections-featured",
       "blocks": {
         "collection_1": {
-          "type": "collection_card",
+          "type": "card",
           "settings": {
             "collection": "accessori-bagno",
-            "fallback_title": "Accessori Bagno"
+            "custom_title": "Accessori Bagno",
+            "custom_image": ""
           }
         },
         "collection_2": {
-          "type": "collection_card",
+          "type": "card",
           "settings": {
             "collection": "cucina-tavola",
-            "fallback_title": "Cucina e Tavola"
+            "custom_title": "Cucina e Tavola",
+            "custom_image": ""
           }
         },
         "collection_3": {
-          "type": "collection_card",
+          "type": "card",
           "settings": {
             "collection": "organizzazione-casa",
-            "fallback_title": "Organizzazione Casa"
+            "custom_title": "Organizzazione Casa",
+            "custom_image": ""
           }
         },
         "collection_4": {
-          "type": "collection_card",
+          "type": "card",
           "settings": {
             "collection": "decorazione-casa",
-            "fallback_title": "Decorazione Casa"
+            "custom_title": "Decorazione Casa",
+            "custom_image": ""
           }
         },
         "collection_5": {
-          "type": "collection_card",
+          "type": "card",
           "settings": {
             "collection": "illuminazione-casa",
-            "fallback_title": "Illuminazione Casa"
+            "custom_title": "Illuminazione Casa",
+            "custom_image": ""
           }
         },
         "collection_6": {
-          "type": "collection_card",
+          "type": "card",
           "settings": {
             "collection": "tessili-casa",
-            "fallback_title": "Tessili Casa"
+            "custom_title": "Tessili Casa",
+            "custom_image": ""
           }
         }
       },

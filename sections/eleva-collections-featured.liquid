@@ -8,9 +8,9 @@
     <div class="eleva-collections-grid">
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
-        {% assign image = collection.image | default: collection.featured_image %}
-        {% assign fallback_title = block.settings.fallback_title %}
-        {% assign card_title = collection.title | default: fallback_title %}
+        {% assign image = block.settings.custom_image | default: collection.image | default: collection.featured_image %}
+        {% assign fallback_title = block.settings.custom_title | default: collection.title %}
+        {% assign card_title = fallback_title | default: 'Collezione ELEVA' %}
         {% assign card_url = collection.url | default: routes.collections_url %}
         <a class="eleva-collection-card eleva-card" href="{{ card_url }}" {{ block.shopify_attributes }}>
           <div class="eleva-collection-card__media{% if image == blank %} eleva-collection-card__media--placeholder{% endif %}">
@@ -23,7 +23,7 @@
                   widths: '320, 480, 640, 900',
                   sizes: '(min-width: 990px) 33vw, 50vw',
                   loading: 'lazy',
-                  alt: collection.title
+                  alt: card_title
               }}
             {% else %}
               <div class="eleva-collection-card__placeholder">
@@ -53,8 +53,9 @@
   },
   "blocks": [
     {
-      "type": "collection_card",
+      "type": "card",
       "name": "Collection card",
+      "limit": 6,
       "settings": [
         {
           "type": "collection",
@@ -63,9 +64,14 @@
         },
         {
           "type": "text",
-          "id": "fallback_title",
-          "label": "Fallback title",
-          "default": "Collezione ELEVA"
+          "id": "custom_title",
+          "label": "Custom title",
+          "default": ""
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom image"
         }
       ]
     }
@@ -89,40 +95,22 @@
       "name": "ELEVA Featured Collections",
       "blocks": [
         {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Accessori Bagno"
-          }
+          "type": "card"
         },
         {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Cucina e Tavola"
-          }
+          "type": "card"
         },
         {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Organizzazione Casa"
-          }
+          "type": "card"
         },
         {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Decorazione Casa"
-          }
+          "type": "card"
         },
         {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Illuminazione Casa"
-          }
+          "type": "card"
         },
         {
-          "type": "collection_card",
-          "settings": {
-            "fallback_title": "Tessili Casa"
-          }
+          "type": "card"
         }
       ]
     }

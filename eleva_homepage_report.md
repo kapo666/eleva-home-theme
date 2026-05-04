@@ -30,7 +30,9 @@
 
 ## Module 2 Fixes
 - Fixed the missing `ELEVA Featured Collections` issue by rebuilding the section with a more robust Shopify schema based on `collection` blocks.
+- Simplified the section again for maximum customizer compatibility: each card now uses only `collection`, optional `custom_title`, and optional `custom_image`.
 - Confirmed the homepage template still places `ELEVA Collections Featured` between `ELEVA USP Bar` and `ELEVA Statement`.
+- Confirmed `collection-breadcrumbs` is not present in `templates/index.json`.
 - Confirmed the default Dawn newsletter is not present in `templates/index.json`.
 - Hid the footer newsletter block on the homepage only, so `ELEVA Newsletter` remains the single newsletter touchpoint without changing footer logic.
 - Applied an Apple smooth refinement pass with softer gradients, more whitespace, quieter cards, cleaner CTA treatment and subtler borders.
@@ -63,7 +65,9 @@
 - Homepage CSS is loaded in theme: `PASS`
 - `templates/index.json` JSON structure validated locally: `PASS`
 - Homepage sections are in the correct order: `PASS`
+- `collection-breadcrumbs` removed from homepage composition: `PASS`
 - `ELEVA Featured Collections` schema/template wiring corrected: `PASS`
+- `ELEVA Featured Collections` schema contains valid `presets`: `PASS`
 - Default Dawn newsletter removed from homepage composition and hidden from homepage footer view: `PASS`
 - No dangerous product/cart/variant files modified: `PASS`
 - No CSV, product, inventory, variant or collection template files touched: `PASS`
