@@ -1,5 +1,3 @@
-{% assign collection_handles = 'accessori-bagno|cucina-tavola|organizzazione-casa|decorazione-casa|illuminazione-casa|tessili-casa' | split: '|' %}
-
 <section class="eleva-homepage eleva-collections-section eleva-section">
   <div class="eleva-container">
     <div class="eleva-section-head">
@@ -8,10 +6,13 @@
     </div>
 
     <div class="eleva-collections-grid">
-      {% for handle in collection_handles %}
-        {% assign collection = collections[handle] %}
+      {% for block in section.blocks %}
+        {% assign collection = collections[block.settings.collection] %}
         {% assign image = collection.image | default: collection.featured_image %}
-        <a class="eleva-collection-card eleva-card" href="{{ collection.url | default: '/collections/' | append: handle }}">
+        {% assign fallback_title = block.settings.fallback_title %}
+        {% assign card_title = collection.title | default: fallback_title %}
+        {% assign card_url = collection.url | default: routes.collections_url %}
+        <a class="eleva-collection-card eleva-card" href="{{ card_url }}" {{ block.shopify_attributes }}>
           <div class="eleva-collection-card__media{% if image == blank %} eleva-collection-card__media--placeholder{% endif %}">
             {% if image != blank %}
               {{
@@ -27,12 +28,12 @@
             {% else %}
               <div class="eleva-collection-card__placeholder">
                 <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
-                <strong>{{ collection.title | default: handle | replace: '-', ' ' }}</strong>
+                <strong>{{ card_title }}</strong>
               </div>
             {% endif %}
           </div>
           <div class="eleva-collection-card__body">
-            <h3 class="eleva-collection-card__title">{{ collection.title | default: handle | replace: '-', ' ' }}</h3>
+            <h3 class="eleva-collection-card__title">{{ card_title }}</h3>
             <span class="eleva-collection-card__link">Esplora</span>
           </div>
         </a>
@@ -46,9 +47,29 @@
   "name": "ELEVA Featured Collections",
   "tag": "section",
   "class": "section",
+  "max_blocks": 6,
   "disabled_on": {
     "groups": ["header", "footer"]
   },
+  "blocks": [
+    {
+      "type": "collection_card",
+      "name": "Collection card",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "fallback_title",
+          "label": "Fallback title",
+          "default": "Collezione ELEVA"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "text",
@@ -65,7 +86,45 @@
   ],
   "presets": [
     {
-      "name": "ELEVA Featured Collections"
+      "name": "ELEVA Featured Collections",
+      "blocks": [
+        {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Accessori Bagno"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Cucina e Tavola"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Organizzazione Casa"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Decorazione Casa"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Illuminazione Casa"
+          }
+        },
+        {
+          "type": "collection_card",
+          "settings": {
+            "fallback_title": "Tessili Casa"
+          }
+        }
+      ]
     }
   ]
 }

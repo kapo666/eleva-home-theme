@@ -65,6 +65,65 @@
       "name": "ELEVA USP Bar",
       "settings": {}
     },
+    "eleva_collections_featured": {
+      "type": "eleva-collections-featured",
+      "blocks": {
+        "collection_1": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "accessori-bagno",
+            "fallback_title": "Accessori Bagno"
+          }
+        },
+        "collection_2": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "cucina-tavola",
+            "fallback_title": "Cucina e Tavola"
+          }
+        },
+        "collection_3": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "organizzazione-casa",
+            "fallback_title": "Organizzazione Casa"
+          }
+        },
+        "collection_4": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "decorazione-casa",
+            "fallback_title": "Decorazione Casa"
+          }
+        },
+        "collection_5": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "illuminazione-casa",
+            "fallback_title": "Illuminazione Casa"
+          }
+        },
+        "collection_6": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "tessili-casa",
+            "fallback_title": "Tessili Casa"
+          }
+        }
+      },
+      "block_order": [
+        "collection_1",
+        "collection_2",
+        "collection_3",
+        "collection_4",
+        "collection_5",
+        "collection_6"
+      ],
+      "settings": {
+        "eyebrow": "Collezioni",
+        "heading": "Esplora le nostre collezioni"
+      }
+    },
     "eleva_statement_CQXCAd": {
       "type": "eleva-statement",
       "name": "ELEVA Statement",
@@ -125,6 +184,7 @@
   "order": [
     "eleva_hero_wmT8gq",
     "eleva_usp_bar_MM6yrw",
+    "eleva_collections_featured",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
     "eleva_newsletter_8pbJTb"

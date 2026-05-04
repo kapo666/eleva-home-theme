@@ -11,8 +11,9 @@
 - `eleva_homepage_report.md`
 
 ## Files Modified
+- `assets/eleva-homepage.css`
+- `sections/eleva-collections-featured.liquid`
 - `templates/index.json`
-- `layout/theme.liquid`
 
 ## Homepage Section Order
 1. `eleva-hero`
@@ -27,10 +28,17 @@
 - `assets/eleva-design-system.css` remains the shared token layer
 - Homepage styles are isolated to `eleva-` prefixed classes only
 
+## Module 2 Fixes
+- Fixed the missing `ELEVA Featured Collections` issue by rebuilding the section with a more robust Shopify schema based on `collection` blocks.
+- Confirmed the homepage template still places `ELEVA Collections Featured` between `ELEVA USP Bar` and `ELEVA Statement`.
+- Confirmed the default Dawn newsletter is not present in `templates/index.json`.
+- Hid the footer newsletter block on the homepage only, so `ELEVA Newsletter` remains the single newsletter touchpoint without changing footer logic.
+- Applied an Apple smooth refinement pass with softer gradients, more whitespace, quieter cards, cleaner CTA treatment and subtler borders.
+
 ## Implementation Notes
 - Hero uses the requested copy and a centered minimal layout
 - USP bar includes 4 trust items with inline SVG icons
-- Featured collections use Shopify `collection` objects when available
+- Featured collections now use Shopify `collection` settings per block for safer customizer compatibility
 - Missing collection images fall back to a clean placeholder card
 - Statement and brand proof sections stay editorial and non-promotional
 - Newsletter reuses the Dawn customer/newsletter form pattern
@@ -55,6 +63,8 @@
 - Homepage CSS is loaded in theme: `PASS`
 - `templates/index.json` JSON structure validated locally: `PASS`
 - Homepage sections are in the correct order: `PASS`
+- `ELEVA Featured Collections` schema/template wiring corrected: `PASS`
+- Default Dawn newsletter removed from homepage composition and hidden from homepage footer view: `PASS`
 - No dangerous product/cart/variant files modified: `PASS`
 - No CSV, product, inventory, variant or collection template files touched: `PASS`
 - No custom JavaScript added: `PASS`
