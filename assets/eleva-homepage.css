@@ -411,6 +411,19 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
       0 2.2rem 4rem rgba(30, 26, 23, 0.05);
   }
 
+  .eleva-hero__visual-image {
+    position: absolute;
+    width: min(100%, 30rem);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 3rem;
+    border: 1px solid rgba(183, 172, 159, 0.16);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.45) inset,
+      0 2.2rem 4rem rgba(30, 26, 23, 0.05);
+    background: rgba(255, 253, 249, 0.96);
+  }
+
   .eleva-hero__inner {
     text-align: left;
     margin: 0;

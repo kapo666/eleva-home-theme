@@ -3,7 +3,20 @@
     <div class="eleva-hero eleva-card eleva-card--soft">
       <div class="eleva-hero__visual" aria-hidden="true">
         <div class="eleva-hero__visual-orb eleva-reveal eleva-reveal--delay-2"></div>
-        <div class="eleva-hero__visual-panel eleva-reveal eleva-reveal--delay-3"></div>
+        {% if section.settings.hero_image != blank %}
+          {{
+            section.settings.hero_image
+            | image_url: width: 1200
+            | image_tag:
+              class: 'eleva-hero__visual-image eleva-reveal eleva-reveal--delay-3',
+              widths: '400, 600, 800, 1000, 1200',
+              sizes: '(min-width: 990px) 32rem, 100vw',
+              loading: 'lazy',
+              alt: section.settings.heading
+          }}
+        {% else %}
+          <div class="eleva-hero__visual-panel eleva-reveal eleva-reveal--delay-3"></div>
+        {% endif %}
       </div>
       <div class="eleva-hero__inner">
         <p class="eleva-eyebrow eleva-reveal">{{ section.settings.eyebrow }}</p>
@@ -43,6 +56,11 @@
       "id": "subheading",
       "label": "Subheading",
       "default": "Design moderno per la casa contemporanea"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
     },
     {
       "type": "text",

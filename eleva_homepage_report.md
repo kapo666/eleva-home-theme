@@ -45,6 +45,7 @@
 
 ## Refinement Pass
 - Hero refined with a softer warm glow, cleaner spacing, desktop visual panel, and smoother black pill CTA treatment.
+- Hero now includes an optional Shopify `image_picker` setting so a custom image can be added directly from the Customizer.
 - USP bar compacted and lightened with subtler icons and staggered reveal motion.
 - Collections cards refined with softer surfaces, calmer hover, better text rhythm, and staggered entrance motion.
 - Statement spacing reduced slightly on mobile while preserving the editorial tone.
@@ -59,7 +60,7 @@
   with reduced-motion support.
 
 ## Implementation Notes
-- Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual.
+- Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.
 - USP bar includes 4 trust items with inline SVG icons and CSS-only staggered reveals.
 - Featured collections remain static and save-safe while acting as a premium navigation gateway.
 - Missing collection visuals intentionally use refined gradient placeholders.
@@ -92,6 +93,7 @@
 - `ELEVA Collections Featured` schema contains no blocks: `PASS`
 - Default Dawn newsletter removed from homepage composition and hidden from homepage footer view: `PASS`
 - Motion system added with CSS only and reduced-motion fallback: `PASS`
+- Hero image option added with save-safe `image_picker`: `PASS`
 - No `type: "url"` with default introduced: `PASS`
 - No unsupported Liquid syntax introduced: `PASS`
 - No heavy JavaScript added: `PASS`
