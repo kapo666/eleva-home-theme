@@ -1,5 +1,6 @@
 {% assign eleva_collection_titles = 'Accessori Bagno|Cucina e Tavola|Organizzazione Casa|Decorazione Casa|Illuminazione Casa|Tessili Casa' | split: '|' %}
 {% assign eleva_collection_links = '/collections/accessori-bagno|/collections/cucina-tavola|/collections/organizzazione-casa|/collections/decorazione-casa|/collections/illuminazione-casa|/collections/tessili-casa' | split: '|' %}
+{% assign eleva_collection_handles = 'accessori-bagno|cucina-tavola|organizzazione-casa|decorazione-casa|illuminazione-casa|tessili-casa' | split: '|' %}
 
 <section class="eleva-homepage eleva-collections-section eleva-section">
   <div class="eleva-container">
@@ -10,16 +11,47 @@
 
     <div class="eleva-collections-grid">
       {% for title in eleva_collection_titles %}
+        {% assign card_handle = eleva_collection_handles[forloop.index0] %}
+        {% assign card_collection = collections[card_handle] %}
         {% assign card_link = eleva_collection_links[forloop.index0] %}
+        {% assign card_title = title %}
+        {% if card_collection != blank and card_collection.title != blank %}
+          {% assign card_title = card_collection.title %}
+        {% endif %}
+        {% if card_collection != blank and card_collection.url != blank %}
+          {% assign card_link = card_collection.url %}
+        {% endif %}
+        {% assign card_image = blank %}
+        {% if card_collection != blank %}
+          {% assign card_image = card_collection.image %}
+          {% if card_image == blank %}
+            {% assign card_image = card_collection.featured_image %}
+          {% endif %}
+        {% endif %}
         <a class="eleva-collection-card eleva-card eleva-reveal{% cycle '', ' eleva-reveal--delay-1', ' eleva-reveal--delay-2', ' eleva-reveal--delay-3', ' eleva-reveal--delay-4', ' eleva-reveal--delay-2' %}" href="{{ card_link }}">
-          <div class="eleva-collection-card__media eleva-collection-card__media--placeholder">
-            <div class="eleva-collection-card__placeholder">
-              <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
-              <strong>{{ title }}</strong>
+          {% if card_image != blank %}
+            <div class="eleva-collection-card__media">
+              {{
+                card_image
+                | image_url: width: 1200
+                | image_tag:
+                  class: 'eleva-collection-card__image',
+                  widths: '320, 480, 640, 900, 1200',
+                  sizes: '(min-width: 990px) 33vw, 50vw',
+                  loading: 'lazy',
+                  alt: card_title
+              }}
             </div>
-          </div>
+          {% else %}
+            <div class="eleva-collection-card__media eleva-collection-card__media--placeholder">
+              <div class="eleva-collection-card__placeholder">
+                <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
+                <strong>{{ card_title }}</strong>
+              </div>
+            </div>
+          {% endif %}
           <div class="eleva-collection-card__body">
-            <h3 class="eleva-collection-card__title">{{ title }}</h3>
+            <h3 class="eleva-collection-card__title">{{ card_title }}</h3>
             <span class="eleva-collection-card__link">Esplora</span>
           </div>
         </a>

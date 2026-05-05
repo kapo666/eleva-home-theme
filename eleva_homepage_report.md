@@ -36,7 +36,11 @@
 ## Module 2 Fixes
 - Replaced `ELEVA Collections Featured` with an ultra-simple save-safe version to isolate the Customizer visibility issue.
 - The section now uses a minimal schema with no blocks, one text setting, and a clean preset.
-- The rendered content is static: 6 collection cards with fixed collection links and gradient placeholders.
+- The section now automatically reads the existing Shopify collection objects for the 6 homepage collections.
+- Collection image priority is:
+  - `collection.image`
+  - `collection.featured_image`
+  - elegant gradient placeholder if no image exists
 - Confirmed the homepage template still places `ELEVA Collections Featured` between `ELEVA USP Bar` and `ELEVA Statement`.
 - Confirmed `collection-breadcrumbs` is not present in `templates/index.json`.
 - Confirmed the default Dawn newsletter is not present in `templates/index.json`.
@@ -66,6 +70,7 @@
 - Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.
 - USP bar includes 4 trust items with inline SVG icons and CSS-only staggered reveals.
 - Featured collections remain static and save-safe while acting as a premium navigation gateway.
+- Existing Shopify collection images are used automatically when available.
 - Missing collection visuals intentionally use refined gradient placeholders.
 - Statement and brand proof stay editorial and non-promotional.
 - Newsletter still reuses the Dawn customer/newsletter form pattern.
@@ -94,6 +99,8 @@
 - `ELEVA Collections Featured` schema is now minimal and save-safe: `PASS`
 - `ELEVA Collections Featured` schema contains valid `presets`: `PASS`
 - `ELEVA Collections Featured` schema contains no blocks: `PASS`
+- `ELEVA Collections Featured` uses Shopify collection images automatically: `PASS`
+- No `image_picker` settings added to collections section: `PASS`
 - Default Dawn newsletter removed from homepage composition and hidden from homepage footer view: `PASS`
 - Motion system added with CSS only and reduced-motion fallback: `PASS`
 - Hero image option added with save-safe `image_picker`: `PASS`
