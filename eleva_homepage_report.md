@@ -47,6 +47,7 @@
 - Hero refined with a softer warm glow, cleaner spacing, desktop visual panel, and smoother black pill CTA treatment.
 - Hero now includes an optional Shopify `image_picker` setting so a custom image can be added directly from the Customizer.
 - Hero image behavior was refined to support landscape visuals more naturally, including mobile visibility and a cleaner 16:9-style presentation.
+- Hero received a final mobile-first polish with reduced height, calmer spacing, and a more balanced image/text rhythm on smaller screens.
 - USP bar compacted and lightened with subtler icons and staggered reveal motion.
 - Collections cards refined with softer surfaces, calmer hover, better text rhythm, and staggered entrance motion.
 - Statement spacing reduced slightly on mobile while preserving the editorial tone.
