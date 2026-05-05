@@ -1,8 +1,8 @@
 <section class="eleva-homepage eleva-hero-section">
   <div class="eleva-container">
-    <div class="eleva-hero eleva-card eleva-card--soft">
-      <div class="eleva-hero__visual" aria-hidden="true">
-        <div class="eleva-hero__visual-orb eleva-reveal eleva-reveal--delay-2"></div>
+    <div class="eleva-hero eleva-card eleva-card--soft{% if section.settings.hero_image != blank %} eleva-hero--with-image{% endif %}">
+      <div class="eleva-hero__visual">
+        <div class="eleva-hero__visual-orb eleva-reveal eleva-reveal--delay-2" aria-hidden="true"></div>
         {% if section.settings.hero_image != blank %}
           {{
             section.settings.hero_image
@@ -15,7 +15,7 @@
               alt: section.settings.heading
           }}
         {% else %}
-          <div class="eleva-hero__visual-panel eleva-reveal eleva-reveal--delay-3"></div>
+          <div class="eleva-hero__visual-panel eleva-reveal eleva-reveal--delay-3" aria-hidden="true"></div>
         {% endif %}
       </div>
       <div class="eleva-hero__inner">

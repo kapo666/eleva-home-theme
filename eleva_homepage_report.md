@@ -46,6 +46,7 @@
 ## Refinement Pass
 - Hero refined with a softer warm glow, cleaner spacing, desktop visual panel, and smoother black pill CTA treatment.
 - Hero now includes an optional Shopify `image_picker` setting so a custom image can be added directly from the Customizer.
+- Hero image behavior was refined to support landscape visuals more naturally, including mobile visibility and a cleaner 16:9-style presentation.
 - USP bar compacted and lightened with subtler icons and staggered reveal motion.
 - Collections cards refined with softer surfaces, calmer hover, better text rhythm, and staggered entrance motion.
 - Statement spacing reduced slightly on mobile while preserving the editorial tone.
@@ -61,6 +62,7 @@
 
 ## Implementation Notes
 - Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.
+- Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.
 - USP bar includes 4 trust items with inline SVG icons and CSS-only staggered reveals.
 - Featured collections remain static and save-safe while acting as a premium navigation gateway.
 - Missing collection visuals intentionally use refined gradient placeholders.
