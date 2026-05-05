@@ -20,10 +20,10 @@
         "button_link": "shopify://collections"
       }
     },
-    "eleva_usp_bar_MM6yrw": {
+    "eleva_usp_bar_xF9p7U": {
       "type": "eleva-usp-bar",
       "blocks": {
-        "usp_FMgDfH": {
+        "usp_QT3b9q": {
           "type": "usp",
           "settings": {
             "icon": "truck",
@@ -31,7 +31,7 @@
             "text": "Consegna rapida e tracciata in tutta Italia."
           }
         },
-        "usp_yVqWLF": {
+        "usp_XV787h": {
           "type": "usp",
           "settings": {
             "icon": "return",
@@ -39,7 +39,7 @@
             "text": "Acquisti sereni con una procedura semplice."
           }
         },
-        "usp_iALyJB": {
+        "usp_VCULiJ": {
           "type": "usp",
           "settings": {
             "icon": "shield",
@@ -47,7 +47,7 @@
             "text": "Qualità pensata per accompagnare ogni ambiente."
           }
         },
-        "usp_bdihWd": {
+        "usp_ckqeHh": {
           "type": "usp",
           "settings": {
             "icon": "lock",
@@ -57,10 +57,10 @@
         }
       },
       "block_order": [
-        "usp_FMgDfH",
-        "usp_yVqWLF",
-        "usp_iALyJB",
-        "usp_bdihWd"
+        "usp_QT3b9q",
+        "usp_XV787h",
+        "usp_VCULiJ",
+        "usp_ckqeHh"
       ],
       "name": "ELEVA USP Bar",
       "settings": {}
@@ -131,7 +131,7 @@
   },
   "order": [
     "eleva_hero_wmT8gq",
-    "eleva_usp_bar_MM6yrw",
+    "eleva_usp_bar_xF9p7U",
     "eleva_collections_featured_DwXPgT",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
