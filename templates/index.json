@@ -65,6 +65,13 @@
       "name": "ELEVA USP Bar",
       "settings": {}
     },
+    "eleva_collections_featured_DwXPgT": {
+      "type": "eleva-collections-featured",
+      "name": "ELEVA Collections",
+      "settings": {
+        "heading": "Esplora le nostre collezioni"
+      }
+    },
     "eleva_statement_CQXCAd": {
       "type": "eleva-statement",
       "name": "ELEVA Statement",
@@ -120,21 +127,14 @@
         "button_label": "Iscriviti",
         "privacy_note": "Rispettiamo la tua privacy. Nessuno spam, promesso."
       }
-    },
-    "eleva_collections_featured_DwXPgT": {
-      "type": "eleva-collections-featured",
-      "name": "ELEVA Collections",
-      "settings": {
-        "heading": "Esplora le nostre collezioni"
-      }
     }
   },
   "order": [
     "eleva_hero_wmT8gq",
     "eleva_usp_bar_MM6yrw",
+    "eleva_collections_featured_DwXPgT",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
-    "eleva_newsletter_8pbJTb",
-    "eleva_collections_featured_DwXPgT"
+    "eleva_newsletter_8pbJTb"
   ]
 }
