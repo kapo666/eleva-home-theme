@@ -268,6 +268,71 @@
   font-size: 1.2rem;
 }
 
+.eleva-salvaspazio {
+  padding: var(--eleva-space-4);
+  border-color: rgba(183, 172, 159, 0.16);
+  background:
+    radial-gradient(circle at top left, rgba(212, 191, 157, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(246, 241, 233, 0.92));
+}
+
+.eleva-salvaspazio__inner {
+  display: grid;
+  gap: var(--eleva-space-5);
+}
+
+.eleva-salvaspazio__content {
+  display: grid;
+  align-content: center;
+  gap: var(--eleva-space-4);
+}
+
+.eleva-salvaspazio__heading {
+  max-width: 15ch;
+}
+
+.eleva-salvaspazio__text {
+  max-width: 50rem;
+}
+
+.eleva-salvaspazio__cta {
+  justify-self: start;
+}
+
+.eleva-salvaspazio__media {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 2.8rem;
+  border: 1px solid rgba(183, 172, 159, 0.16);
+  background:
+    radial-gradient(circle at top right, rgba(142, 155, 135, 0.12), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(212, 191, 157, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(244, 238, 230, 0.92));
+  aspect-ratio: 16 / 10;
+}
+
+.eleva-salvaspazio__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.eleva-salvaspazio__placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: end;
+  gap: var(--eleva-space-3);
+  padding: var(--eleva-space-6);
+  color: var(--eleva-color-soft-black);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(212, 191, 157, 0.18), transparent 30%),
+    radial-gradient(circle at 82% 80%, rgba(142, 155, 135, 0.12), transparent 28%);
+}
+
 .eleva-statement {
   padding: var(--eleva-space-6) var(--eleva-space-5);
   text-align: center;
@@ -405,6 +470,10 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
     gap: var(--eleva-space-6);
   }
 
+  .eleva-salvaspazio {
+    padding: var(--eleva-space-5);
+  }
+
   .eleva-proof-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -463,5 +532,16 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
 
   .eleva-statement {
     padding: var(--eleva-space-8);
+  }
+
+  .eleva-salvaspazio__inner {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: var(--eleva-space-7);
+  }
+
+  .eleva-salvaspazio__media {
+    min-height: 42rem;
+    aspect-ratio: auto;
   }
 }

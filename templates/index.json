@@ -73,6 +73,17 @@
         "heading": "Esplora le nostre collezioni"
       }
     },
+    "eleva_salvaspazio_spotlight_Ht7kLm": {
+      "type": "eleva-salvaspazio-spotlight",
+      "name": "ELEVA Salvaspazio",
+      "settings": {
+        "eyebrow": "SALVASPAZIO",
+        "heading": "Soluzioni intelligenti per piccoli spazi",
+        "text": "Scopri accessori compatti, organizer verticali e idee funzionali per trasformare ogni centimetro della tua casa.",
+        "button_label": "Scopri la collezione",
+        "button_link": "/collections/soluzioni-salvaspazio"
+      }
+    },
     "eleva_statement_CQXCAd": {
       "type": "eleva-statement",
       "name": "ELEVA Statement",
@@ -134,6 +145,7 @@
     "eleva_hero_wmT8gq",
     "eleva_usp_bar_xF9p7U",
     "eleva_collections_featured_DwXPgT",
+    "eleva_salvaspazio_spotlight_Ht7kLm",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
     "eleva_newsletter_8pbJTb"

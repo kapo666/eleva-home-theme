@@ -1,0 +1,100 @@
+{% assign salvaspazio_collection = collections['soluzioni-salvaspazio'] %}
+{% assign salvaspazio_title = section.settings.heading %}
+{% assign salvaspazio_link = section.settings.button_link | strip %}
+{% assign salvaspazio_image = blank %}
+
+{% if salvaspazio_collection != blank %}
+  {% if salvaspazio_collection.url != blank %}
+    {% assign salvaspazio_link = salvaspazio_collection.url %}
+  {% endif %}
+  {% assign salvaspazio_image = salvaspazio_collection.image %}
+  {% if salvaspazio_image == blank %}
+    {% assign salvaspazio_image = salvaspazio_collection.featured_image %}
+  {% endif %}
+{% endif %}
+
+{% if salvaspazio_link == blank %}
+  {% assign salvaspazio_link = '/collections/soluzioni-salvaspazio' %}
+{% endif %}
+
+<section class="eleva-homepage eleva-salvaspazio-section eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-salvaspazio eleva-card eleva-card--soft eleva-reveal">
+      <div class="eleva-salvaspazio__inner">
+        <div class="eleva-salvaspazio__content eleva-reveal eleva-reveal--delay-1">
+          <p class="eleva-eyebrow eleva-salvaspazio__eyebrow">{{ section.settings.eyebrow }}</p>
+          <h2 class="eleva-heading eleva-salvaspazio__heading">{{ salvaspazio_title }}</h2>
+          <p class="eleva-text eleva-muted eleva-salvaspazio__text">{{ section.settings.text }}</p>
+          <a class="eleva-btn eleva-btn--primary eleva-salvaspazio__cta" href="{{ salvaspazio_link }}">
+            {{ section.settings.button_label }}
+          </a>
+        </div>
+
+        <div class="eleva-salvaspazio__media eleva-reveal eleva-reveal--delay-2">
+          {% if salvaspazio_image != blank %}
+            {{
+              salvaspazio_image
+              | image_url: width: 1400
+              | image_tag:
+                class: 'eleva-salvaspazio__image',
+                widths: '480, 720, 960, 1200, 1400',
+                sizes: '(min-width: 990px) 42vw, 100vw',
+                loading: 'lazy',
+                alt: salvaspazio_collection.title | default: salvaspazio_title
+            }}
+          {% else %}
+            <div class="eleva-salvaspazio__placeholder">
+              <span class="eleva-eyebrow">SALVASPAZIO</span>
+              <strong>Ordine verticale, impatto minimo</strong>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Salvaspazio",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "SALVASPAZIO"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Soluzioni intelligenti per piccoli spazi"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Scopri accessori compatti, organizer verticali e idee funzionali per trasformare ogni centimetro della tua casa."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Scopri la collezione"
+    },
+    {
+      "type": "text",
+      "id": "button_link",
+      "label": "Button link",
+      "default": "/collections/soluzioni-salvaspazio"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Salvaspazio"
+    }
+  ]
+}
+{% endschema %}

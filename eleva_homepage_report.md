@@ -4,6 +4,7 @@
 - `sections/eleva-hero.liquid`
 - `sections/eleva-usp-bar.liquid`
 - `sections/eleva-collections-featured.liquid`
+- `sections/eleva-salvaspazio-spotlight.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-brand-proof.liquid`
 - `sections/eleva-newsletter.liquid`
@@ -16,6 +17,7 @@
 - `sections/eleva-brand-proof.liquid`
 - `sections/eleva-hero.liquid`
 - `sections/eleva-newsletter.liquid`
+- `sections/eleva-salvaspazio-spotlight.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-usp-bar.liquid`
 - `templates/index.json`
@@ -24,9 +26,10 @@
 1. `eleva-hero`
 2. `eleva-usp-bar`
 3. `eleva-collections-featured`
-4. `eleva-statement`
-5. `eleva-brand-proof`
-6. `eleva-newsletter`
+4. `eleva-salvaspazio-spotlight`
+5. `eleva-statement`
+6. `eleva-brand-proof`
+7. `eleva-newsletter`
 
 ## How CSS Is Loaded
 - `assets/eleva-homepage.css` is loaded from `layout/theme.liquid`
@@ -34,6 +37,12 @@
 - Homepage styles are isolated to `eleva-` prefixed classes only
 
 ## Module 2 Fixes
+- Added a dedicated `ELEVA Salvaspazio` spotlight section after the main collections grid.
+- The section uses the Shopify collection object `collections['soluzioni-salvaspazio']`.
+- Spotlight image priority is:
+  - `collection.image`
+  - `collection.featured_image`
+  - elegant gradient placeholder if no image exists
 - Replaced `ELEVA Collections Featured` with an ultra-simple save-safe version to isolate the Customizer visibility issue.
 - The section now uses a minimal schema with no blocks, one text setting, and a clean preset.
 - The section now automatically reads the existing Shopify collection objects for the 6 homepage collections.
@@ -70,6 +79,7 @@
 - Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.
 - USP bar includes 4 trust items with inline SVG icons and CSS-only staggered reveals.
 - Featured collections remain static and save-safe while acting as a premium navigation gateway.
+- Salvaspazio is highlighted separately as a two-column premium spotlight rather than a seventh collection card.
 - Existing Shopify collection images are used automatically when available.
 - Missing collection visuals intentionally use refined gradient placeholders.
 - Statement and brand proof stay editorial and non-promotional.
@@ -95,7 +105,9 @@
 - Homepage CSS is loaded in theme: `PASS`
 - `templates/index.json` JSON structure validated locally: `PASS`
 - Homepage sections are in the correct order: `PASS`
+- Salvaspazio spotlight added after `ELEVA Collections`: `PASS`
 - `collection-breadcrumbs` removed from homepage composition: `PASS`
+- Salvaspazio spotlight schema is simple and save-safe: `PASS`
 - `ELEVA Collections Featured` schema is now minimal and save-safe: `PASS`
 - `ELEVA Collections Featured` schema contains valid `presets`: `PASS`
 - `ELEVA Collections Featured` schema contains no blocks: `PASS`
