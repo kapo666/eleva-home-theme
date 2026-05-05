@@ -3,7 +3,7 @@
 
 <section class="eleva-homepage eleva-collections-section eleva-section">
   <div class="eleva-container">
-    <div class="eleva-section-head">
+    <div class="eleva-section-head eleva-reveal">
       <p class="eleva-eyebrow">Collezioni</p>
       <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
     </div>
@@ -11,7 +11,7 @@
     <div class="eleva-collections-grid">
       {% for title in eleva_collection_titles %}
         {% assign card_link = eleva_collection_links[forloop.index0] %}
-        <a class="eleva-collection-card eleva-card" href="{{ card_link }}">
+        <a class="eleva-collection-card eleva-card eleva-reveal{% cycle '', ' eleva-reveal--delay-1', ' eleva-reveal--delay-2', ' eleva-reveal--delay-3', ' eleva-reveal--delay-4', ' eleva-reveal--delay-2' %}" href="{{ card_link }}">
           <div class="eleva-collection-card__media eleva-collection-card__media--placeholder">
             <div class="eleva-collection-card__placeholder">
               <span class="eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>

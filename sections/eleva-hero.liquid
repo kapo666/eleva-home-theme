@@ -1,11 +1,15 @@
 <section class="eleva-homepage eleva-hero-section">
   <div class="eleva-container">
     <div class="eleva-hero eleva-card eleva-card--soft">
+      <div class="eleva-hero__visual" aria-hidden="true">
+        <div class="eleva-hero__visual-orb eleva-reveal eleva-reveal--delay-2"></div>
+        <div class="eleva-hero__visual-panel eleva-reveal eleva-reveal--delay-3"></div>
+      </div>
       <div class="eleva-hero__inner">
-        <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
-        <h1 class="eleva-heading eleva-hero__title">{{ section.settings.heading }}</h1>
-        <p class="eleva-text eleva-muted eleva-hero__subtitle">{{ section.settings.subheading }}</p>
-        <a class="eleva-btn eleva-btn--primary eleva-hero__cta" href="{{ section.settings.button_link | default: '/collections' }}">
+        <p class="eleva-eyebrow eleva-reveal">{{ section.settings.eyebrow }}</p>
+        <h1 class="eleva-heading eleva-hero__title eleva-reveal eleva-reveal--delay-1">{{ section.settings.heading }}</h1>
+        <p class="eleva-text eleva-muted eleva-hero__subtitle eleva-reveal eleva-reveal--delay-2">{{ section.settings.subheading }}</p>
+        <a class="eleva-btn eleva-btn--primary eleva-hero__cta eleva-reveal eleva-reveal--delay-3" href="{{ section.settings.button_link | default: '/collections' }}">
           {{ section.settings.button_label }}
         </a>
       </div>

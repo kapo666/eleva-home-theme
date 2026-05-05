@@ -2,7 +2,7 @@
   <div class="eleva-container">
     <div class="eleva-usp-grid" role="list">
       {% for block in section.blocks %}
-        <div class="eleva-usp-card eleva-card" role="listitem" {{ block.shopify_attributes }}>
+        <div class="eleva-usp-card eleva-card eleva-reveal{% case forloop.index %}{% when 2 %} eleva-reveal--delay-1{% when 3 %} eleva-reveal--delay-2{% when 4 %} eleva-reveal--delay-3{% endcase %}" role="listitem" {{ block.shopify_attributes }}>
           <div class="eleva-usp-card__icon" aria-hidden="true">
             {% case block.settings.icon %}
               {% when 'truck' %}
