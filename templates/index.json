@@ -14,7 +14,7 @@
       "name": "ELEVA Hero",
       "settings": {
         "eyebrow": "ELEVA HOME",
-        "heading": "il tocco che trasforma",
+        "heading": "Il tocco che trasforma",
         "subheading": "Design moderno per la casa contemporanea",
         "hero_image": "shopify://shop_images/Ultra_realistic_premium_interior_photography_of_a_modern_Italian_home_warm_beige_and_soft_white_tones_elegant_minimal_living_space_with_subtle_home_decor_details_clean_sofa_wooden_cof.jpg",
         "button_label": "Scopri le collezioni",
@@ -29,7 +29,7 @@
           "settings": {
             "icon": "truck",
             "title": "Spedizione gratuita oltre 50€",
-            "text": "Consegna rapida e tracciata in tutta Europa."
+            "text": "Consegna rapida in Italia."
           }
         },
         "usp_XV787h": {
@@ -37,7 +37,7 @@
           "settings": {
             "icon": "return",
             "title": "Reso gratuito entro 30 giorni",
-            "text": "Acquisti sereni con una procedura semplice."
+            "text": "Acquisti sereni, senza stress."
           }
         },
         "usp_VCULiJ": {
@@ -45,7 +45,7 @@
           "settings": {
             "icon": "shield",
             "title": "Garanzia prodotto 2 anni",
-            "text": "Qualità pensata per accompagnare ogni ambiente."
+            "text": "Qualità pensata per durare."
           }
         },
         "usp_ckqeHh": {
@@ -53,7 +53,7 @@
           "settings": {
             "icon": "lock",
             "title": "Pagamento sicuro SSL",
-            "text": "Protezione completa durante tutto il checkout."
+            "text": "Protezione completa al checkout."
           }
         }
       },
@@ -73,17 +73,6 @@
         "heading": "Esplora le nostre collezioni"
       }
     },
-    "eleva_salvaspazio_spotlight_Ht7kLm": {
-      "type": "eleva-salvaspazio-spotlight",
-      "name": "ELEVA Salvaspazio",
-      "settings": {
-        "eyebrow": "SALVASPAZIO",
-        "heading": "Soluzioni intelligenti per piccoli spazi",
-        "text": "Scopri accessori compatti, organizer verticali e idee funzionali per trasformare ogni centimetro della tua casa.",
-        "button_label": "Scopri la collezione",
-        "button_link": "/collections/soluzioni-salvaspazio"
-      }
-    },
     "eleva_statement_CQXCAd": {
       "type": "eleva-statement",
       "name": "ELEVA Statement",
@@ -99,21 +88,21 @@
           "type": "card",
           "settings": {
             "title": "Selezione curata",
-            "text": "Prodotti scelti per funzionalità, estetica e uso quotidiano."
+            "text": "Ogni prodotto è scelto per unire funzione, estetica e uso quotidiano."
           }
         },
         "card_kCNYkc": {
           "type": "card",
           "settings": {
-            "title": "Design per ogni ambiente",
-            "text": "Soluzioni per cucina, bagno, organizzazione, tessili e decorazione."
+            "title": "Design per la casa reale",
+            "text": "Soluzioni pensate per ambienti moderni, pratici e vissuti ogni giorno."
           }
         },
         "card_4jCCN4": {
           "type": "card",
           "settings": {
             "title": "Esperienza semplice",
-            "text": "Navigazione chiara, pagamenti sicuri e assistenza dedicata."
+            "text": "Navigazione chiara, pagamenti sicuri e dettagli senza rumore."
           }
         }
       },
@@ -124,8 +113,8 @@
       ],
       "name": "ELEVA Brand Proof",
       "settings": {
-        "eyebrow": "Perché ELEVA HOME",
-        "heading": "Perché scegliere ELEVA HOME"
+        "eyebrow": "ELEVA HOME",
+        "heading": "La nostra visione"
       }
     },
     "eleva_newsletter_8pbJTb": {
@@ -145,7 +134,6 @@
     "eleva_hero_wmT8gq",
     "eleva_usp_bar_xF9p7U",
     "eleva_collections_featured_DwXPgT",
-    "eleva_salvaspazio_spotlight_Ht7kLm",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
     "eleva_newsletter_8pbJTb"

@@ -17,7 +17,6 @@
 - `sections/eleva-brand-proof.liquid`
 - `sections/eleva-hero.liquid`
 - `sections/eleva-newsletter.liquid`
-- `sections/eleva-salvaspazio-spotlight.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-usp-bar.liquid`
 - `templates/index.json`
@@ -26,10 +25,9 @@
 1. `eleva-hero`
 2. `eleva-usp-bar`
 3. `eleva-collections-featured`
-4. `eleva-salvaspazio-spotlight`
-5. `eleva-statement`
-6. `eleva-brand-proof`
-7. `eleva-newsletter`
+4. `eleva-statement`
+5. `eleva-brand-proof`
+6. `eleva-newsletter`
 
 ## How CSS Is Loaded
 - `assets/eleva-homepage.css` is loaded from `layout/theme.liquid`
@@ -37,12 +35,6 @@
 - Homepage styles are isolated to `eleva-` prefixed classes only
 
 ## Module 2 Fixes
-- Added a dedicated `ELEVA Salvaspazio` spotlight section after the main collections grid.
-- The section uses the Shopify collection object `collections['soluzioni-salvaspazio']`.
-- Spotlight image priority is:
-  - `collection.image`
-  - `collection.featured_image`
-  - elegant gradient placeholder if no image exists
 - Replaced `ELEVA Collections Featured` with an ultra-simple save-safe version to isolate the Customizer visibility issue.
 - The section now uses a minimal schema with no blocks, one text setting, and a clean preset.
 - The section now automatically reads the existing Shopify collection objects for the 6 homepage collections.
@@ -55,17 +47,58 @@
 - Confirmed the default Dawn newsletter is not present in `templates/index.json`.
 - Hid the footer newsletter block on the homepage only, so `ELEVA Newsletter` remains the single newsletter touchpoint without changing footer logic.
 - Applied an Apple smooth refinement pass with softer gradients, more whitespace, quieter cards, cleaner CTA treatment and subtler borders.
+- Removed `ELEVA Salvaspazio` from the homepage composition while keeping the section file intact for possible reuse later.
 
-## Refinement Pass
-- Hero refined with a softer warm glow, cleaner spacing, desktop visual panel, and smoother black pill CTA treatment.
-- Hero now includes an optional Shopify `image_picker` setting so a custom image can be added directly from the Customizer.
-- Hero image behavior was refined to support landscape visuals more naturally, including mobile visibility and a cleaner 16:9-style presentation.
-- Hero received a final mobile-first polish with reduced height, calmer spacing, and a more balanced image/text rhythm on smaller screens.
-- USP bar compacted and lightened with subtler icons and staggered reveal motion.
-- Collections cards refined with softer surfaces, calmer hover, better text rhythm, and staggered entrance motion.
-- Statement spacing reduced slightly on mobile while preserving the editorial tone.
-- Brand proof cards upgraded with subtle visual markers and cleaner spacing.
-- Newsletter reduced in height, contained in width, and refined for cleaner input/button alignment.
+## Premium 9/10 Polish Pass
+### Hero
+- Kept the current split composition but pushed it into a more editorial direction instead of a default Dawn split.
+- Increased visual breathing space and softened the ambient gradient for a more premium first impression.
+- Refined the image panel with calmer elevation, larger radius, and a cleaner framed treatment.
+- Tuned the H1 to a more monumental editorial scale with controlled line-breaks, tighter letter-spacing and better balance.
+- Tightened the subtitle width so it reads clearly as secondary copy.
+- Refined the black pill CTA with a softer shadow and subtle translateY hover only.
+- Preserved compact mobile behavior so the image stays visible but does not dominate the viewport.
+
+### USP Bar
+- Updated the supporting text to tighter premium copy:
+  - `Consegna rapida in Italia.`
+  - `Acquisti sereni, senza stress.`
+  - `Qualità pensata per durare.`
+  - `Protezione completa al checkout.`
+- Reduced card padding and icon size for a lighter, cleaner rhythm.
+- Reworked the hover state into a subtle lift/background refinement instead of a bulky card feel.
+- Preserved the compact 2x2 mobile layout and 4-column desktop layout.
+
+### Collections
+- Kept the 6-collection structure and automatic Shopify collection image logic.
+- Upgraded cards with better overlay contrast, softer surfaces and a stronger editorial hierarchy.
+- Replaced the too-quiet `Esplora` link with `Scopri la collezione` in a pill-style micro-CTA.
+- Added gentle image scale and overlay opacity shift on hover without aggressive zoom.
+- Preserved mobile 2-column and desktop 3-column layout.
+
+### Salvaspazio
+- Removed `ELEVA Salvaspazio` from homepage composition only.
+- Confirmed `sections/eleva-salvaspazio-spotlight.liquid` was not deleted and remains reusable later.
+
+### Statement
+- Kept the section structure intact.
+- Refined the quote card with softer editorial typography, tighter max-width and a subtle hanging quote treatment.
+- Preserved the warm neutral background while keeping mobile height controlled.
+
+### Brand Proof
+- Reframed the section from defensive proof to premium positioning.
+- Changed eyebrow from `Perché ELEVA HOME` to `ELEVA HOME`.
+- Changed heading from `Perché scegliere ELEVA HOME` to `La nostra visione`.
+- Updated the three card texts to a more brand-led tone.
+- Softened cards and added quieter micro-interactions to avoid a generic SaaS look.
+
+### Newsletter
+- Reduced the overall width and vertical bulk for a more contained premium block.
+- Improved input focus with a softer border/glow treatment.
+- Refined button shadow and hover behavior to align with the hero CTA language.
+- Kept the Dawn newsletter form pattern and the existing copy.
+
+### Motion and Type
 - Added a reusable motion system:
   - `.eleva-reveal`
   - `.eleva-reveal--delay-1`
@@ -73,13 +106,14 @@
   - `.eleva-reveal--delay-3`
   - `.eleva-reveal--delay-4`
   with reduced-motion support.
+- Added balanced headings and text-wrap improvements where safe.
+- Enabled subtle typographic refinement with `font-feature-settings: "liga" 1, "kern" 1;` on key headings.
 
 ## Implementation Notes
 - Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.
 - Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.
 - USP bar includes 4 trust items with inline SVG icons and CSS-only staggered reveals.
 - Featured collections remain static and save-safe while acting as a premium navigation gateway.
-- Salvaspazio is highlighted separately as a two-column premium spotlight rather than a seventh collection card.
 - Existing Shopify collection images are used automatically when available.
 - Missing collection visuals intentionally use refined gradient placeholders.
 - Statement and brand proof stay editorial and non-promotional.
@@ -105,7 +139,7 @@
 - Homepage CSS is loaded in theme: `PASS`
 - `templates/index.json` JSON structure validated locally: `PASS`
 - Homepage sections are in the correct order: `PASS`
-- Salvaspazio spotlight added after `ELEVA Collections`: `PASS`
+- Salvaspazio spotlight removed from homepage order while keeping its section file: `PASS`
 - `collection-breadcrumbs` removed from homepage composition: `PASS`
 - Salvaspazio spotlight schema is simple and save-safe: `PASS`
 - `ELEVA Collections Featured` schema is now minimal and save-safe: `PASS`
@@ -127,4 +161,4 @@
 - Module 3: Header and navigation refinement
 
 ## Final Verdict
-`READY FOR REVIEW`
+`READY FOR LIVE REVIEW`

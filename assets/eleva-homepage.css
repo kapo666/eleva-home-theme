@@ -41,28 +41,31 @@
 }
 
 .eleva-homepage .eleva-section-head .eleva-heading {
-  max-width: 19ch;
+  max-width: 16ch;
+  text-wrap: balance;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 
 .eleva-hero-section {
-  padding: var(--eleva-space-5) 0 var(--eleva-space-7);
+  padding: var(--eleva-space-5) 0 var(--eleva-space-6);
 }
 
 .eleva-hero {
   position: relative;
-  min-height: min(70vh, 72rem);
+  min-height: min(72vh, 76rem);
   display: grid;
-  gap: var(--eleva-space-5);
+  gap: var(--eleva-space-4);
   padding: var(--eleva-space-4);
-  border: 1px solid rgba(183, 172, 159, 0.16);
+  border: 1px solid rgba(183, 172, 159, 0.15);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.42) inset,
-    0 2rem 4rem rgba(30, 26, 23, 0.04);
+    0 1.8rem 4.4rem rgba(30, 26, 23, 0.045);
   background:
-    radial-gradient(circle at 14% 18%, rgba(212, 191, 157, 0.16), transparent 34%),
-    radial-gradient(circle at 86% 20%, rgba(142, 155, 135, 0.1), transparent 28%),
-    radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.72), transparent 32%),
+    radial-gradient(circle at 10% 16%, rgba(212, 191, 157, 0.2), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(142, 155, 135, 0.1), transparent 26%),
+    radial-gradient(circle at 54% 72%, rgba(255, 255, 255, 0.8), transparent 34%),
     linear-gradient(180deg, rgba(251, 249, 244, 0.99), rgba(255, 253, 249, 1));
+  overflow: clip;
 }
 
 .eleva-hero__visual {
@@ -70,53 +73,69 @@
   display: grid;
   min-width: 0;
   overflow: hidden;
-  border-radius: 2.4rem;
-  border: 1px solid rgba(183, 172, 159, 0.16);
+  border-radius: 2.8rem;
+  border: 1px solid rgba(183, 172, 159, 0.18);
   background:
     radial-gradient(circle at top right, rgba(142, 155, 135, 0.12), transparent 28%),
     radial-gradient(circle at bottom left, rgba(212, 191, 157, 0.18), transparent 34%),
     linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(244, 238, 230, 0.92));
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.28) inset,
+    0 1.2rem 3rem rgba(30, 26, 23, 0.055);
 }
 
 .eleva-hero__inner {
   display: grid;
   align-content: center;
-  gap: var(--eleva-space-4);
+  gap: var(--eleva-space-3);
   min-height: auto;
   text-align: center;
-  max-width: 74rem;
+  max-width: 72rem;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
 .eleva-hero__title {
-  font-size: clamp(3.5rem, 8vw, 7.2rem);
-  letter-spacing: -0.04em;
+  max-width: 9.5ch;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 1.07;
+  letter-spacing: -0.035em;
   text-wrap: balance;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 
 .eleva-hero__subtitle {
-  max-width: 48rem;
+  max-width: 33rem;
   margin: 0 auto;
-  font-size: clamp(1.65rem, 2vw, 2.05rem);
-  line-height: 1.58;
+  font-size: clamp(1.55rem, 2.2vw, 1.95rem);
+  line-height: 1.55;
+  text-wrap: balance;
 }
 
 .eleva-hero__cta {
   justify-self: center;
-  min-width: 20rem;
+  min-width: 18.6rem;
   min-height: 5rem;
-  padding-inline: 2.4rem;
-  box-shadow: 0 0.8rem 2rem rgba(30, 26, 23, 0.1);
+  padding-inline: 2.3rem;
+  box-shadow: 0 0.7rem 1.8rem rgba(30, 26, 23, 0.12);
+  transition:
+    transform var(--eleva-transition-fast),
+    box-shadow var(--eleva-transition-base),
+    background-color var(--eleva-transition-base);
+}
+
+.eleva-hero__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 2.4rem rgba(30, 26, 23, 0.14);
 }
 
 .eleva-hero__visual-orb {
   position: absolute;
-  inset: auto auto -3rem -3rem;
-  width: 14rem;
-  height: 14rem;
+  inset: auto auto -3.2rem -3.2rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(212, 191, 157, 0.34), rgba(255, 255, 255, 0));
   filter: blur(2px);
@@ -145,54 +164,66 @@
 }
 
 .eleva-usp-section {
-  padding: 0 0 var(--eleva-space-8);
+  padding: 0 0 var(--eleva-space-7);
 }
 
 .eleva-usp-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--eleva-space-4);
+  gap: 1rem;
 }
 
 .eleva-usp-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: var(--eleva-space-3);
+  gap: 1.2rem;
   align-items: center;
-  padding: 1.4rem 1.5rem;
-  background: rgba(255, 253, 249, 0.78);
-  border-color: rgba(183, 172, 159, 0.16);
+  padding: 1.3rem 1.4rem;
+  background: rgba(255, 253, 249, 0.7);
+  border-color: rgba(183, 172, 159, 0.14);
   box-shadow: none;
+  transition:
+    transform var(--eleva-transition-fast),
+    border-color var(--eleva-transition-base),
+    background-color var(--eleva-transition-base);
+}
+
+.eleva-usp-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(183, 172, 159, 0.24);
+  background: rgba(255, 253, 249, 0.88);
 }
 
 .eleva-usp-card__icon {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.9rem;
+  height: 2.9rem;
   display: grid;
   place-items: center;
   border-radius: var(--eleva-radius-pill);
-  background: rgba(248, 245, 239, 0.8);
+  background: rgba(248, 245, 239, 0.66);
   color: var(--eleva-color-soft-black);
-  box-shadow: inset 0 0 0 1px rgba(183, 172, 159, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(183, 172, 159, 0.16);
 }
 
 .eleva-usp-card__icon svg {
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.45rem;
+  height: 1.45rem;
 }
 
 .eleva-usp-card__title {
   margin: 0 0 var(--eleva-space-1);
   color: var(--eleva-color-soft-black);
-  font-size: 1.3rem;
-  line-height: 1.4;
+  font-size: 1.24rem;
+  line-height: 1.35;
+  text-wrap: balance;
 }
 
 .eleva-usp-card__text {
   margin: 0;
   color: var(--eleva-color-text-muted);
-  font-size: 1.1rem;
-  line-height: 1.45;
+  font-size: 1.06rem;
+  line-height: 1.38;
+  text-wrap: pretty;
 }
 
 .eleva-collections-grid {
@@ -207,15 +238,21 @@
   color: inherit;
   text-decoration: none;
   border-color: rgba(183, 172, 159, 0.16);
-  background: rgba(255, 253, 249, 0.72);
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 253, 249, 0.76);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.36) inset;
-  transition: box-shadow var(--eleva-transition-base), border-color var(--eleva-transition-base), background-color var(--eleva-transition-base), transform var(--eleva-transition-fast);
+  transition:
+    box-shadow var(--eleva-transition-base),
+    border-color var(--eleva-transition-base),
+    background-color var(--eleva-transition-base),
+    transform var(--eleva-transition-fast);
 }
 
 .eleva-collection-card:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 1.6rem 3.2rem rgba(30, 26, 23, 0.045),
+    0 1.8rem 3.4rem rgba(30, 26, 23, 0.05),
     0 0 0 1px rgba(255, 255, 255, 0.4) inset;
   border-color: rgba(183, 172, 159, 0.28);
 }
@@ -230,11 +267,30 @@
     linear-gradient(180deg, rgba(246, 242, 235, 0.94), rgba(236, 228, 217, 0.9));
 }
 
+.eleva-collection-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(19, 17, 15, 0.02), rgba(19, 17, 15, 0.18));
+  opacity: 0.82;
+  transition: opacity var(--eleva-transition-base);
+}
+
+.eleva-collection-card:hover .eleva-collection-card__media::after {
+  opacity: 0.7;
+}
+
 .eleva-collection-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1);
+  transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.eleva-collection-card:hover .eleva-collection-card__image {
+  transform: scale(1.02);
 }
 
 .eleva-collection-card__media--placeholder {
@@ -253,19 +309,36 @@
 .eleva-collection-card__body {
   display: grid;
   gap: var(--eleva-space-2);
-  padding: var(--eleva-space-5);
+  padding: var(--eleva-space-4);
 }
 
 .eleva-collection-card__title {
   margin: 0;
   color: var(--eleva-color-soft-black);
-  font-size: 1.8rem;
-  line-height: 1.32;
+  font-size: 1.7rem;
+  line-height: 1.28;
+  text-wrap: balance;
 }
 
 .eleva-collection-card__link {
-  color: var(--eleva-color-text-muted);
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 3rem;
+  padding: 0.4rem 1.05rem;
+  border-radius: 999px;
+  background: rgba(30, 26, 23, 0.06);
+  color: var(--eleva-color-soft-black);
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition:
+    background-color var(--eleva-transition-base),
+    color var(--eleva-transition-base);
+}
+
+.eleva-collection-card:hover .eleva-collection-card__link {
+  background: rgba(30, 26, 23, 0.92);
+  color: #fff;
 }
 
 .eleva-salvaspazio {
@@ -334,21 +407,35 @@
 }
 
 .eleva-statement {
+  position: relative;
   padding: var(--eleva-space-6) var(--eleva-space-5);
   text-align: center;
-  background: linear-gradient(180deg, rgba(248, 245, 239, 0.92), rgba(244, 238, 230, 0.84));
+  background: linear-gradient(180deg, rgba(249, 246, 241, 0.94), rgba(244, 238, 230, 0.86));
   border-color: rgba(183, 172, 159, 0.18);
   box-shadow: none;
+}
+
+.eleva-statement::before {
+  content: "“";
+  position: absolute;
+  top: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(183, 172, 159, 0.45);
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1;
 }
 
 .eleva-statement__quote {
   margin: 0;
   color: var(--eleva-color-soft-black);
-  font-size: clamp(2rem, 4.8vw, 3.4rem);
-  line-height: 1.42;
-  letter-spacing: -0.02em;
-  max-width: 26ch;
+  font-size: clamp(1.95rem, 4.6vw, 3.3rem);
+  line-height: 1.38;
+  letter-spacing: -0.024em;
+  max-width: 24ch;
   margin-inline: auto;
+  text-wrap: balance;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 
 .eleva-statement__signature {
@@ -368,14 +455,24 @@
 .eleva-proof-card {
   position: relative;
   padding: var(--eleva-space-6) var(--eleva-space-5);
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.96), rgba(249, 245, 238, 0.9));
-  border-color: rgba(183, 172, 159, 0.18);
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.96), rgba(250, 246, 240, 0.92));
+  border-color: rgba(183, 172, 159, 0.16);
   box-shadow: none;
+  transition:
+    transform var(--eleva-transition-fast),
+    border-color var(--eleva-transition-base),
+    background-color var(--eleva-transition-base);
+}
+
+.eleva-proof-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(183, 172, 159, 0.24);
+  background: linear-gradient(180deg, rgba(255, 253, 249, 1), rgba(250, 246, 240, 0.96));
 }
 
 .eleva-proof-card__marker {
-  width: 3.4rem;
-  height: 0.3rem;
+  width: 3rem;
+  height: 0.24rem;
   display: inline-block;
   margin-bottom: var(--eleva-space-4);
   border-radius: var(--eleva-radius-pill);
@@ -387,22 +484,24 @@
   color: var(--eleva-color-soft-black);
   font-size: var(--eleva-font-size-lg);
   line-height: 1.3;
+  text-wrap: balance;
 }
 
 .eleva-newsletter {
   display: grid;
-  gap: var(--eleva-space-5);
-  width: min(100%, 86rem);
+  gap: var(--eleva-space-4);
+  width: min(100%, 74rem);
   margin-inline: auto;
-  padding: var(--eleva-space-6) var(--eleva-space-5);
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(247, 243, 236, 0.92));
+  padding: var(--eleva-space-5) var(--eleva-space-4);
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(248, 244, 237, 0.94));
   border-color: rgba(183, 172, 159, 0.18);
   box-shadow: none;
 }
 
 .eleva-newsletter__intro {
   display: grid;
-  gap: var(--eleva-space-3);
+  gap: var(--eleva-space-2);
+  max-width: 52rem;
 }
 
 .eleva-newsletter-form__field-wrapper {
@@ -421,13 +520,25 @@
 }
 
 .eleva-newsletter-form__field .field__input {
-  min-height: 5rem;
+  min-height: 4.8rem;
   border-radius: var(--eleva-radius-pill);
   border: 1px solid rgba(183, 172, 159, 0.34);
   box-shadow: none;
   background: rgba(255, 253, 249, 0.96);
   padding-left: 2rem;
   padding-right: 2rem;
+  transition:
+    border-color var(--eleva-transition-base),
+    box-shadow var(--eleva-transition-base),
+    background-color var(--eleva-transition-base);
+}
+
+.eleva-newsletter-form__field .field__input:focus {
+  border-color: rgba(30, 26, 23, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(30, 26, 23, 0.08),
+    0 0 0 0.5rem rgba(212, 191, 157, 0.12);
+  background: rgba(255, 255, 255, 0.98);
 }
 
 .eleva-newsletter-form__field .field__label {
@@ -436,11 +547,18 @@
 
 .eleva-newsletter-form__button {
   width: 100%;
+  min-height: 4.8rem;
+  box-shadow: 0 0.7rem 1.8rem rgba(30, 26, 23, 0.12);
+}
+
+.eleva-newsletter-form__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 2.4rem rgba(30, 26, 23, 0.14);
 }
 
 .eleva-newsletter__privacy {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-block--newsletter {
@@ -479,7 +597,7 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
   }
 
   .eleva-newsletter {
-    padding: var(--eleva-space-7);
+    padding: var(--eleva-space-6);
   }
 
   .eleva-newsletter-form__field {
@@ -495,17 +613,17 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
 
 @media screen and (min-width: 990px) {
   .eleva-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
     align-items: center;
     gap: var(--eleva-space-7);
-    padding: calc(var(--eleva-space-8) + var(--eleva-space-3)) var(--eleva-space-8);
+    padding: calc(var(--eleva-space-8) + var(--eleva-space-2)) var(--eleva-space-8);
   }
 
   .eleva-hero__visual {
     place-items: center;
-    min-height: 44rem;
+    min-height: 46rem;
     aspect-ratio: auto;
-    border-radius: 3rem;
+    border-radius: 3.2rem;
   }
 
   .eleva-hero__visual-orb {
@@ -517,13 +635,14 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
   .eleva-hero__inner {
     text-align: left;
     margin: 0;
-    max-width: 60rem;
-    min-height: 44rem;
-    gap: var(--eleva-space-5);
+    max-width: 52rem;
+    min-height: 46rem;
+    gap: var(--eleva-space-4);
   }
 
   .eleva-hero__subtitle {
     margin: 0;
+    max-width: 34rem;
   }
 
   .eleva-hero__cta {
