@@ -131,6 +131,8 @@
 
 {%- assign eleva_nav_titles = 'Bagno|Cucina|Organizzazione|Decorazione|Illuminazione|Tessili|Salvaspazio' | split: '|' -%}
 {%- assign eleva_nav_urls = '/collections/accessori-bagno|/collections/cucina-tavola|/collections/organizzazione-casa|/collections/decorazione-casa|/collections/illuminazione-casa|/collections/tessili-casa|/collections/soluzioni-salvaspazio' | split: '|' -%}
+{%- assign eleva_subnav_titles_groups = 'Dispenser e Portasapone|Contenitori Bagno|Tappetini Bagno||Contenitori Cucina|Utensili Cucina|Stoviglie e Piatti||Organizzazione Cucina|Organizzazione Bagno|Organizzazione Camera|Organizzazione Ufficio|Organizzazione Ingresso||Vasi e Portavasi|Specchi Decorativi|Quadri e Poster|Candele e Portacandele|Cuscini Decorativi||Lampade da Tavolo|Lampade a Sospensione|Lampade da Terra|Applique||Coperte e Plaid|Tappeti Moderni|Tende||Salvaspazio Cucina|Salvaspazio Bagno|Salvaspazio Camera' | split: '||' -%}
+{%- assign eleva_subnav_urls_groups = '/collections/dispenser-portasapone|/collections/contenitori-bagno|/collections/tappetini-bagno||/collections/contenitori-cucina|/collections/utensili-cucina|/collections/stoviglie-piatti||/collections/organizzazione-cucina|/collections/organizzazione-bagno|/collections/organizzazione-camera|/collections/organizzazione-ufficio|/collections/organizzazione-ingresso||/collections/vasi-decorativi|/collections/specchi-decorativi|/collections/quadri-poster|/collections/candele-portacandele|/collections/cuscini-decorativi||/collections/lampade-tavolo|/collections/lampade-sospensione|/collections/lampade-terra|/collections/applique-lampade-parete||/collections/coperte-plaid|/collections/tappeti-moderni|/collections/tende-moderne||/collections/salvaspazio-cucina|/collections/salvaspazio-bagno|/collections/salvaspazio-camera' | split: '||' -%}
 {%- assign current_path = request.path -%}
 
 <{{ header_tag }}
@@ -273,21 +275,82 @@
       <ul class="eleva-header__drawer-list" role="list">
         {%- for nav_title in eleva_nav_titles -%}
           {%- assign nav_url = eleva_nav_urls[forloop.index0] -%}
+          {%- assign subnav_titles = eleva_subnav_titles_groups[forloop.index0] | split: '|' -%}
+          {%- assign subnav_urls = eleva_subnav_urls_groups[forloop.index0] | split: '|' -%}
           {%- assign nav_prefix = nav_url | append: '/' -%}
           {%- assign nav_is_active = false -%}
+          {%- assign submenu_is_active = false -%}
           {%- if current_path == nav_url or current_path contains nav_prefix -%}
             {%- assign nav_is_active = true -%}
           {%- endif -%}
+          {%- for subnav_url in subnav_urls -%}
+            {%- assign subnav_prefix = subnav_url | append: '/' -%}
+            {%- if current_path == subnav_url or current_path contains subnav_prefix -%}
+              {%- assign submenu_is_active = true -%}
+              {%- assign nav_is_active = true -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- assign has_submenu = false -%}
+          {%- if subnav_titles.size > 0 and subnav_titles.first != blank -%}
+            {%- assign has_submenu = true -%}
+          {%- endif -%}
           <li>
-            <a
-              href="{{ nav_url }}"
-              class="eleva-header__drawer-link link focus-inset{% if nav_is_active %} is-active{% endif %}"
-              {% if nav_is_active %}
-                aria-current="page"
-              {% endif %}
-            >
-              {{ nav_title }}
-            </a>
+            <div class="eleva-header__drawer-item">
+              <a
+                href="{{ nav_url }}"
+                class="eleva-header__drawer-link link focus-inset{% if nav_is_active %} is-active{% endif %}"
+                {% if nav_is_active %}
+                  aria-current="page"
+                {% endif %}
+              >
+                {{ nav_title }}
+              </a>
+              {%- if has_submenu -%}
+                <button
+                  type="button"
+                  class="eleva-header__drawer-toggle link focus-inset"
+                  aria-label="Apri {{ nav_title }}"
+                  aria-expanded="{% if submenu_is_active %}true{% else %}false{% endif %}"
+                  aria-controls="ElevaHeaderSubmenu-{{ forloop.index }}"
+                  data-eleva-submenu-toggle
+                >
+                  <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+                </button>
+              {%- endif -%}
+            </div>
+            {%- if has_submenu -%}
+              <div
+                id="ElevaHeaderSubmenu-{{ forloop.index }}"
+                class="eleva-header__drawer-submenu{% if submenu_is_active %} is-open{% endif %}"
+                {% unless submenu_is_active %}
+                  hidden
+                {% endunless %}
+                aria-hidden="{% if submenu_is_active %}false{% else %}true{% endif %}"
+                data-eleva-submenu
+              >
+                <ul class="eleva-header__drawer-submenu-list" role="list">
+                  {%- for subnav_title in subnav_titles -%}
+                    {%- assign subnav_url = subnav_urls[forloop.index0] -%}
+                    {%- assign subnav_prefix = subnav_url | append: '/' -%}
+                    {%- assign subnav_is_active = false -%}
+                    {%- if current_path == subnav_url or current_path contains subnav_prefix -%}
+                      {%- assign subnav_is_active = true -%}
+                    {%- endif -%}
+                    <li>
+                      <a
+                        href="{{ subnav_url }}"
+                        class="eleva-header__drawer-sublink link focus-inset{% if subnav_is_active %} is-active{% endif %}"
+                        {% if subnav_is_active %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ subnav_title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
           </li>
         {%- endfor -%}
       </ul>

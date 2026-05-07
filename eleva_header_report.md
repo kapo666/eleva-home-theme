@@ -39,6 +39,7 @@
   - white background
   - dark backdrop overlay
   - stacked collection links
+  - mobile-only accordion submenus under every main collection
   - secondary links:
     - `Account`
     - `Assistenza`
@@ -68,6 +69,40 @@
   5. `Illuminazione` → `/collections/illuminazione-casa`
   6. `Tessili` → `/collections/tessili-casa`
   7. `Salvaspazio` → `/collections/soluzioni-salvaspazio`
+- Added subcollection links inside the mobile drawer only:
+  - `Bagno`
+    - `Dispenser e Portasapone`
+    - `Contenitori Bagno`
+    - `Tappetini Bagno`
+  - `Cucina`
+    - `Contenitori Cucina`
+    - `Utensili Cucina`
+    - `Stoviglie e Piatti`
+  - `Organizzazione`
+    - `Organizzazione Cucina`
+    - `Organizzazione Bagno`
+    - `Organizzazione Camera`
+    - `Organizzazione Ufficio`
+    - `Organizzazione Ingresso`
+  - `Decorazione`
+    - `Vasi e Portavasi`
+    - `Specchi Decorativi`
+    - `Quadri e Poster`
+    - `Candele e Portacandele`
+    - `Cuscini Decorativi`
+  - `Illuminazione`
+    - `Lampade da Tavolo`
+    - `Lampade a Sospensione`
+    - `Lampade da Terra`
+    - `Applique`
+  - `Tessili`
+    - `Coperte e Plaid`
+    - `Tappeti Moderni`
+    - `Tende`
+  - `Salvaspazio`
+    - `Salvaspazio Cucina`
+    - `Salvaspazio Bagno`
+    - `Salvaspazio Camera`
 
 ## 7. Salvaspazio Integration
 - `Salvaspazio` is intentionally last in the desktop nav
@@ -83,6 +118,12 @@
   - existing Dawn account route logic remains
   - desktop icon stays in the top bar
   - mobile account access is moved into the drawer
+- Desktop navigation remains simple:
+  - no dropdowns or mega-menu added
+- Mobile drawer was refined for readability:
+  - warmer opaque surface
+  - softer lines
+  - quieter subcollection text hierarchy
 
 ## 9. Accessibility Checks
 - mobile menu button has `aria-label`, `aria-controls`, `aria-expanded`
@@ -92,6 +133,9 @@
 - keyboard close with `Escape` implemented
 - focusable links/buttons preserved
 - reduced motion respected in CSS
+- accordion chevrons have `aria-expanded`
+- accordion panels use `aria-hidden`
+- touch targets remain at least `44px`
 
 ## 10. Performance Notes
 - no heavy libraries
@@ -101,6 +145,8 @@
 - mobile drawer JS is small and isolated
 - glass blur emphasized on desktop only
 - mobile keeps a more solid header for safer performance
+- accordion behavior uses lightweight JS only
+- only one submenu stays open at a time for cleaner interaction
 
 ## 11. Dangerous Files Untouched Confirmation
 - `sections/cart-drawer.liquid`
@@ -125,6 +171,9 @@
 - new JS asset loaded: `PASS`
 - fixed navigation links added: `PASS`
 - Salvaspazio integrated last with separation: `PASS`
+- mobile accordion submenus added: `PASS`
+- subcollection links added: `PASS`
+- mobile drawer readability refined: `PASS`
 - cart icon bubble preserved: `PASS`
 - Dawn search snippet preserved: `PASS`
 - mobile menu open/close behavior added: `PASS`
