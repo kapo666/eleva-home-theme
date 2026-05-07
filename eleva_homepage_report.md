@@ -4,6 +4,8 @@
 - `sections/eleva-hero.liquid`
 - `sections/eleva-usp-bar.liquid`
 - `sections/eleva-collections-featured.liquid`
+- `sections/eleva-shop-by-room.liquid`
+- `sections/eleva-selezione-momento.liquid`
 - `sections/eleva-salvaspazio-spotlight.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-brand-proof.liquid`
@@ -25,9 +27,11 @@
 1. `eleva-hero`
 2. `eleva-usp-bar`
 3. `eleva-collections-featured`
-4. `eleva-statement`
-5. `eleva-brand-proof`
-6. `eleva-newsletter`
+4. `eleva-shop-by-room`
+5. `eleva-selezione-momento`
+6. `eleva-statement`
+7. `eleva-brand-proof`
+8. `eleva-newsletter`
 
 ## How CSS Is Loaded
 - `assets/eleva-homepage.css` is loaded from `layout/theme.liquid`
@@ -109,6 +113,59 @@
 - Added balanced headings and text-wrap improvements where safe.
 - Enabled subtle typographic refinement with `font-feature-settings: "liga" 1, "kern" 1;` on key headings.
 
+## Module 4 Discovery + Internal Linking
+### New sections added
+- Added `ELEVA Shop by Room` as a secondary discovery layer inspired by LidoNova’s stronger browse architecture, but adapted to ELEVA as a calmer room-based guide.
+- Added `ELEVA Selezione` as a light merchandising layer inspired by LidoNova’s featured/trend logic, without adding aggressive CRO behavior.
+
+### Final homepage order
+1. `ELEVA Hero`
+2. `ELEVA USP Bar`
+3. `ELEVA Collections`
+4. `ELEVA Shop by Room`
+5. `ELEVA Selezione`
+6. `ELEVA Statement`
+7. `ELEVA Brand Proof`
+8. `ELEVA Newsletter`
+
+### Shop by Room structure
+- Added 6 room/use-case entry points:
+  - `Bagno ordinato`
+  - `Cucina funzionale`
+  - `Camera essenziale`
+  - `Ingresso accogliente`
+  - `Piccoli spazi`
+  - `Casa completa`
+- Each card includes a title, support text and direct internal link.
+- The section is intentionally compact and editorial, not utility-heavy.
+
+### Selezione del momento structure
+- Added a display-only curated product grid.
+- Uses a Shopify collection setting with fallback to `organizzazione-casa`.
+- Displays:
+  - featured image
+  - title
+  - price
+  - product link
+- No quick add, no variant UI, no product form, no cart logic.
+
+### Internal links added
+- `/collections/organizzazione-bagno`
+- `/collections/organizzazione-cucina`
+- `/collections/organizzazione-camera`
+- `/collections/organizzazione-ingresso`
+- `/collections/soluzioni-salvaspazio`
+- `/collections/organizzazione-casa`
+
+### Product merchandising logic
+- Calm merchandising only:
+  - no urgency
+  - no badges
+  - no quick add
+  - no cart mutation
+  - no JS-heavy behavior
+- This imports LidoNova’s stronger discovery principle while preserving ELEVA’s premium minimal shell.
+
 ## Implementation Notes
 - Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.
 - Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.
@@ -118,6 +175,8 @@
 - Missing collection visuals intentionally use refined gradient placeholders.
 - Statement and brand proof stay editorial and non-promotional.
 - Newsletter still reuses the Dawn customer/newsletter form pattern.
+- `ELEVA Shop by Room` uses simple text settings and text-based default links to remain Shopify save-safe.
+- `ELEVA Selezione` uses a native Shopify `collection` setting and a safe fallback when no collection is chosen.
 
 ## Dangerous Files Untouched
 - `sections/header.liquid`
@@ -139,6 +198,14 @@
 - Homepage CSS is loaded in theme: `PASS`
 - `templates/index.json` JSON structure validated locally: `PASS`
 - Homepage sections are in the correct order: `PASS`
+- `ELEVA Shop by Room` schema is valid and includes presets: `PASS`
+- `ELEVA Selezione` schema is valid and includes presets: `PASS`
+- Both new sections are save-safe and avoid unsafe url defaults: `PASS`
+- Display-only product merchandising adds no cart or product-form logic: `PASS`
+- Salvaspazio spotlight remains absent from homepage composition: `PASS`
+- Default Dawn newsletter is still not present on homepage: `PASS`
+- Collection breadcrumbs are still absent from homepage: `PASS`
+- Header files were not modified and current navigation should remain unaffected: `PASS`
 - Salvaspazio spotlight removed from homepage order while keeping its section file: `PASS`
 - `collection-breadcrumbs` removed from homepage composition: `PASS`
 - Salvaspazio spotlight schema is simple and save-safe: `PASS`

@@ -1,0 +1,102 @@
+{% assign eleva_selection_handle = section.settings.collection %}
+{% if eleva_selection_handle == blank %}
+  {% assign eleva_selection_handle = 'organizzazione-casa' %}
+{% endif %}
+{% assign eleva_selection_collection = collections[eleva_selection_handle] %}
+{% assign eleva_product_limit = section.settings.product_limit %}
+{% if eleva_product_limit == blank %}
+  {% assign eleva_product_limit = 4 %}
+{% endif %}
+
+<section class="eleva-homepage eleva-selection eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-selection__header eleva-section-head eleva-reveal">
+      <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
+      <p class="eleva-text eleva-muted">{{ section.settings.intro }}</p>
+    </div>
+
+    {% if eleva_selection_collection != blank and eleva_selection_collection.products_count > 0 %}
+      <div class="eleva-selection__grid">
+        {% for product in eleva_selection_collection.products limit: eleva_product_limit %}
+          <a class="eleva-selection__card eleva-card eleva-card--soft eleva-reveal{% cycle '', ' eleva-reveal--delay-1', ' eleva-reveal--delay-2', ' eleva-reveal--delay-3' %}" href="{{ product.url }}">
+            <div class="eleva-selection__media">
+              {% if product.featured_image != blank %}
+                {{
+                  product.featured_image
+                  | image_url: width: 900
+                  | image_tag:
+                    class: 'eleva-selection__image',
+                    widths: '280, 420, 640, 900',
+                    sizes: '(min-width: 990px) 25vw, 50vw',
+                    loading: 'lazy',
+                    alt: product.title
+                }}
+              {% else %}
+                <div class="eleva-selection__placeholder">
+                  <span class="eleva-eyebrow">{{ eleva_selection_collection.title | default: section.settings.heading }}</span>
+                </div>
+              {% endif %}
+            </div>
+            <div class="eleva-selection__body">
+              <h3 class="eleva-selection__title">{{ product.title }}</h3>
+              <p class="eleva-selection__price">{{ product.price | money }}</p>
+              <span class="eleva-selection__link">Scopri il prodotto</span>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="eleva-selection__empty eleva-card eleva-card--soft eleva-reveal eleva-reveal--delay-1">
+        <p class="eleva-text eleva-muted">Una selezione curata arriverà presto.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Selezione",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "CURATO DA ELEVA"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Selezione del momento"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "Oggetti scelti per unire funzionalità, estetica e piccoli gesti quotidiani."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Number of products",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Selezione"
+    }
+  ]
+}
+{% endschema %}

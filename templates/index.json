@@ -73,6 +73,27 @@
         "heading": "Esplora le nostre collezioni"
       }
     },
+    "eleva_shop_room_6kq2Rn": {
+      "type": "eleva-shop-by-room",
+      "name": "ELEVA Shop by Room",
+      "settings": {
+        "eyebrow": "GUIDA ALLA CASA",
+        "heading": "Scegli per ambiente",
+        "intro": "Trova rapidamente le soluzioni più adatte al tuo spazio, dal bagno alla cucina fino agli angoli da organizzare.",
+        "links": "/collections/organizzazione-bagno|/collections/organizzazione-cucina|/collections/organizzazione-camera|/collections/organizzazione-ingresso|/collections/soluzioni-salvaspazio|/collections/organizzazione-casa"
+      }
+    },
+    "eleva_selection_s1Qm8K": {
+      "type": "eleva-selezione-momento",
+      "name": "ELEVA Selezione",
+      "settings": {
+        "eyebrow": "CURATO DA ELEVA",
+        "heading": "Selezione del momento",
+        "intro": "Oggetti scelti per unire funzionalità, estetica e piccoli gesti quotidiani.",
+        "collection": "organizzazione-casa",
+        "product_limit": 4
+      }
+    },
     "eleva_statement_CQXCAd": {
       "type": "eleva-statement",
       "name": "ELEVA Statement",
@@ -134,6 +155,8 @@
     "eleva_hero_wmT8gq",
     "eleva_usp_bar_xF9p7U",
     "eleva_collections_featured_DwXPgT",
+    "eleva_shop_room_6kq2Rn",
+    "eleva_selection_s1Qm8K",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
     "eleva_newsletter_8pbJTb"

@@ -1,0 +1,65 @@
+{% assign eleva_room_titles = 'Bagno ordinato|Cucina funzionale|Camera essenziale|Ingresso accogliente|Piccoli spazi|Casa completa' | split: '|' %}
+{% assign eleva_room_links = section.settings.links | split: '|' %}
+{% assign eleva_room_texts = 'Mensole, contenitori e dettagli funzionali per un bagno più pulito e armonioso.|Soluzioni pratiche per dispensa, piano cucina e accessori quotidiani.|Idee salvaspazio e contenitori per rendere la camera più leggera.|Appendiabiti, organizer e soluzioni per dare ordine al primo sguardo.|Accessori compatti e intelligenti per sfruttare ogni centimetro.|Una selezione curata per organizzare ogni ambiente con stile.' | split: '|' %}
+
+<section class="eleva-homepage eleva-shop-room eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-shop-room__header eleva-section-head eleva-reveal">
+      <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
+      <p class="eleva-text eleva-muted">{{ section.settings.intro }}</p>
+    </div>
+
+    <div class="eleva-shop-room__grid">
+      {% for room_title in eleva_room_titles %}
+        {% assign room_link = eleva_room_links[forloop.index0] | strip %}
+        {% assign room_text = eleva_room_texts[forloop.index0] %}
+        <a class="eleva-shop-room__card eleva-card eleva-card--soft eleva-reveal{% cycle '', ' eleva-reveal--delay-1', ' eleva-reveal--delay-2', ' eleva-reveal--delay-3', ' eleva-reveal--delay-4', ' eleva-reveal--delay-2' %}" href="{{ room_link }}">
+          <span class="eleva-shop-room__index eleva-eyebrow">{{ forloop.index | prepend: '0' }}</span>
+          <h3 class="eleva-shop-room__title">{{ room_title }}</h3>
+          <p class="eleva-shop-room__text">{{ room_text }}</p>
+          <span class="eleva-shop-room__link">Esplora</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Shop by Room",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "GUIDA ALLA CASA"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Scegli per ambiente"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "Trova rapidamente le soluzioni più adatte al tuo spazio, dal bagno alla cucina fino agli angoli da organizzare."
+    },
+    {
+      "type": "textarea",
+      "id": "links",
+      "label": "Room links separated by |",
+      "default": "/collections/organizzazione-bagno|/collections/organizzazione-cucina|/collections/organizzazione-camera|/collections/organizzazione-ingresso|/collections/soluzioni-salvaspazio|/collections/organizzazione-casa"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Shop by Room"
+    }
+  ]
+}
+{% endschema %}
