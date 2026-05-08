@@ -1,0 +1,47 @@
+{% assign eleva_payment_labels = 'Visa|Mastercard|PayPal|Apple Pay|Klarna|SSL' | split: '|' %}
+
+<section class="eleva-homepage eleva-trust-badges-section eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-trust-badges eleva-card eleva-card--soft eleva-reveal">
+      <div class="eleva-trust-badges__header">
+        <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
+        <p class="eleva-text eleva-muted">{{ section.settings.subheading }}</p>
+      </div>
+
+      <div class="eleva-trust-badges__list" role="list">
+        {% for label in eleva_payment_labels %}
+          <span class="eleva-trust-badges__pill eleva-reveal{% case forloop.index %}{% when 2 %} eleva-reveal--delay-1{% when 3 %} eleva-reveal--delay-2{% when 4 %} eleva-reveal--delay-3{% when 5 %} eleva-reveal--delay-4{% when 6 %} eleva-reveal--delay-2{% endcase %}" role="listitem">
+            {{ label }}
+          </span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Trust",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Pagamenti sicuri e certificati"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Tutti i dati sono protetti con crittografia SSL e metodi di pagamento sicuri."
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Trust"
+    }
+  ]
+}
+{% endschema %}

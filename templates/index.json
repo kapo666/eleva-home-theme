@@ -29,7 +29,7 @@
           "settings": {
             "icon": "truck",
             "title": "Spedizione gratuita oltre 50€",
-            "text": "Consegna rapida in Italia."
+            "text": "Consegna in 3-5 giorni lavorativi"
           }
         },
         "usp_XV787h": {
@@ -37,7 +37,7 @@
           "settings": {
             "icon": "return",
             "title": "Reso gratuito entro 30 giorni",
-            "text": "Acquisti sereni, senza stress."
+            "text": "Anche se il prodotto è stato aperto"
           }
         },
         "usp_VCULiJ": {
@@ -45,15 +45,15 @@
           "settings": {
             "icon": "shield",
             "title": "Garanzia prodotto 2 anni",
-            "text": "Qualità pensata per durare."
+            "text": "Copertura completa su difetti"
           }
         },
         "usp_ckqeHh": {
           "type": "usp",
           "settings": {
             "icon": "lock",
-            "title": "Pagamento sicuro SSL",
-            "text": "Protezione completa al checkout."
+            "title": "Pagamento sicuro certificato",
+            "text": "Visa, Mastercard, PayPal, Klarna"
           }
         }
       },
@@ -108,22 +108,22 @@
         "card_wphwzt": {
           "type": "card",
           "settings": {
-            "title": "Selezione curata",
-            "text": "Ogni prodotto è scelto per unire funzione, estetica e uso quotidiano."
+            "title": "Selezione rigorosa",
+            "text": "Ogni prodotto è selezionato e testato personalmente dal nostro team per garantire funzionalità, estetica e durata nel tempo."
           }
         },
         "card_kCNYkc": {
           "type": "card",
           "settings": {
-            "title": "Design per la casa reale",
-            "text": "Soluzioni pensate per ambienti moderni, pratici e vissuti ogni giorno."
+            "title": "Garanzia estesa",
+            "text": "2 anni di garanzia completa su tutti i prodotti, con sostituzione rapida in caso di difetti di fabbricazione."
           }
         },
         "card_4jCCN4": {
           "type": "card",
           "settings": {
-            "title": "Esperienza semplice",
-            "text": "Navigazione chiara, pagamenti sicuri e dettagli senza rumore."
+            "title": "Assistenza dedicata",
+            "text": "Team di assistenza italiano disponibile via email. Rispondiamo entro 24h, anche durante il weekend."
           }
         }
       },
@@ -132,10 +132,62 @@
         "card_kCNYkc",
         "card_4jCCN4"
       ],
-      "name": "ELEVA Brand Proof",
+      "name": "ELEVA Quality",
       "settings": {
         "eyebrow": "ELEVA HOME",
-        "heading": "La nostra visione"
+        "heading": "Il nostro impegno per la qualità"
+      }
+    },
+    "eleva_faq_micro_jmT6Ld": {
+      "type": "eleva-faq-micro",
+      "blocks": {
+        "faq_1vK8mz": {
+          "type": "faq",
+          "settings": {
+            "question": "Quanto tempo per la consegna?",
+            "answer": "Spediamo gli ordini in 24-48h. La consegna richiede 3-5 giorni lavorativi in tutta Italia. Riceverai il tracking via email."
+          }
+        },
+        "faq_2xB3qa": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso restituire un prodotto anche se aperto?",
+            "answer": "Sì. Hai 30 giorni per restituire qualsiasi prodotto, anche se è stato aperto e provato. Il reso è gratuito."
+          }
+        },
+        "faq_3nQ7yc": {
+          "type": "faq",
+          "settings": {
+            "question": "I prodotti sono di qualità testata?",
+            "answer": "Ogni prodotto è selezionato e controllato dal nostro team prima di essere proposto su ELEVA HOME. La garanzia di 2 anni è inclusa."
+          }
+        },
+        "faq_4hR2up": {
+          "type": "faq",
+          "settings": {
+            "question": "Come posso contattare l’assistenza?",
+            "answer": "Scrivi a assistenza@elevahome.it. Ti rispondiamo entro 24h con supporto chiaro e dedicato."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1vK8mz",
+        "faq_2xB3qa",
+        "faq_3nQ7yc",
+        "faq_4hR2up"
+      ],
+      "name": "ELEVA FAQ",
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti"
+      }
+    },
+    "eleva_trust_badges_c2P4Vr": {
+      "type": "eleva-trust-badges",
+      "name": "ELEVA Trust",
+      "settings": {
+        "heading": "Pagamenti sicuri e certificati",
+        "subheading": "Tutti i dati sono protetti con crittografia SSL e metodi di pagamento sicuri."
       }
     },
     "eleva_newsletter_8pbJTb": {
@@ -159,6 +211,8 @@
     "eleva_selection_s1Qm8K",
     "eleva_statement_CQXCAd",
     "eleva_brand_proof_z3M4kV",
+    "eleva_faq_micro_jmT6Ld",
+    "eleva_trust_badges_c2P4Vr",
     "eleva_newsletter_8pbJTb"
   ]
 }

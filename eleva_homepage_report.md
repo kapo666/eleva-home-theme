@@ -6,6 +6,8 @@
 - `sections/eleva-collections-featured.liquid`
 - `sections/eleva-shop-by-room.liquid`
 - `sections/eleva-selezione-momento.liquid`
+- `sections/eleva-faq-micro.liquid`
+- `sections/eleva-trust-badges.liquid`
 - `sections/eleva-salvaspazio-spotlight.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-brand-proof.liquid`
@@ -16,9 +18,11 @@
 ## Files Modified
 - `assets/eleva-homepage.css`
 - `sections/eleva-collections-featured.liquid`
+- `sections/eleva-faq-micro.liquid`
 - `sections/eleva-brand-proof.liquid`
 - `sections/eleva-hero.liquid`
 - `sections/eleva-newsletter.liquid`
+- `sections/eleva-trust-badges.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-usp-bar.liquid`
 - `templates/index.json`
@@ -125,8 +129,10 @@
 4. `ELEVA Shop by Room`
 5. `ELEVA Selezione`
 6. `ELEVA Statement`
-7. `ELEVA Brand Proof`
-8. `ELEVA Newsletter`
+7. `ELEVA Quality`
+8. `ELEVA FAQ`
+9. `ELEVA Trust`
+10. `ELEVA Newsletter`
 
 ### Shop by Room structure
 - Added 6 room/use-case entry points:
@@ -166,6 +172,53 @@
   - no JS-heavy behavior
 - This imports LidoNova’s stronger discovery principle while preserving ELEVA’s premium minimal shell.
 
+## Module 5 Homepage Trust Layer
+### USP Bar 2.0 changes
+- Updated the 4 trust items with more concrete and conversion-relevant subtitles:
+  - `Spedizione gratuita oltre 50€` → `Consegna in 3-5 giorni lavorativi`
+  - `Reso gratuito entro 30 giorni` → `Anche se il prodotto è stato aperto`
+  - `Garanzia prodotto 2 anni` → `Copertura completa su difetti`
+  - `Pagamento sicuro certificato` → `Visa, Mastercard, PayPal, Klarna`
+- Kept the layout compact and premium while making the reassurance more explicit.
+
+### Quality Statement changes
+- Reframed the old brand-proof block into a more concrete trust section.
+- New heading:
+  - `Il nostro impegno per la qualità`
+- New cards:
+  - `Selezione rigorosa`
+  - `Garanzia estesa`
+  - `Assistenza dedicata`
+- The section now answers product quality, warranty and support objections more directly.
+
+### FAQ Micro added
+- Added a compact homepage FAQ using native `details/summary`.
+- 4 questions cover:
+  - delivery timing
+  - returns even after opening
+  - product quality checks
+  - customer support contact
+- First item opens by default without custom JS.
+
+### Trust Badges added
+- Added a payment trust section before the newsletter.
+- Uses neutral text-based pills only:
+  - `Visa`
+  - `Mastercard`
+  - `PayPal`
+  - `Apple Pay`
+  - `Klarna`
+  - `SSL`
+- No fake trust seals, no fake certifications, no external logos.
+
+### Trust objections resolved
+- `Quando arriva il mio ordine?`
+- `Posso restituire un prodotto aperto?`
+- `La qualità è davvero controllata?`
+- `C’è una garanzia reale?`
+- `Come pago in sicurezza?`
+- `Se ho un problema, chi mi risponde?`
+
 ## Implementation Notes
 - Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.
 - Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.
@@ -177,6 +230,8 @@
 - Newsletter still reuses the Dawn customer/newsletter form pattern.
 - `ELEVA Shop by Room` uses simple text settings and text-based default links to remain Shopify save-safe.
 - `ELEVA Selezione` uses a native Shopify `collection` setting and a safe fallback when no collection is chosen.
+- `ELEVA FAQ` uses native HTML disclosure patterns, so no extra JavaScript was needed.
+- `ELEVA Trust` keeps payment reassurance text-based and visually restrained.
 
 ## Dangerous Files Untouched
 - `sections/header.liquid`
@@ -200,11 +255,18 @@
 - Homepage sections are in the correct order: `PASS`
 - `ELEVA Shop by Room` schema is valid and includes presets: `PASS`
 - `ELEVA Selezione` schema is valid and includes presets: `PASS`
+- `ELEVA FAQ` schema is valid and includes presets: `PASS`
+- `ELEVA Trust` schema is valid and includes presets: `PASS`
 - Both new sections are save-safe and avoid unsafe url defaults: `PASS`
 - Display-only product merchandising adds no cart or product-form logic: `PASS`
+- USP Bar 2.0 uses concrete trust copy without fake testimonials or fake stats: `PASS`
+- Quality Statement adds credibility without fake certifications: `PASS`
+- FAQ Micro uses no heavy JS and remains accessible: `PASS`
+- Trust Badges use text-only premium pills with no fake seals: `PASS`
 - Salvaspazio spotlight remains absent from homepage composition: `PASS`
 - Default Dawn newsletter is still not present on homepage: `PASS`
 - Collection breadcrumbs are still absent from homepage: `PASS`
+- Header and footer files remain untouched: `PASS`
 - Header files were not modified and current navigation should remain unaffected: `PASS`
 - Salvaspazio spotlight removed from homepage order while keeping its section file: `PASS`
 - `collection-breadcrumbs` removed from homepage composition: `PASS`
