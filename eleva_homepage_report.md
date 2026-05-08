@@ -202,13 +202,9 @@
 
 ### Trust Badges added
 - Added a payment trust section before the newsletter.
-- Uses neutral text-based pills only:
-  - `Visa`
-  - `Mastercard`
-  - `PayPal`
-  - `Apple Pay`
-  - `Klarna`
-  - `SSL`
+- Replaced placeholder-style text pills with Shopify native payment icons via `shop.enabled_payment_types` and `payment_type_svg_tag`.
+- Added safe fallback behavior:
+  - if Shopify returns no enabled payment types, the section shows a neutral support line plus text fallback pills
 - No fake trust seals, no fake certifications, no external logos.
 
 ### Trust objections resolved
@@ -231,7 +227,7 @@
 - `ELEVA Shop by Room` uses simple text settings and text-based default links to remain Shopify save-safe.
 - `ELEVA Selezione` uses a native Shopify `collection` setting and a safe fallback when no collection is chosen.
 - `ELEVA FAQ` uses native HTML disclosure patterns, so no extra JavaScript was needed.
-- `ELEVA Trust` keeps payment reassurance text-based and visually restrained.
+- `ELEVA Trust` now prefers Shopify native payment icons, with graceful fallback if the shop exposes none.
 
 ## Dangerous Files Untouched
 - `sections/header.liquid`
@@ -262,7 +258,7 @@
 - USP Bar 2.0 uses concrete trust copy without fake testimonials or fake stats: `PASS`
 - Quality Statement adds credibility without fake certifications: `PASS`
 - FAQ Micro uses no heavy JS and remains accessible: `PASS`
-- Trust Badges use text-only premium pills with no fake seals: `PASS`
+- Trust Badges use Shopify native payment icons when available, with safe text fallback: `PASS`
 - Salvaspazio spotlight remains absent from homepage composition: `PASS`
 - Default Dawn newsletter is still not present on homepage: `PASS`
 - Collection breadcrumbs are still absent from homepage: `PASS`

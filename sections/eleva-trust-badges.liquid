@@ -1,4 +1,4 @@
-{% assign eleva_payment_labels = 'Visa|Mastercard|PayPal|Apple Pay|Klarna|SSL' | split: '|' %}
+{% assign eleva_payment_labels = 'Visa|Mastercard|PayPal|Apple Pay|Klarna' | split: '|' %}
 
 <section class="eleva-homepage eleva-trust-badges-section eleva-section">
   <div class="eleva-container">
@@ -8,13 +8,26 @@
         <p class="eleva-text eleva-muted">{{ section.settings.subheading }}</p>
       </div>
 
-      <div class="eleva-trust-badges__list" role="list">
-        {% for label in eleva_payment_labels %}
-          <span class="eleva-trust-badges__pill eleva-reveal{% case forloop.index %}{% when 2 %} eleva-reveal--delay-1{% when 3 %} eleva-reveal--delay-2{% when 4 %} eleva-reveal--delay-3{% when 5 %} eleva-reveal--delay-4{% when 6 %} eleva-reveal--delay-2{% endcase %}" role="listitem">
-            {{ label }}
-          </span>
-        {% endfor %}
-      </div>
+      {% if shop.enabled_payment_types != blank %}
+        <div class="eleva-trust__payment-icons" role="list" aria-label="Metodi di pagamento disponibili">
+          {% for type in shop.enabled_payment_types %}
+            <span class="eleva-trust__payment-icon-wrap eleva-reveal{% case forloop.index %}{% when 2 %} eleva-reveal--delay-1{% when 3 %} eleva-reveal--delay-2{% when 4 %} eleva-reveal--delay-3{% when 5 %} eleva-reveal--delay-4{% when 6 %} eleva-reveal--delay-2{% endcase %}" role="listitem">
+              {{ type | payment_type_svg_tag: class: 'eleva-trust__payment-icon' }}
+            </span>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="eleva-trust-badges__fallback eleva-text eleva-muted">
+          Metodi di pagamento sicuri disponibili al checkout.
+        </p>
+        <div class="eleva-trust-badges__list" role="list">
+          {% for label in eleva_payment_labels %}
+            <span class="eleva-trust-badges__pill eleva-reveal{% case forloop.index %}{% when 2 %} eleva-reveal--delay-1{% when 3 %} eleva-reveal--delay-2{% when 4 %} eleva-reveal--delay-3{% when 5 %} eleva-reveal--delay-4{% endcase %}" role="listitem">
+              {{ label }}
+            </span>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>
@@ -35,7 +48,7 @@
       "type": "textarea",
       "id": "subheading",
       "label": "Subheading",
-      "default": "Tutti i dati sono protetti con crittografia SSL e metodi di pagamento sicuri."
+      "default": "Paga in modo protetto con i metodi disponibili al checkout. I dati sono gestiti tramite connessione sicura."
     }
   ],
   "presets": [
