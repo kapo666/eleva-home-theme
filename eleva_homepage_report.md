@@ -230,6 +230,14 @@
 - The previous poetic line was preserved as the supporting subtitle:
   - `Il tocco che trasforma gli spazi quotidiani in ambienti di ordine, comfort e stile.`
 
+### Hero SEO / aesthetic rebalance
+- Rebalanced the hero so the SEO intent remains strong without showing a long heavy brand-led H1.
+- `ELEVA HOME` is now displayed as a smaller brand line in the hero instead of dominating the visible H1.
+- Final visible H1 is now:
+  - `Accessori casa moderni`
+  - `per una casa ordinata`
+- This keeps the core SEO phrases while restoring a calmer Apple-smooth editorial composition.
+
 ### H2/H3 hierarchy changes
 - Kept one H1 only in the hero.
 - Added a visually hidden supporting H2 to the USP layer:
