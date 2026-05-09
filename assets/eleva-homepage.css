@@ -37,7 +37,7 @@
 }
 
 .eleva-homepage .eleva-section-head {
-  margin-bottom: var(--eleva-space-6);
+  margin-bottom: var(--eleva-space-5);
 }
 
 .eleva-homepage .eleva-section-head .eleva-heading {
@@ -407,7 +407,7 @@
 
 .eleva-shop-room__card {
   gap: var(--eleva-space-2);
-  padding: var(--eleva-space-5) var(--eleva-space-4);
+  padding: var(--eleva-space-4) var(--eleva-space-4);
 }
 
 .eleva-shop-room__index {
@@ -525,7 +525,7 @@
 }
 
 .eleva-selection__title {
-  font-size: 1.52rem;
+  font-size: 1.44rem;
   line-height: 1.32;
 }
 
@@ -539,6 +539,16 @@
 .eleva-selection__empty {
   padding: var(--eleva-space-5);
   text-align: center;
+}
+
+.eleva-selection__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--eleva-space-4);
+}
+
+.eleva-selection__more {
+  min-height: 4.4rem;
 }
 
 .eleva-seo-intro {
@@ -581,6 +591,11 @@
 .eleva-seo-intro__content a:hover {
   color: rgba(30, 26, 23, 0.88);
   text-decoration-color: rgba(30, 26, 23, 0.55);
+}
+
+.eleva-seo-intro__cta {
+  justify-self: start;
+  min-height: 4.4rem;
 }
 
 .eleva-salvaspazio {
@@ -751,7 +766,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--eleva-space-3);
-  min-height: 5.2rem;
+  min-height: 5.4rem;
   padding: var(--eleva-space-4);
   cursor: pointer;
 }
@@ -798,7 +813,7 @@
   gap: var(--eleva-space-4);
   width: min(100%, 76rem);
   margin-inline: auto;
-  padding: var(--eleva-space-5) var(--eleva-space-4);
+  padding: var(--eleva-space-4) var(--eleva-space-4);
   background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(247, 243, 236, 0.94));
   border-color: rgba(183, 172, 159, 0.18);
   box-shadow: none;
@@ -877,7 +892,7 @@
   gap: var(--eleva-space-4);
   width: min(100%, 74rem);
   margin-inline: auto;
-  padding: var(--eleva-space-5) var(--eleva-space-4);
+  padding: var(--eleva-space-4) var(--eleva-space-4);
   background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(248, 244, 237, 0.94));
   border-color: rgba(183, 172, 159, 0.18);
   box-shadow: none;
@@ -973,6 +988,10 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
     gap: var(--eleva-space-6);
   }
 
+  .eleva-homepage .eleva-section-head {
+    margin-bottom: var(--eleva-space-6);
+  }
+
   .eleva-shop-room__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--eleva-space-5);
@@ -981,6 +1000,10 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
   .eleva-selection__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--eleva-space-5);
+  }
+
+  .eleva-selection__footer {
+    justify-content: flex-start;
   }
 
   .eleva-seo-intro {

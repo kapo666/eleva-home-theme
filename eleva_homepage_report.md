@@ -348,6 +348,80 @@
   - `Shop online di accessori casa moderni e complementi d’arredo. Organizzazione, cucina, bagno e design per una casa ordinata.`
 - Confirm enabled payment methods in Shopify admin if you want the trust icon set to reflect all active options.
 
+## Module 7 — Homepage CRO + Mobile/Performance QA
+### CTA flow audit
+- Hero CTA remains:
+  - `Scopri le collezioni`
+- Collection cards CTA tightened to:
+  - `Esplora`
+- Shop by Room cards CTA tightened to:
+  - `Scopri`
+- Selezione product cards CTA clarified to:
+  - `Vedi il prodotto`
+- Added a clean section-level merchandising CTA:
+  - `Scopri tutti i prodotti`
+- Added a soft exit CTA under SEO Intro:
+  - `Esplora le collezioni`
+
+### Mobile UX changes
+- Reduced some mobile spacing to limit scroll fatigue.
+- Shop by Room cards were tightened slightly so they do not feel too tall.
+- Selection product titles were slightly reduced for cleaner two-column mobile reading.
+- FAQ summary targets remain large and easy to tap.
+- Trust and newsletter blocks were compacted slightly on mobile.
+
+### Section rhythm changes
+- Reduced global homepage section-head spacing slightly on mobile.
+- Kept larger rhythm on tablet/desktop.
+- Added more visual rhythm by making below-the-fold utility blocks slightly more compact.
+
+### Product merchandising checks
+- Product images remain lazy-loaded.
+- Product cards still have no quick add, no variant logic and no cart mutation.
+- Added a helpful collection-level CTA below the merchandising grid for users who want to browse more than the curated set.
+- Empty-state fallback remains elegant and non-blocking.
+
+### FAQ CRO checks
+- First FAQ item remains open by default.
+- Questions now cover delivery, return, quality, support and Italy-wide shipping/costs.
+- Support email remains visible in the answer copy.
+- No legal overclaim was added.
+
+### Performance / CLS notes
+- Hero image is now marked above-the-fold with eager loading and high fetch priority.
+- Collection and product images remain lazy-loaded below the fold.
+- Existing aspect-ratio wrappers remain in place for hero, collections and product cards to reduce CLS risk.
+- No heavy JS was added.
+- Reduced-motion support remains intact.
+
+### Accessibility notes
+- CTA labels remain explicit and Italian.
+- FAQ tap targets remain comfortably sized.
+- Focus and hover behavior continue to rely on existing button/link styling.
+- No new inaccessible custom JS patterns were introduced.
+
+### Files modified
+- `assets/eleva-homepage.css`
+- `sections/eleva-hero.liquid`
+- `sections/eleva-collections-featured.liquid`
+- `sections/eleva-shop-by-room.liquid`
+- `sections/eleva-selezione-momento.liquid`
+- `sections/eleva-seo-intro.liquid`
+- `eleva_homepage_report.md`
+
+### Dangerous files untouched confirmation
+- Header untouched
+- Footer untouched
+- Product/cart/variant files untouched
+- Schema snippet untouched
+- No collection templates or product templates touched
+
+### Remaining manual checks
+- Verify hero CTA visibility on the smallest mobile viewport in Shopify preview.
+- Confirm the new `Scopri tutti i prodotti` CTA feels useful and not redundant.
+- Review payment icons live if enabled payment methods change in Shopify admin.
+- Confirm the final scroll rhythm feels premium rather than long on a real device.
+
 ## Implementation Notes
 - Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.
 - Optional hero images now render visibly on mobile and use a wider, more natural composition on desktop.

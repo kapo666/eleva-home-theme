@@ -42,10 +42,15 @@
             <div class="eleva-selection__body">
               <h3 class="eleva-selection__title">{{ product.title }}</h3>
               <p class="eleva-selection__price">{{ product.price | money }}</p>
-              <span class="eleva-selection__link">Scopri il prodotto</span>
+              <span class="eleva-selection__link">Vedi il prodotto</span>
             </div>
           </a>
         {% endfor %}
+      </div>
+      <div class="eleva-selection__footer eleva-reveal eleva-reveal--delay-2">
+        <a class="eleva-selection__more eleva-btn eleva-btn--secondary" href="{{ eleva_selection_collection.url | default: '/collections/organizzazione-casa' }}">
+          Scopri tutti i prodotti
+        </a>
       </div>
     {% else %}
       <div class="eleva-selection__empty eleva-card eleva-card--soft eleva-reveal eleva-reveal--delay-1">
