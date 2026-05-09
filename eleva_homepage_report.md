@@ -7,12 +7,14 @@
 - `sections/eleva-shop-by-room.liquid`
 - `sections/eleva-selezione-momento.liquid`
 - `sections/eleva-faq-micro.liquid`
+- `sections/eleva-seo-intro.liquid`
 - `sections/eleva-trust-badges.liquid`
 - `sections/eleva-salvaspazio-spotlight.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-brand-proof.liquid`
 - `sections/eleva-newsletter.liquid`
 - `assets/eleva-homepage.css`
+- `snippets/eleva-homepage-schema.liquid`
 - `eleva_homepage_report.md`
 
 ## Files Modified
@@ -22,9 +24,13 @@
 - `sections/eleva-brand-proof.liquid`
 - `sections/eleva-hero.liquid`
 - `sections/eleva-newsletter.liquid`
+- `sections/eleva-seo-intro.liquid`
 - `sections/eleva-trust-badges.liquid`
 - `sections/eleva-statement.liquid`
 - `sections/eleva-usp-bar.liquid`
+- `sections/eleva-shop-by-room.liquid`
+- `sections/eleva-selezione-momento.liquid`
+- `layout/theme.liquid`
 - `templates/index.json`
 
 ## Homepage Section Order
@@ -214,6 +220,125 @@
 - `C’è una garanzia reale?`
 - `Come pago in sicurezza?`
 - `Se ho un problema, chi mi risponde?`
+
+## Module 6 Homepage SEO Final Optimization
+### H1 change
+- The homepage H1 is now:
+  - `ELEVA HOME — Accessori Casa Moderni per una Casa Ordinata ed Elegante`
+- The hero eyebrow is now:
+  - `SHOP ONLINE DESIGN PER LA CASA`
+- The previous poetic line was preserved as the supporting subtitle:
+  - `Il tocco che trasforma gli spazi quotidiani in ambienti di ordine, comfort e stile.`
+
+### H2/H3 hierarchy changes
+- Kept one H1 only in the hero.
+- Added a visually hidden supporting H2 to the USP layer:
+  - `Spedizione, Resi e Garanzia`
+- Updated major section headings to be more descriptive for search without harming the visual tone.
+- Collection cards and room cards remain H3-level content.
+- FAQ questions now render with H3 semantics inside the disclosure summary.
+
+### SEO Intro section added
+- Added `ELEVA SEO Intro` after the Statement and before the Quality section.
+- New H2:
+  - `Accessori Casa Moderni per una Casa Ordinata`
+- The block is editorial and crawlable, designed to help Google understand homepage topical relevance without creating a keyword wall.
+
+### Keywords naturally integrated
+- `accessori casa moderni`
+- `complementi d’arredo`
+- `organizzazione casa`
+- `organizzazione cucina`
+- `accessori bagno moderni`
+- `soluzioni salvaspazio`
+- `illuminazione casa design`
+- `tessili casa moderni`
+- `decorazione casa moderna`
+- These were integrated only where context felt natural.
+
+### Collection microcopy added
+- Added subtle collection microcopy beneath each collection title:
+  - bathroom accessories
+  - kitchen organization
+  - home organization
+  - decor
+  - lighting
+  - textiles
+- Kept the card visuals premium and restrained.
+
+### Shop by Room anchors optimized
+- Updated room card titles and body copy to be more semantically useful.
+- Added safe `title` attributes to links for clearer anchor context.
+
+### FAQ questions optimized
+- Updated FAQ wording to better match real search intent:
+  - delivery times
+  - returns for opened products
+  - quality selection process
+  - support contact
+  - shipping in Italy and extra costs
+
+### FAQPage schema added
+- Added `FAQPage` JSON-LD on homepage only.
+- Uses the 5 optimized homepage FAQ questions and answers.
+
+### Organization schema added
+- Added `Organization` JSON-LD with safe data only:
+  - `ELEVA HOME`
+  - `https://elevahome.it`
+  - `assistenza@elevahome.it`
+  - `IT`
+  - `Italian`
+- No fake phone number, no fake social links, no fake certifications.
+
+### WebSite schema added
+- Added `WebSite` JSON-LD with `SearchAction`.
+
+### Meta title/description status
+- Dawn already outputs homepage `<title>` and `<meta name="description">` from Shopify-managed fields:
+  - `page_title`
+  - `page_description`
+- To avoid duplicate or conflicting meta tags, no hardcoded homepage meta tags were added in theme code.
+- Manual Shopify admin target values:
+  - Title: `ELEVA HOME | Accessori Casa Moderni per Organizzazione e Design`
+  - Description: `Shop online di accessori casa moderni e complementi d’arredo. Organizzazione, cucina, bagno e design per una casa ordinata.`
+
+### Canonical status
+- `layout/theme.liquid` already contains:
+  - `<link rel="canonical" href="{{ canonical_url }}">`
+- No duplicate canonical tag was added.
+
+### Alt text improvements
+- Hero image alt now uses a descriptive premium fallback:
+  - `Ambiente moderno ELEVA HOME con accessori casa e design minimal`
+- Collection images now use descriptive contextual alt fallback text.
+- Product cards now prefer `product.featured_image.alt`, with fallback to `product.title`.
+
+### Internal links added
+- Homepage internal-linking now includes:
+  - collection grid links
+  - room-based discovery links
+  - contextual links in the new SEO intro section
+- The SEO intro intentionally stays within a restrained internal-linking range.
+
+### Cannibalization prevention notes
+- The homepage targets broad, brand + category-intent terms.
+- More specific intent remains delegated to collection pages:
+  - bagno
+  - cucina
+  - organizzazione
+  - salvaspazio
+  - illuminazione
+  - tessili
+  - decorazione
+- This reduces the risk of competing too directly with deeper collection pages.
+
+### Manual Shopify admin actions required
+- Set homepage SEO title in Shopify admin to:
+  - `ELEVA HOME | Accessori Casa Moderni per Organizzazione e Design`
+- Set homepage meta description in Shopify admin to:
+  - `Shop online di accessori casa moderni e complementi d’arredo. Organizzazione, cucina, bagno e design per una casa ordinata.`
+- Confirm enabled payment methods in Shopify admin if you want the trust icon set to reflect all active options.
 
 ## Implementation Notes
 - Hero keeps the requested copy and remains text-first, with a refined desktop-only abstract visual or an optional custom image.

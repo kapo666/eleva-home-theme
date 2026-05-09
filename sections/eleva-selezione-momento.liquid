@@ -19,6 +19,7 @@
     {% if eleva_selection_collection != blank and eleva_selection_collection.products_count > 0 %}
       <div class="eleva-selection__grid">
         {% for product in eleva_selection_collection.products limit: eleva_product_limit %}
+          {% assign eleva_product_alt = product.featured_image.alt | default: product.title %}
           <a class="eleva-selection__card eleva-card eleva-card--soft eleva-reveal{% cycle '', ' eleva-reveal--delay-1', ' eleva-reveal--delay-2', ' eleva-reveal--delay-3' %}" href="{{ product.url }}">
             <div class="eleva-selection__media">
               {% if product.featured_image != blank %}
@@ -30,7 +31,7 @@
                     widths: '280, 420, 640, 900',
                     sizes: '(min-width: 990px) 25vw, 50vw',
                     loading: 'lazy',
-                    alt: product.title
+                    alt: eleva_product_alt
                 }}
               {% else %}
                 <div class="eleva-selection__placeholder">
@@ -70,7 +71,7 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Selezione del momento"
+      "default": "Prodotti in Evidenza"
     },
     {
       "type": "textarea",

@@ -9,7 +9,7 @@
       {% for block in section.blocks %}
         <details class="eleva-faq-item eleva-card eleva-card--soft eleva-reveal{% case forloop.index %}{% when 2 %} eleva-reveal--delay-1{% when 3 %} eleva-reveal--delay-2{% when 4 %} eleva-reveal--delay-3{% endcase %}" {% if forloop.first %}open{% endif %} {{ block.shopify_attributes }}>
           <summary class="eleva-faq-item__summary">
-            <span class="eleva-faq-item__question">{{ block.settings.question }}</span>
+            <h3 class="eleva-faq-item__question">{{ block.settings.question }}</h3>
             <span class="eleva-faq-item__icon" aria-hidden="true"></span>
           </summary>
           <div class="eleva-faq-item__answer">
@@ -26,7 +26,7 @@
   "name": "ELEVA FAQ",
   "tag": "section",
   "class": "section",
-  "max_blocks": 4,
+  "max_blocks": 5,
   "settings": [
     {
       "type": "text",
@@ -50,7 +50,7 @@
           "type": "text",
           "id": "question",
           "label": "Question",
-          "default": "Quanto tempo per la consegna?"
+          "default": "Quali sono i tempi di consegna per gli accessori casa?"
         },
         {
           "type": "textarea",
@@ -68,21 +68,21 @@
         {
           "type": "faq",
           "settings": {
-            "question": "Quanto tempo per la consegna?",
+            "question": "Quali sono i tempi di consegna per gli accessori casa?",
             "answer": "Spediamo gli ordini in 24-48h. La consegna richiede 3-5 giorni lavorativi in tutta Italia. Riceverai il tracking via email."
           }
         },
         {
           "type": "faq",
           "settings": {
-            "question": "Posso restituire un prodotto anche se aperto?",
+            "question": "Posso restituire prodotti aperti? Come funziona il reso?",
             "answer": "Sì. Hai 30 giorni per restituire qualsiasi prodotto, anche se è stato aperto e provato. Il reso è gratuito."
           }
         },
         {
           "type": "faq",
           "settings": {
-            "question": "I prodotti sono di qualità testata?",
+            "question": "Come selezionate gli accessori casa? Sono di qualità?",
             "answer": "Ogni prodotto è selezionato e controllato dal nostro team prima di essere proposto su ELEVA HOME. La garanzia di 2 anni è inclusa."
           }
         },
@@ -91,6 +91,13 @@
           "settings": {
             "question": "Come posso contattare l’assistenza?",
             "answer": "Scrivi a assistenza@elevahome.it. Ti rispondiamo entro 24h con supporto chiaro e dedicato."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Spedite in tutta Italia? Ci sono costi extra?",
+            "answer": "Sì, spediamo in tutta Italia. La spedizione è gratuita sopra 50€ e i costi sono sempre mostrati chiaramente prima del checkout."
           }
         }
       ]

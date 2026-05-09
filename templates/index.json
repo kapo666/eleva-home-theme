@@ -13,9 +13,9 @@
       "type": "eleva-hero",
       "name": "ELEVA Hero",
       "settings": {
-        "eyebrow": "ELEVA HOME",
-        "heading": "Il tocco che trasforma",
-        "subheading": "Design moderno per la casa contemporanea",
+        "eyebrow": "SHOP ONLINE DESIGN PER LA CASA",
+        "heading": "ELEVA HOME — Accessori Casa Moderni per una Casa Ordinata ed Elegante",
+        "subheading": "Il tocco che trasforma gli spazi quotidiani in ambienti di ordine, comfort e stile.",
         "hero_image": "shopify://shop_images/Ultra_realistic_premium_interior_photography_of_a_modern_Italian_home_warm_beige_and_soft_white_tones_elegant_minimal_living_space_with_subtle_home_decor_details_clean_sofa_wooden_cof.jpg",
         "button_label": "Scopri le collezioni",
         "button_link": "shopify://collections"
@@ -70,7 +70,7 @@
       "type": "eleva-collections-featured",
       "name": "ELEVA Collections",
       "settings": {
-        "heading": "Esplora le nostre collezioni"
+        "heading": "Esplora le Nostre Collezioni di Accessori Casa"
       }
     },
     "eleva_shop_room_6kq2Rn": {
@@ -78,7 +78,7 @@
       "name": "ELEVA Shop by Room",
       "settings": {
         "eyebrow": "GUIDA ALLA CASA",
-        "heading": "Scegli per ambiente",
+        "heading": "Trova Accessori per Ogni Ambiente della Casa",
         "intro": "Trova rapidamente le soluzioni più adatte al tuo spazio, dal bagno alla cucina fino agli angoli da organizzare.",
         "links": "/collections/organizzazione-bagno|/collections/organizzazione-cucina|/collections/organizzazione-camera|/collections/organizzazione-ingresso|/collections/soluzioni-salvaspazio|/collections/organizzazione-casa"
       }
@@ -88,7 +88,7 @@
       "name": "ELEVA Selezione",
       "settings": {
         "eyebrow": "CURATO DA ELEVA",
-        "heading": "Selezione del momento",
+        "heading": "Prodotti in Evidenza",
         "intro": "Oggetti scelti per unire funzionalità, estetica e piccoli gesti quotidiani.",
         "collection": "organizzazione-casa",
         "product_limit": 4
@@ -100,6 +100,13 @@
       "settings": {
         "quote": "Ogni prodotto è scelto per trasformare gli spazi quotidiani in ambienti di ordine, comfort ed eleganza.",
         "signature": "ELEVA HOME"
+      }
+    },
+    "eleva_seo_intro_t6Pq9M": {
+      "type": "eleva-seo-intro",
+      "name": "ELEVA SEO Intro",
+      "settings": {
+        "heading": "Accessori Casa Moderni per una Casa Ordinata"
       }
     },
     "eleva_brand_proof_z3M4kV": {
@@ -115,7 +122,7 @@
         "card_kCNYkc": {
           "type": "card",
           "settings": {
-            "title": "Garanzia estesa",
+            "title": "Garanzia Estesa 2 Anni",
             "text": "2 anni di garanzia completa su tutti i prodotti, con sostituzione rapida in caso di difetti di fabbricazione."
           }
         },
@@ -135,7 +142,7 @@
       "name": "ELEVA Quality",
       "settings": {
         "eyebrow": "ELEVA HOME",
-        "heading": "Il nostro impegno per la qualità"
+        "heading": "Qualità e Selezione: Il Nostro Impegno"
       }
     },
     "eleva_faq_micro_jmT6Ld": {
@@ -144,21 +151,21 @@
         "faq_1vK8mz": {
           "type": "faq",
           "settings": {
-            "question": "Quanto tempo per la consegna?",
+            "question": "Quali sono i tempi di consegna per gli accessori casa?",
             "answer": "Spediamo gli ordini in 24-48h. La consegna richiede 3-5 giorni lavorativi in tutta Italia. Riceverai il tracking via email."
           }
         },
         "faq_2xB3qa": {
           "type": "faq",
           "settings": {
-            "question": "Posso restituire un prodotto anche se aperto?",
+            "question": "Posso restituire prodotti aperti? Come funziona il reso?",
             "answer": "Sì. Hai 30 giorni per restituire qualsiasi prodotto, anche se è stato aperto e provato. Il reso è gratuito."
           }
         },
         "faq_3nQ7yc": {
           "type": "faq",
           "settings": {
-            "question": "I prodotti sono di qualità testata?",
+            "question": "Come selezionate gli accessori casa? Sono di qualità?",
             "answer": "Ogni prodotto è selezionato e controllato dal nostro team prima di essere proposto su ELEVA HOME. La garanzia di 2 anni è inclusa."
           }
         },
@@ -168,13 +175,21 @@
             "question": "Come posso contattare l’assistenza?",
             "answer": "Scrivi a assistenza@elevahome.it. Ti rispondiamo entro 24h con supporto chiaro e dedicato."
           }
+        },
+        "faq_5sL1er": {
+          "type": "faq",
+          "settings": {
+            "question": "Spedite in tutta Italia? Ci sono costi extra?",
+            "answer": "Sì, spediamo in tutta Italia. La spedizione è gratuita sopra 50€ e i costi sono sempre mostrati chiaramente prima del checkout."
+          }
         }
       },
       "block_order": [
         "faq_1vK8mz",
         "faq_2xB3qa",
         "faq_3nQ7yc",
-        "faq_4hR2up"
+        "faq_4hR2up",
+        "faq_5sL1er"
       ],
       "name": "ELEVA FAQ",
       "settings": {
@@ -210,6 +225,7 @@
     "eleva_shop_room_6kq2Rn",
     "eleva_selection_s1Qm8K",
     "eleva_statement_CQXCAd",
+    "eleva_seo_intro_t6Pq9M",
     "eleva_brand_proof_z3M4kV",
     "eleva_faq_micro_jmT6Ld",
     "eleva_trust_badges_c2P4Vr",

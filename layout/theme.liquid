@@ -27,6 +27,9 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    {% if request.page_type == 'index' %}
+      {% render 'eleva-homepage-schema' %}
+    {% endif %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>

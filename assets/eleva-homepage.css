@@ -320,6 +320,14 @@
   text-wrap: balance;
 }
 
+.eleva-collection-card__microcopy {
+  margin: 0;
+  color: var(--eleva-color-text-muted);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
 .eleva-collection-card__link {
   display: inline-flex;
   align-items: center;
@@ -520,6 +528,48 @@
   text-align: center;
 }
 
+.eleva-seo-intro {
+  padding: var(--eleva-space-5) var(--eleva-space-4);
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(249, 246, 241, 0.94));
+  border-color: rgba(183, 172, 159, 0.18);
+  box-shadow: none;
+}
+
+.eleva-seo-intro__inner {
+  max-width: 65ch;
+  display: grid;
+  gap: var(--eleva-space-3);
+}
+
+.eleva-seo-intro__heading {
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.eleva-seo-intro__content {
+  display: grid;
+  gap: var(--eleva-space-3);
+  line-height: 1.72;
+}
+
+.eleva-seo-intro__content p {
+  margin: 0;
+}
+
+.eleva-seo-intro__content a {
+  color: var(--eleva-color-soft-black);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+  transition:
+    color var(--eleva-transition-base),
+    text-decoration-color var(--eleva-transition-base);
+}
+
+.eleva-seo-intro__content a:hover {
+  color: rgba(30, 26, 23, 0.88);
+  text-decoration-color: rgba(30, 26, 23, 0.55);
+}
+
 .eleva-salvaspazio {
   padding: var(--eleva-space-4);
   border-color: rgba(183, 172, 159, 0.16);
@@ -698,6 +748,7 @@
 }
 
 .eleva-faq-item__question {
+  margin: 0;
   color: var(--eleva-color-soft-black);
   font-size: 1.45rem;
   font-weight: 600;
@@ -917,6 +968,10 @@ body:has(.eleva-newsletter-section) .shopify-section-group-footer-group .footer-
   .eleva-selection__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--eleva-space-5);
+  }
+
+  .eleva-seo-intro {
+    padding: var(--eleva-space-6);
   }
 
   .eleva-salvaspazio {
