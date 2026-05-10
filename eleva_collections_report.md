@@ -252,5 +252,69 @@ For all 6 templates:
 - no product/card/cart/filter/sort/pagination files touched: `PASS`
 - diff limited to the 6 target templates: `PASS`
 
+## Module 8.3 — Collection Schema SEO
+
+### 1. Schema added
+- added `snippets/eleva-collection-schema.liquid`
+
+### 2. Where snippet is included
+- included in `layout/theme.liquid`
+- rendered only when `request.page_type == 'collection'`
+
+### 3. Schema types output
+- `BreadcrumbList`
+- `CollectionPage`
+- `FAQPage` for the 7 main collection handles only
+- `ItemList` nested inside `CollectionPage.mainEntity`
+
+### 4. Handles covered
+- `accessori-bagno`
+- `cucina-tavola`
+- `organizzazione-casa`
+- `decorazione-casa`
+- `illuminazione-casa`
+- `tessili-casa`
+- `soluzioni-salvaspazio`
+
+### 5. FAQ mapping confirmation
+- FAQPage content is mapped by `collection.handle`
+- the schema answers match the visible FAQ copy for the 7 main collections
+- no FAQPage output for other collection handles
+
+### 6. Duplicate schema check
+- no existing `CollectionPage`, `BreadcrumbList` or collection `FAQPage` schema was found in theme code
+- existing homepage schema remains homepage-only
+- existing header/product/article structured data was left untouched
+
+### 7. ItemList decision
+- `ItemList` was included
+- it stays intentionally simple:
+  - `position`
+  - `url`
+  - `name`
+  - `image` when available
+- no offers, ratings, availability or fake ecommerce data were added
+
+### 8. Validation
+- collection schema snippet guarded to collection pages only: `PASS`
+- BreadcrumbList outputs on collection pages: `PASS`
+- CollectionPage outputs on collection pages: `PASS`
+- FAQPage outputs only on the 7 main collection handles: `PASS`
+- no duplicate collection schema detected: `PASS`
+- no visual layer changed: `PASS`
+
+### 9. Files modified
+- `snippets/eleva-collection-schema.liquid`
+- `layout/theme.liquid`
+- `eleva_collections_report.md`
+
+### 10. Dangerous files untouched confirmation
+- no collection template layout changes
+- `sections/main-collection-product-grid.liquid` untouched
+- product cards untouched
+- filters / sorting / pagination untouched
+- cart / product-form / variant files untouched
+- homepage, header and footer visuals untouched
+
 ## Final Verdict
 - `READY FOR LIVE REVIEW`

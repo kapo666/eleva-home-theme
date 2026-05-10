@@ -1,0 +1,360 @@
+{% if request.page_type == 'collection' and collection != blank %}
+  {% assign eleva_shop_url = shop.url | default: request.origin %}
+  {% assign eleva_home_url = eleva_shop_url | append: routes.root_url %}
+  {% assign eleva_collections_url = eleva_shop_url | append: routes.collections_url %}
+  {% assign eleva_collection_url = eleva_shop_url | append: collection.url %}
+  {% assign eleva_collection_name = collection.title | strip_html | strip | escape %}
+  {% assign eleva_collection_description = collection.description | strip_html | strip | escape %}
+  {% if eleva_collection_description == blank %}
+    {% capture eleva_collection_description %}Collezione {{ eleva_collection_name }} di ELEVA HOME.{% endcapture %}
+  {% endif %}
+
+  {% assign eleva_faq_json = blank %}
+
+  {% case collection.handle %}
+    {% when 'accessori-bagno' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quali materiali sono migliori per gli accessori bagno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ceramica, vetro e acciaio inox sono tra i materiali più adatti perché resistenti all’umidità, facili da pulire e coerenti con un bagno moderno."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come scegliere un set bagno coordinato?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli accessori con materiali, colori e finiture coerenti. Un set coordinato rende lavabo, doccia e zona beauty più armoniosi e ordinati."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gli accessori bagno ELEVA HOME sono facili da usare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Dispenser, portasapone, contenitori e tappetini sono pensati per l’uso quotidiano, con soluzioni pratiche e facili da pulire."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso restituire gli accessori bagno se non sono soddisfatto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'cucina-tavola' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere gli accessori cucina più utili?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Parti dalle abitudini quotidiane: contenitori per la dispensa, utensili pratici e organizer per cassetti aiutano a mantenere la cucina ordinata e funzionale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali materiali sono più adatti per cucina e tavola?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vetro, acciaio inox, ceramica, silicone e legno sono materiali pratici e resistenti, ideali per l’uso quotidiano e facili da integrare in una cucina moderna."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gli accessori cucina sono facili da pulire?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì, molti prodotti sono pensati per una manutenzione semplice. Controlla sempre la scheda prodotto per verificare lavaggio, materiali e modalità d’uso."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso restituire gli accessori cucina se non sono soddisfatto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'organizzazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Da dove iniziare per organizzare casa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inizia dagli ambienti più usati, come cucina, bagno e ingresso. Usa contenitori, divisori e organizer per separare gli oggetti e rendere tutto più facile da trovare."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali prodotti aiutano a ottimizzare lo spazio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scatole impilabili, cesti, divisori per cassetti, organizer verticali e soluzioni salvaspazio sono ideali per sfruttare meglio ogni centimetro."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Organizzazione e design possono stare insieme?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. ELEVA HOME seleziona soluzioni pratiche ma curate esteticamente, pensate per integrarsi in case moderne e ordinate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "I prodotti sono coperti da garanzia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Tutti i prodotti sono coperti da garanzia di 2 anni sui difetti e puoi effettuare il reso entro 30 giorni."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'decorazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere i complementi d’arredo giusti?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli pochi elementi coerenti tra loro per colore, materiale e stile. Vasi, candele, quadri e specchi possono trasformare un ambiente senza appesantirlo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali accessori rendono una casa più moderna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Linee essenziali, colori neutri, materiali naturali e dettagli ben posizionati aiutano a creare un effetto moderno, ordinato e accogliente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso abbinare decorazione e organizzazione?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Una casa elegante è anche funzionale: contenitori, cesti e accessori decorativi possono migliorare sia l’estetica sia l’ordine."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso restituire un complemento d’arredo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Hai 30 giorni per effettuare il reso e i prodotti sono coperti da garanzia di 2 anni sui difetti."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'illuminazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere l’illuminazione per ogni ambiente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usa luci diverse per funzioni diverse: luce diffusa per l’ambiente, luce diretta per lavoro o lettura, luce decorativa per atmosfera."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali lampade sono più adatte a una casa moderna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lampade con linee essenziali, colori neutri e materiali resistenti si integrano bene in ambienti contemporanei e minimal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le lampade sono facili da installare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Molte lampade da tavolo e da terra non richiedono installazione. Per sospensioni e applique, verifica sempre le indicazioni nella scheda prodotto."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "I prodotti illuminazione sono coperti da garanzia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Tutti i prodotti sono coperti da garanzia di 2 anni sui difetti e puoi effettuare il reso entro 30 giorni."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'tessili-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere i tessili per la casa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli colori e texture coerenti con lo stile dell’ambiente. Cuscini, tappeti e coperte possono aggiungere calore senza stravolgere l’arredo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "I tessili sono facili da lavare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Molti tessili sono pensati per una manutenzione semplice. Controlla sempre la scheda prodotto per istruzioni di lavaggio e cura."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali tessili rendono una casa più accogliente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Plaid, cuscini morbidi, tende leggere e tappeti aiutano a rendere soggiorno e camera più confortevoli e armoniosi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso restituire i tessili se non sono adatti?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'soluzioni-salvaspazio' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quali prodotti aiutano davvero a risparmiare spazio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Organizer verticali, scatole impilabili, contenitori compatti e divisori per cassetti sono tra le soluzioni più efficaci per ottimizzare piccoli ambienti."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le soluzioni salvaspazio sono adatte a case piccole?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Sono pensate proprio per sfruttare al meglio armadi, scaffali, bagno, cucina e camera anche quando lo spazio è limitato."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come evitare che la casa sembri piena anche con tanti organizer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli accessori coerenti per colore e materiale. Soluzioni ordinate e coordinate rendono lo spazio più pulito visivamente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso restituire prodotti salvaspazio se non vanno bene?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+  {% endcase %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": {{ eleva_home_url | json }}
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Accessori Casa",
+              "item": {{ eleva_collections_url | json }}
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": {{ eleva_collection_name | json }},
+              "item": {{ eleva_collection_url | json }}
+            }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "name": {{ eleva_collection_name | json }},
+          "url": {{ eleva_collection_url | json }},
+          "description": {{ eleva_collection_description | json }},
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "ELEVA HOME",
+            "url": {{ eleva_home_url | json }}
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {% for product in collection.products limit: 10 %}
+                {% assign eleva_product_url = eleva_shop_url | append: product.url %}
+                {% assign eleva_product_image = blank %}
+                {% if product.featured_image != blank %}
+                  {% assign eleva_product_image = product.featured_image | image_url: width: 1200 %}
+                  {% assign eleva_product_image = eleva_shop_url | append: eleva_product_image %}
+                {% endif %}
+                {
+                  "@type": "ListItem",
+                  "position": {{ forloop.index }},
+                  "url": {{ eleva_product_url | json }},
+                  "name": {{ product.title | strip_html | strip | json }}{% if eleva_product_image != blank %},
+                  "image": {{ eleva_product_image | json }}{% endif %}
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ]
+          }
+        }{% if eleva_faq_json != blank %},
+        {{ eleva_faq_json | strip }}
+        {% endif %}
+      ]
+    }
+  </script>
+{% endif %}

@@ -30,6 +30,9 @@
     {% if request.page_type == 'index' %}
       {% render 'eleva-homepage-schema' %}
     {% endif %}
+    {% if request.page_type == 'collection' %}
+      {% render 'eleva-collection-schema' %}
+    {% endif %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
