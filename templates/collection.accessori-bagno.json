@@ -17,7 +17,7 @@
         "padding_bottom": 16
       }
     },
-    "eleva_collection_hero": {
+    "eleva_collection_hero_main": {
       "type": "eleva-collection-hero",
       "settings": {
         "eyebrow": "ACCESSORI BAGNO",
@@ -26,7 +26,7 @@
         "show_product_count": true
       }
     },
-    "eleva_subcollections": {
+    "eleva_subcollections_main": {
       "type": "eleva-subcollection-pills",
       "blocks": {
         "pill_dispenser": {
@@ -61,7 +61,7 @@
       ],
       "settings": {}
     },
-    "eleva_collection_intro": {
+    "eleva_collection_intro_main": {
       "type": "eleva-collection-seo-intro",
       "settings": {
         "heading": "Accessori bagno moderni per ordine e stile",
@@ -89,7 +89,7 @@
         "padding_bottom": 36
       }
     },
-    "eleva_related_collections": {
+    "eleva_related_collections_main": {
       "type": "eleva-related-collections",
       "blocks": {
         "related_cucina": {
@@ -136,7 +136,7 @@
         "heading": "Esplora altri ambienti ELEVA"
       }
     },
-    "eleva_collection_faq": {
+    "eleva_collection_faq_main": {
       "type": "eleva-collection-faq",
       "blocks": {
         "faq_materiali": {
@@ -179,7 +179,7 @@
         "heading": "Domande frequenti sugli accessori bagno"
       }
     },
-    "eleva_collection_trust": {
+    "eleva_collection_trust_main": {
       "type": "eleva-collection-trust",
       "blocks": {
         "trust_shipping": {
@@ -218,12 +218,12 @@
   },
   "order": [
     "breadcrumbs",
-    "eleva_collection_hero",
-    "eleva_subcollections",
-    "eleva_collection_intro",
+    "eleva_collection_hero_main",
+    "eleva_subcollections_main",
+    "eleva_collection_intro_main",
     "product_grid",
-    "eleva_related_collections",
-    "eleva_collection_faq",
-    "eleva_collection_trust"
+    "eleva_related_collections_main",
+    "eleva_collection_faq_main",
+    "eleva_collection_trust_main"
   ]
 }
