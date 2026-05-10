@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "CUCINA E TAVOLA",
+        "title": "Stoviglie e Piatti Moderni Design",
+        "intro": "Piatti, ciotole e stoviglie per apparecchiare la tavola con ordine e stile."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_contenitori": {
+          "type": "pill",
+          "settings": {
+            "label": "Contenitori Cucina",
+            "link": "/collections/contenitori-cucina"
+          }
+        },
+        "pill_utensili": {
+          "type": "pill",
+          "settings": {
+            "label": "Utensili Cucina",
+            "link": "/collections/utensili-cucina"
+          }
+        }
+      },
+      "block_order": [
+        "pill_contenitori",
+        "pill_utensili"
+      ],
+      "settings": {
+        "parent_label": "← Tutta Cucina e Tavola",
+        "parent_link": "/collections/cucina-tavola",
+        "siblings_label": "Altri accessori cucina:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Stoviglie e piatti moderni per una tavola elegante",
+        "text_1": "Le stoviglie e i piatti ELEVA HOME aiutano a rendere la tavola più curata, ordinata e piacevole da vivere ogni giorno. Piatti, ciotole e set moderni completano la cucina con linee pulite e uno stile contemporaneo.",
+        "text_2": "Scegli stoviglie design per apparecchiare con semplicità, creare armonia visiva e valorizzare pranzi, cene e momenti quotidiani. Colori neutri e forme essenziali si adattano facilmente a diversi stili di casa.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Cucina e Tavola",
+        "link_parent": "/collections/cucina-tavola",
+        "text_3_middle": " per completare la cucina con ",
+        "link_sibling_1_label": "Contenitori Cucina",
+        "link_sibling_1": "/collections/contenitori-cucina",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Utensili Cucina",
+        "link_sibling_2": "/collections/utensili-cucina",
+        "text_3_suffix": "."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere piatti moderni per la tavola?",
+            "answer": "Scegli forme e colori coerenti con lo stile della cucina. Toni neutri e linee semplici funzionano bene sia ogni giorno sia in occasioni speciali."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le stoviglie possono migliorare l’estetica della cucina?",
+            "answer": "Sì. Piatti e ciotole coordinati rendono la tavola più ordinata e valorizzano anche i momenti quotidiani."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come abbinare stoviglie e accessori cucina?",
+            "answer": "Mantieni una palette coerente e abbina materiali simili. Contenitori, utensili e piatti coordinati creano un effetto più pulito e moderno."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti su stoviglie e piatti"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la tua cucina?",
+        "button_label": "Scopri tutta Cucina e Tavola",
+        "button_link": "/collections/cucina-tavola"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

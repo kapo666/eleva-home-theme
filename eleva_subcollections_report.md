@@ -332,5 +332,101 @@ For all 8 templates:
 ### 9. Next recommended batch
 - continue with remaining P1/P2 subcollections or consolidate by parent family after live review of all decorazione, organizzazione, bagno and illuminazione pilots
 
+## Module 9.5 — Final Batch P2
+
+### 1. Templates created
+- `templates/collection.candele-portacandele.json`
+- `templates/collection.applique-lampade-parete.json`
+- `templates/collection.tende-moderne.json`
+- `templates/collection.organizzazione-ingresso.json`
+- `templates/collection.salvaspazio-bagno.json`
+- `templates/collection.salvaspazio-camera.json`
+- `templates/collection.stoviglie-piatti.json`
+
+### 2. Final section order for each
+For all 7 templates:
+1. `collection-breadcrumbs`
+2. `eleva-subcollection-hero`
+3. `eleva-parent-siblings`
+4. `main-collection-product-grid`
+5. `eleva-subcollection-seo-content`
+6. `eleva-subcollection-faq`
+7. `eleva-parent-cta`
+
+### 3. Parent/sibling links for each
+- `Candele e Portacandele`
+  - parent: `Decorazione Casa`
+  - siblings: `Vasi Decorativi`, `Specchi Decorativi`, `Quadri e Poster`, `Cuscini Decorativi`
+- `Applique`
+  - parent: `Illuminazione Casa`
+  - siblings: `Lampade da Tavolo`, `Lampade a Sospensione`, `Lampade da Terra`
+- `Tende Moderne`
+  - parent: `Tessili Casa`
+  - siblings: `Tappeti Moderni`, `Coperte e Plaid`
+- `Organizzazione Ingresso`
+  - parent: `Organizzazione Casa`
+  - siblings: `Organizzazione Cucina`, `Organizzazione Bagno`, `Organizzazione Camera`, `Organizzazione Ufficio`
+- `Salvaspazio Bagno`
+  - parent: `Soluzioni Salvaspazio`
+  - siblings: `Salvaspazio Cucina`, `Salvaspazio Camera`
+- `Salvaspazio Camera`
+  - parent: `Soluzioni Salvaspazio`
+  - siblings: `Salvaspazio Cucina`, `Salvaspazio Bagno`
+- `Stoviglie e Piatti`
+  - parent: `Cucina e Tavola`
+  - siblings: `Contenitori Cucina`, `Utensili Cucina`
+
+### 4. SEO content for each
+- `Candele e Portacandele`
+  - focused on atmosphere, warm light and decorative details
+- `Applique`
+  - focused on wall lighting, corridors, bedrooms and functional atmosphere
+- `Tende Moderne`
+  - focused on privacy, filtered light and soft visual comfort
+- `Organizzazione Ingresso`
+  - focused on keys, shoes, bags and first-impression order
+- `Salvaspazio Bagno`
+  - focused on lavabo, doccia, mensole and compact bathroom storage
+- `Salvaspazio Camera`
+  - focused on armadi, cassetti, sottoletto and bedroom calm
+- `Stoviglie e Piatti`
+  - focused on table styling, modern dinnerware and everyday harmony
+
+### 5. FAQ for each
+- each final subcollection now has 3 dedicated FAQ items matching the visible content
+
+### 6. Schema handles added
+- `candele-portacandele`
+- `applique-lampade-parete`
+- `tende-moderne`
+- `organizzazione-ingresso`
+- `salvaspazio-bagno`
+- `salvaspazio-camera`
+- `stoviglie-piatti`
+
+### 7. Validation
+- all 7 templates follow the validated subcollection structure: `PASS`
+- raw `python3 -m json.tool` is blocked by Shopify comment headers: expected
+- JSON validation passes when skipping the Shopify comment header: `PASS`
+- one H1 per template through `eleva-subcollection-hero`: `PASS`
+- `main-collection-product-grid` present in each template: `PASS`
+- `main-collection-banner` absent in each template: `PASS`
+- schema only outputs for supported subcollection handles: `PASS`
+- no duplicate with main collection schema routing: `PASS`
+
+### 8. Dangerous files untouched confirmation
+- main collection templates untouched
+- previous subcollection templates untouched in this pass
+- `sections/main-collection-product-grid.liquid` untouched
+- product cards untouched
+- filters / sorting / pagination untouched
+- cart / product-form / variant files untouched
+- homepage / header / footer untouched visually
+
+### 9. Final subcollection status
+- all planned subcollection templates now use the ELEVA lightweight system
+- parent/sibling hierarchy is covered across bagno, decorazione, illuminazione, tessili, cucina and salvaspazio families
+- the reusable subcollection architecture is now closed and ready for live review as a complete system
+
 ## Final Verdict
 - `READY FOR LIVE REVIEW`

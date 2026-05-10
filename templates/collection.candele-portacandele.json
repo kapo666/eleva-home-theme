@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "DECORAZIONE CASA",
+        "title": "Candele e Portacandele Moderni",
+        "intro": "Candele e portacandele per creare atmosfera, calore e dettagli eleganti in casa."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_vasi": {
+          "type": "pill",
+          "settings": {
+            "label": "Vasi Decorativi",
+            "link": "/collections/vasi-decorativi"
+          }
+        },
+        "pill_specchi": {
+          "type": "pill",
+          "settings": {
+            "label": "Specchi Decorativi",
+            "link": "/collections/specchi-decorativi"
+          }
+        },
+        "pill_quadri": {
+          "type": "pill",
+          "settings": {
+            "label": "Quadri e Poster",
+            "link": "/collections/quadri-poster"
+          }
+        },
+        "pill_cuscini": {
+          "type": "pill",
+          "settings": {
+            "label": "Cuscini Decorativi",
+            "link": "/collections/cuscini-decorativi"
+          }
+        }
+      },
+      "block_order": [
+        "pill_vasi",
+        "pill_specchi",
+        "pill_quadri",
+        "pill_cuscini"
+      ],
+      "settings": {
+        "parent_label": "← Tutta la Decorazione Casa",
+        "parent_link": "/collections/decorazione-casa",
+        "siblings_label": "Altri complementi:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Candele e portacandele per atmosfera e decorazione",
+        "text_1": "Le candele e i portacandele ELEVA HOME aggiungono atmosfera, luce calda e dettagli eleganti agli ambienti quotidiani. Sono perfetti per tavoli, mensole, soggiorno, camera o zona relax.",
+        "text_2": "Scegli portacandele moderni per completare la decorazione della casa con materiali curati, forme pulite e colori equilibrati. Anche un piccolo dettaglio luminoso può rendere lo spazio più accogliente.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Decorazione Casa",
+        "link_parent": "/collections/decorazione-casa",
+        "text_3_middle": " per abbinare candele, ",
+        "link_sibling_1_label": "Vasi Decorativi",
+        "link_sibling_1": "/collections/vasi-decorativi",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Cuscini Decorativi",
+        "link_sibling_2": "/collections/cuscini-decorativi",
+        "text_3_suffix": "."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove posizionare candele e portacandele?",
+            "answer": "Sono ideali su tavoli, mensole, comodini e zone relax. Posizionali sempre su superfici stabili e lontano da materiali infiammabili."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "I portacandele sono anche decorativi?",
+            "answer": "Sì. Un portacandele moderno può decorare anche quando la candela non è accesa, grazie a forma, materiale e finitura."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come abbinare candele e portacandele?",
+            "answer": "Mantieni colori e materiali coerenti con il resto dell’arredo. Toni neutri e forme semplici funzionano bene in case moderne."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti su candele e portacandele"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la decorazione della casa?",
+        "button_label": "Scopri tutta la Decorazione Casa",
+        "button_link": "/collections/decorazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

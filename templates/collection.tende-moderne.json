@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "TESSILI CASA",
+        "title": "Tende Moderne per Casa e Finestre",
+        "intro": "Tende leggere e moderne per privacy, luce naturale e stile negli ambienti."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_tappeti": {
+          "type": "pill",
+          "settings": {
+            "label": "Tappeti Moderni",
+            "link": "/collections/tappeti-moderni"
+          }
+        },
+        "pill_coperte": {
+          "type": "pill",
+          "settings": {
+            "label": "Coperte e Plaid",
+            "link": "/collections/coperte-plaid"
+          }
+        }
+      },
+      "block_order": [
+        "pill_tappeti",
+        "pill_coperte"
+      ],
+      "settings": {
+        "parent_label": "← Tutti i Tessili Casa",
+        "parent_link": "/collections/tessili-casa",
+        "siblings_label": "Altri tessili:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Tende moderne per luce, privacy e comfort visivo",
+        "text_1": "Le tende moderne ELEVA HOME aiutano a filtrare la luce, migliorare la privacy e completare l’arredo con un dettaglio morbido e funzionale. Sono ideali per soggiorno, camera, studio e zona living.",
+        "text_2": "Scegli tende casa moderne per rendere l’ambiente più caldo, equilibrato e curato. Tessuti leggeri, colori neutri e linee semplici si integrano bene in case contemporanee e minimal.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Tessili Casa",
+        "link_parent": "/collections/tessili-casa",
+        "text_3_middle": " per completare il tuo stile con ",
+        "link_sibling_1_label": "Tappeti Moderni",
+        "link_sibling_1": "/collections/tappeti-moderni",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Coperte e Plaid",
+        "link_sibling_2": "/collections/coperte-plaid",
+        "text_3_suffix": "."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere tende moderne per la casa?",
+            "answer": "Valuta luce, privacy e stile dell’ambiente. Toni neutri e tessuti leggeri sono versatili e adatti a molte stanze."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le tende aiutano anche l’arredo?",
+            "answer": "Sì. Le tende completano visivamente una stanza, ammorbidiscono le linee e rendono l’ambiente più accogliente."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove usare tende leggere?",
+            "answer": "Sono ideali in soggiorno, camera, studio e ambienti dove vuoi filtrare la luce senza chiudere completamente lo spazio."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sulle tende moderne"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare l’ambiente con altri tessili?",
+        "button_label": "Scopri tutti i Tessili Casa",
+        "button_link": "/collections/tessili-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

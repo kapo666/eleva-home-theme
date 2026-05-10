@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "SOLUZIONI SALVASPAZIO",
+        "title": "Salvaspazio Camera: Organizer e Contenitori",
+        "intro": "Soluzioni per armadi, cassetti, letto e piccoli spazi della camera."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Salvaspazio Cucina",
+            "link": "/collections/salvaspazio-cucina"
+          }
+        },
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Salvaspazio Bagno",
+            "link": "/collections/salvaspazio-bagno"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_bagno"
+      ],
+      "settings": {
+        "parent_label": "← Tutte le Soluzioni Salvaspazio",
+        "parent_link": "/collections/soluzioni-salvaspazio",
+        "siblings_label": "Altri spazi:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Salvaspazio camera per armadi, letto e cassetti",
+        "text_1": "Le soluzioni salvaspazio camera ELEVA HOME aiutano a organizzare armadi, cassetti, comodini e spazi sottoletto. Contenitori compatti e organizer pratici permettono di sfruttare meglio la stanza senza creare confusione visiva.",
+        "text_2": "Scegli accessori salvaspazio per camera per mantenere abiti, accessori e oggetti quotidiani più ordinati. Una camera ben organizzata risulta più rilassante, pulita e semplice da vivere.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Soluzioni Salvaspazio",
+        "link_parent": "/collections/soluzioni-salvaspazio",
+        "text_3_middle": " per ottimizzare ",
+        "link_sibling_1_label": "Salvaspazio Cucina",
+        "link_sibling_1": "/collections/salvaspazio-cucina",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Salvaspazio Bagno",
+        "link_sibling_2": "/collections/salvaspazio-bagno",
+        "text_3_suffix": " e altri ambienti della casa."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come risparmiare spazio in camera da letto?",
+            "answer": "Usa contenitori sottoletto, organizer per cassetti e soluzioni compatte per armadi. Aiutano a separare gli oggetti e a sfruttare meglio ogni zona."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le soluzioni salvaspazio rendono la camera più ordinata?",
+            "answer": "Sì. Riducendo il disordine visivo, rendono la camera più semplice da vivere e più rilassante."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove usare organizer e contenitori in camera?",
+            "answer": "Puoi usarli in armadi, cassetti, comodini, scaffali o sotto il letto, in base allo spazio disponibile."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sul salvaspazio camera"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi ottimizzare anche altri ambienti?",
+        "button_label": "Scopri tutte le Soluzioni Salvaspazio",
+        "button_link": "/collections/soluzioni-salvaspazio"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

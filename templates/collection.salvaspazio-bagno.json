@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "SOLUZIONI SALVASPAZIO",
+        "title": "Salvaspazio Bagno: Organizer e Accessori Compatti",
+        "intro": "Soluzioni compatte per sfruttare mensole, lavabo, doccia e piccoli spazi bagno."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Salvaspazio Cucina",
+            "link": "/collections/salvaspazio-cucina"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Salvaspazio Camera",
+            "link": "/collections/salvaspazio-camera"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_camera"
+      ],
+      "settings": {
+        "parent_label": "← Tutte le Soluzioni Salvaspazio",
+        "parent_link": "/collections/soluzioni-salvaspazio",
+        "siblings_label": "Altri spazi:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Salvaspazio bagno per ambienti piccoli e funzionali",
+        "text_1": "Le soluzioni salvaspazio bagno ELEVA HOME aiutano a sfruttare meglio mensole, mobile lavabo, doccia e ripiani. Organizer compatti e accessori pratici permettono di tenere tutto in ordine anche nei bagni più piccoli.",
+        "text_2": "Scegli accessori salvaspazio per bagno per ridurre il disordine, migliorare la routine quotidiana e creare un ambiente più pulito visivamente. Anche pochi dettagli possono liberare spazio e rendere il bagno più funzionale.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Soluzioni Salvaspazio",
+        "link_parent": "/collections/soluzioni-salvaspazio",
+        "text_3_middle": " per ottimizzare ",
+        "link_sibling_1_label": "Salvaspazio Cucina",
+        "link_sibling_1": "/collections/salvaspazio-cucina",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Salvaspazio Camera",
+        "link_sibling_2": "/collections/salvaspazio-camera",
+        "text_3_suffix": " e altri ambienti della casa."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come risparmiare spazio in un bagno piccolo?",
+            "answer": "Usa organizer verticali, contenitori compatti e soluzioni per mensole o doccia. L’obiettivo è sfruttare lo spazio in altezza e tenere liberi i ripiani."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Il salvaspazio bagno è utile anche in bagni grandi?",
+            "answer": "Sì. Anche in bagni più ampi aiuta a mantenere cosmetici, asciugamani e accessori organizzati e facili da trovare."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come evitare che il bagno sembri pieno?",
+            "answer": "Scegli accessori coordinati, colori neutri e contenitori chiusi. Questo riduce il disordine visivo e rende lo spazio più pulito."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sul salvaspazio bagno"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi ottimizzare anche altri ambienti?",
+        "button_label": "Scopri tutte le Soluzioni Salvaspazio",
+        "button_link": "/collections/soluzioni-salvaspazio"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

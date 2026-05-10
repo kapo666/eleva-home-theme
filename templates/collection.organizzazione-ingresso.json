@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ORGANIZZAZIONE CASA",
+        "title": "Organizzazione Ingresso: Ordine e Funzionalità",
+        "intro": "Soluzioni per ingresso, scarpe, chiavi e piccoli oggetti quotidiani."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Cucina",
+            "link": "/collections/organizzazione-cucina"
+          }
+        },
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Bagno",
+            "link": "/collections/organizzazione-bagno"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Camera",
+            "link": "/collections/organizzazione-camera"
+          }
+        },
+        "pill_ufficio": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ufficio",
+            "link": "/collections/organizzazione-ufficio"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_bagno",
+        "pill_camera",
+        "pill_ufficio"
+      ],
+      "settings": {
+        "parent_label": "← Tutta l’Organizzazione Casa",
+        "parent_link": "/collections/organizzazione-casa",
+        "siblings_label": "Altri ambienti:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Organizzazione ingresso per una casa più ordinata",
+        "text_1": "L’organizzazione ingresso ELEVA HOME aiuta a gestire scarpe, chiavi, borse e piccoli oggetti che usi ogni giorno. Soluzioni compatte e pratiche rendono l’entrata di casa più ordinata, accogliente e funzionale.",
+        "text_2": "Scegli accessori per organizzare l’ingresso con stile e ridurre il disordine visivo appena entri in casa. Un ingresso ordinato crea subito una sensazione di cura e semplicità.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Organizzazione Casa",
+        "link_parent": "/collections/organizzazione-casa",
+        "text_3_middle": " per trovare soluzioni dedicate a ",
+        "link_sibling_1_label": "Organizzazione Camera",
+        "link_sibling_1": "/collections/organizzazione-camera",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Organizzazione Ufficio",
+        "link_sibling_2": "/collections/organizzazione-ufficio",
+        "text_3_suffix": "."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come organizzare meglio l’ingresso di casa?",
+            "answer": "Usa soluzioni dedicate a scarpe, chiavi, borse e piccoli oggetti. Tenere tutto in zone precise riduce il disordine appena entri in casa."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali accessori sono utili per un ingresso piccolo?",
+            "answer": "Contenitori compatti, organizer verticali, appendini e soluzioni salvaspazio aiutano a sfruttare anche ingressi stretti."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "L’ingresso ordinato cambia la percezione della casa?",
+            "answer": "Sì. È il primo ambiente che vedi entrando: un ingresso pulito e funzionale rende tutta la casa più curata."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’organizzazione ingresso"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi organizzare tutta la casa?",
+        "button_label": "Scopri tutta l’Organizzazione Casa",
+        "button_link": "/collections/organizzazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }
