@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "DECORAZIONE CASA",
+        "title": "Quadri e Poster Moderni per la Casa",
+        "intro": "Stampe, poster e quadri decorativi per valorizzare pareti e ambienti."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_vasi": {
+          "type": "pill",
+          "settings": {
+            "label": "Vasi Decorativi",
+            "link": "/collections/vasi-decorativi"
+          }
+        },
+        "pill_specchi": {
+          "type": "pill",
+          "settings": {
+            "label": "Specchi Decorativi",
+            "link": "/collections/specchi-decorativi"
+          }
+        },
+        "pill_candele": {
+          "type": "pill",
+          "settings": {
+            "label": "Candele e Portacandele",
+            "link": "/collections/candele-portacandele"
+          }
+        },
+        "pill_cuscini": {
+          "type": "pill",
+          "settings": {
+            "label": "Cuscini Decorativi",
+            "link": "/collections/cuscini-decorativi"
+          }
+        }
+      },
+      "block_order": [
+        "pill_vasi",
+        "pill_specchi",
+        "pill_candele",
+        "pill_cuscini"
+      ],
+      "settings": {
+        "parent_label": "← Tutta la Decorazione Casa",
+        "parent_link": "/collections/decorazione-casa",
+        "siblings_label": "Altri complementi:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Quadri e poster per pareti moderne e ordinate",
+        "text_1": "I quadri e poster ELEVA HOME permettono di dare carattere a pareti, corridoi, soggiorni e camere con un gesto semplice. Stampe moderne, soggetti minimal e composizioni equilibrate aiutano a rendere ogni ambiente più personale.",
+        "text_2": "Scegli quadri moderni e poster decorativi per completare l’arredo senza appesantire lo spazio. Formati versatili e tonalità coerenti permettono di creare pareti ordinate, eleganti e facili da abbinare.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Decorazione Casa",
+        "link_parent": "/collections/decorazione-casa",
+        "text_3_middle": " per completare il tuo stile con ",
+        "link_sibling_1_label": "Specchi Decorativi",
+        "link_sibling_1": "/collections/specchi-decorativi",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Vasi Decorativi",
+        "link_sibling_2": "/collections/vasi-decorativi",
+        "text_3_suffix": ", candele e cuscini decorativi."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere quadri e poster per il soggiorno?",
+            "answer": "Scegli colori e soggetti coerenti con l’ambiente. Formati grandi funzionano bene sopra divani o consolle, mentre più stampe piccole creano composizioni leggere."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso abbinare più poster sulla stessa parete?",
+            "answer": "Sì. Mantieni una palette coerente e alterna dimensioni diverse per creare una composizione equilibrata e moderna."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Quadri e poster aiutano a completare l’arredo?",
+            "answer": "Sì. Sono dettagli visivi forti che possono dare personalità alla casa senza cambiare mobili o struttura della stanza."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti su quadri e poster"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la decorazione della casa?",
+        "button_label": "Scopri tutta la Decorazione Casa",
+        "button_link": "/collections/decorazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "SOLUZIONI SALVASPAZIO",
+        "title": "Salvaspazio Cucina: Organizer e Soluzioni Smart",
+        "intro": "Soluzioni compatte per sfruttare meglio dispensa, cassetti, mensole e piano cucina."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Salvaspazio Bagno",
+            "link": "/collections/salvaspazio-bagno"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Salvaspazio Camera",
+            "link": "/collections/salvaspazio-camera"
+          }
+        }
+      },
+      "block_order": [
+        "pill_bagno",
+        "pill_camera"
+      ],
+      "settings": {
+        "parent_label": "← Tutte le Soluzioni Salvaspazio",
+        "parent_link": "/collections/soluzioni-salvaspazio",
+        "siblings_label": "Altri spazi:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Salvaspazio cucina per ambienti piccoli e ordinati",
+        "text_1": "Le soluzioni salvaspazio cucina ELEVA HOME aiutano a sfruttare meglio dispensa, cassetti, mensole e piano lavoro. Organizer compatti, contenitori e accessori intelligenti permettono di mantenere la cucina ordinata anche quando lo spazio è limitato.",
+        "text_2": "Scegli accessori salvaspazio per cucina per ridurre il disordine, ottimizzare ogni centimetro e rendere più semplice la routine quotidiana. Anche una cucina piccola può diventare funzionale, pulita e piacevole da vivere.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Soluzioni Salvaspazio",
+        "link_parent": "/collections/soluzioni-salvaspazio",
+        "text_3_middle": " per trovare idee dedicate a ",
+        "link_sibling_1_label": "Salvaspazio Bagno",
+        "link_sibling_1": "/collections/salvaspazio-bagno",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Salvaspazio Camera",
+        "link_sibling_2": "/collections/salvaspazio-camera",
+        "text_3_suffix": " e altri ambienti della casa."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come risparmiare spazio in cucina?",
+            "answer": "Usa contenitori impilabili, organizer verticali e soluzioni per cassetti o mensole. L’obiettivo è sfruttare meglio lo spazio già disponibile."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le soluzioni salvaspazio sono adatte alle cucine piccole?",
+            "answer": "Sì. Sono pensate proprio per ottimizzare ambienti ridotti, rendendo più semplice tenere in ordine dispensa, utensili e piccoli accessori."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Il salvaspazio cucina può essere anche bello da vedere?",
+            "answer": "Sì. Accessori compatti e coordinati aiutano a mantenere una cucina ordinata senza rinunciare a uno stile moderno."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sul salvaspazio cucina"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi ottimizzare anche altri ambienti?",
+        "button_label": "Scopri tutte le Soluzioni Salvaspazio",
+        "button_link": "/collections/soluzioni-salvaspazio"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

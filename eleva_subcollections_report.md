@@ -231,5 +231,106 @@ For all 5 templates:
 ### 9. Next recommended batch
 - extend the same system to the remaining bagno, decorazione and cucina subcollections after live review of both batch 1 and batch 2
 
+## Module 9.4 — Batch 3 P1
+
+### 1. Templates created
+- `templates/collection.organizzazione-bagno.json`
+- `templates/collection.organizzazione-camera.json`
+- `templates/collection.contenitori-bagno.json`
+- `templates/collection.specchi-decorativi.json`
+- `templates/collection.quadri-poster.json`
+- `templates/collection.lampade-terra.json`
+- `templates/collection.organizzazione-ufficio.json`
+- `templates/collection.salvaspazio-cucina.json`
+
+### 2. Final section order for each
+For all 8 templates:
+1. `collection-breadcrumbs`
+2. `eleva-subcollection-hero`
+3. `eleva-parent-siblings`
+4. `main-collection-product-grid`
+5. `eleva-subcollection-seo-content`
+6. `eleva-subcollection-faq`
+7. `eleva-parent-cta`
+
+### 3. Parent/sibling links for each
+- `Organizzazione Bagno`
+  - parent: `Organizzazione Casa`
+  - siblings: `Organizzazione Cucina`, `Organizzazione Camera`, `Organizzazione Ufficio`, `Organizzazione Ingresso`
+- `Organizzazione Camera`
+  - parent: `Organizzazione Casa`
+  - siblings: `Organizzazione Cucina`, `Organizzazione Bagno`, `Organizzazione Ufficio`, `Organizzazione Ingresso`
+- `Contenitori Bagno`
+  - parent: `Accessori Bagno`
+  - siblings: `Dispenser e Portasapone`, `Tappetini Bagno`
+- `Specchi Decorativi`
+  - parent: `Decorazione Casa`
+  - siblings: `Vasi Decorativi`, `Quadri e Poster`, `Candele e Portacandele`, `Cuscini Decorativi`
+- `Quadri e Poster`
+  - parent: `Decorazione Casa`
+  - siblings: `Vasi Decorativi`, `Specchi Decorativi`, `Candele e Portacandele`, `Cuscini Decorativi`
+- `Lampade da Terra`
+  - parent: `Illuminazione Casa`
+  - siblings: `Lampade da Tavolo`, `Lampade a Sospensione`, `Applique`
+- `Organizzazione Ufficio`
+  - parent: `Organizzazione Casa`
+  - siblings: `Organizzazione Cucina`, `Organizzazione Bagno`, `Organizzazione Camera`, `Organizzazione Ingresso`
+- `Salvaspazio Cucina`
+  - parent: `Soluzioni Salvaspazio`
+  - siblings: `Salvaspazio Bagno`, `Salvaspazio Camera`
+
+### 4. SEO content for each
+- `Organizzazione Bagno`
+  - focused on mensole, lavabo, beauty zone and clean daily order
+- `Organizzazione Camera`
+  - focused on armadi, cassetti and bedroom calm
+- `Contenitori Bagno`
+  - focused on cosmetics, towels and compact storage
+- `Specchi Decorativi`
+  - focused on light, depth and wall styling
+- `Quadri e Poster`
+  - focused on walls, prints and visual personality
+- `Lampade da Terra`
+  - focused on reading corners, living spaces and atmosphere
+- `Organizzazione Ufficio`
+  - focused on scrivania, home office and productivity
+- `Salvaspazio Cucina`
+  - focused on pantry, drawers, shelves and small-space function
+
+### 5. FAQ for each
+- each new subcollection now has 3 dedicated FAQ items matching the visible content
+
+### 6. Schema handles added
+- `organizzazione-bagno`
+- `organizzazione-camera`
+- `contenitori-bagno`
+- `specchi-decorativi`
+- `quadri-poster`
+- `lampade-terra`
+- `organizzazione-ufficio`
+- `salvaspazio-cucina`
+
+### 7. Validation
+- all 8 templates follow the validated subcollection structure: `PASS`
+- raw `python3 -m json.tool` is blocked by Shopify comment headers: expected
+- JSON validation passes when skipping the Shopify comment header: `PASS`
+- one H1 per template through `eleva-subcollection-hero`: `PASS`
+- `main-collection-product-grid` present in each template: `PASS`
+- `main-collection-banner` absent in each template: `PASS`
+- schema only outputs for supported subcollection handles: `PASS`
+- no duplicate with main collection schema routing: `PASS`
+
+### 8. Dangerous files untouched confirmation
+- main collection templates untouched
+- previous subcollection templates untouched in this pass
+- `sections/main-collection-product-grid.liquid` untouched
+- product cards untouched
+- filters / sorting / pagination untouched
+- cart / product-form / variant files untouched
+- homepage / header / footer untouched visually
+
+### 9. Next recommended batch
+- continue with remaining P1/P2 subcollections or consolidate by parent family after live review of all decorazione, organizzazione, bagno and illuminazione pilots
+
 ## Final Verdict
 - `READY FOR LIVE REVIEW`

@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ORGANIZZAZIONE CASA",
+        "title": "Organizzazione Ufficio Casa e Scrivania",
+        "intro": "Organizer e accessori per scrivania pensati per ordine, concentrazione e produttività."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Cucina",
+            "link": "/collections/organizzazione-cucina"
+          }
+        },
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Bagno",
+            "link": "/collections/organizzazione-bagno"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Camera",
+            "link": "/collections/organizzazione-camera"
+          }
+        },
+        "pill_ingresso": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ingresso",
+            "link": "/collections/organizzazione-ingresso"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_bagno",
+        "pill_camera",
+        "pill_ingresso"
+      ],
+      "settings": {
+        "parent_label": "← Tutta l’Organizzazione Casa",
+        "parent_link": "/collections/organizzazione-casa",
+        "siblings_label": "Altri ambienti:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Organizzazione ufficio per scrivania e home office",
+        "text_1": "L’organizzazione ufficio ELEVA HOME aiuta a mantenere scrivania, documenti e piccoli accessori in ordine. Organizer, contenitori e soluzioni pratiche rendono lo spazio di lavoro più pulito, funzionale e piacevole da usare ogni giorno.",
+        "text_2": "Scegli accessori per organizzare l’ufficio casa con stile e ridurre il disordine visivo. Una scrivania ordinata favorisce concentrazione, produttività e una sensazione di controllo durante la giornata.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Organizzazione Casa",
+        "link_parent": "/collections/organizzazione-casa",
+        "text_3_middle": " per completare l’ordine in ",
+        "link_sibling_1_label": "Organizzazione Camera",
+        "link_sibling_1": "/collections/organizzazione-camera",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Organizzazione Ingresso",
+        "link_sibling_2": "/collections/organizzazione-ingresso",
+        "text_3_suffix": ", cucina e bagno."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come organizzare meglio la scrivania?",
+            "answer": "Tieni a portata di mano solo ciò che usi ogni giorno e usa organizer, contenitori e divisori per documenti, cavi e piccoli accessori."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "L’organizzazione ufficio aiuta la produttività?",
+            "answer": "Sì. Uno spazio ordinato riduce distrazioni e rende più semplice concentrarsi sulle attività quotidiane."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali accessori sono utili per l’home office?",
+            "answer": "Organizer scrivania, contenitori per documenti, supporti e soluzioni per piccoli oggetti aiutano a mantenere lo spazio più funzionale."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’organizzazione ufficio"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi organizzare tutta la casa?",
+        "button_label": "Scopri tutta l’Organizzazione Casa",
+        "button_link": "/collections/organizzazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

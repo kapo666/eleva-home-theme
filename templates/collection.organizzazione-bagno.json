@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ORGANIZZAZIONE CASA",
+        "title": "Organizzazione Bagno: Contenitori e Accessori",
+        "intro": "Organizer, contenitori e soluzioni pratiche per un bagno più ordinato e funzionale."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Cucina",
+            "link": "/collections/organizzazione-cucina"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Camera",
+            "link": "/collections/organizzazione-camera"
+          }
+        },
+        "pill_ufficio": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ufficio",
+            "link": "/collections/organizzazione-ufficio"
+          }
+        },
+        "pill_ingresso": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ingresso",
+            "link": "/collections/organizzazione-ingresso"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_camera",
+        "pill_ufficio",
+        "pill_ingresso"
+      ],
+      "settings": {
+        "parent_label": "← Tutta l’Organizzazione Casa",
+        "parent_link": "/collections/organizzazione-casa",
+        "siblings_label": "Altri ambienti:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Organizzazione bagno per spazi puliti e funzionali",
+        "text_1": "L’organizzazione bagno ELEVA HOME aiuta a trasformare mensole, lavabo e zona beauty in spazi più ordinati e facili da vivere. Contenitori, organizer e accessori pratici permettono di tenere cosmetici, asciugamani e piccoli oggetti sempre al loro posto.",
+        "text_2": "Scegli soluzioni per organizzare il bagno con stile, ridurre il disordine visivo e sfruttare meglio ogni ripiano. Una disposizione pulita rende il bagno più elegante, pratico e piacevole nella routine quotidiana.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Organizzazione Casa",
+        "link_parent": "/collections/organizzazione-casa",
+        "text_3_middle": " per trovare soluzioni dedicate a ",
+        "link_sibling_1_label": "Organizzazione Cucina",
+        "link_sibling_1": "/collections/organizzazione-cucina",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Organizzazione Camera",
+        "link_sibling_2": "/collections/organizzazione-camera",
+        "text_3_suffix": ", ingresso e ufficio."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come organizzare meglio il bagno?",
+            "answer": "Inizia separando cosmetici, asciugamani e piccoli accessori. Contenitori e organizer aiutano a mantenere tutto visibile, ordinato e facile da raggiungere."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali accessori aiutano a risparmiare spazio in bagno?",
+            "answer": "Contenitori compatti, organizer verticali e soluzioni per mensole o lavabo permettono di sfruttare meglio lo spazio disponibile."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "L’organizzazione bagno può essere anche elegante?",
+            "answer": "Sì. Accessori coordinati per colore e materiale rendono il bagno più pulito visivamente e più coerente con uno stile moderno."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’organizzazione bagno"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi organizzare anche gli altri ambienti?",
+        "button_label": "Scopri tutta l’Organizzazione Casa",
+        "button_link": "/collections/organizzazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

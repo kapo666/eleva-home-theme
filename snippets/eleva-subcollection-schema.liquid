@@ -369,6 +369,294 @@
           ]
         }
       {% endcapture %}
+    {% when 'organizzazione-bagno' %}
+      {% assign eleva_schema_name = 'Organizzazione Bagno: Contenitori e Accessori' %}
+      {% assign eleva_schema_description = 'Organizer, contenitori e accessori per organizzare il bagno con ordine, funzionalità e stile.' %}
+      {% assign eleva_parent_name = 'Organizzazione Casa' %}
+      {% assign eleva_parent_path = '/collections/organizzazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come organizzare meglio il bagno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inizia separando cosmetici, asciugamani e piccoli accessori. Contenitori e organizer aiutano a mantenere tutto visibile, ordinato e facile da raggiungere."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali accessori aiutano a risparmiare spazio in bagno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contenitori compatti, organizer verticali e soluzioni per mensole o lavabo permettono di sfruttare meglio lo spazio disponibile."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L’organizzazione bagno può essere anche elegante?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Accessori coordinati per colore e materiale rendono il bagno più pulito visivamente e più coerente con uno stile moderno."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'organizzazione-camera' %}
+      {% assign eleva_schema_name = 'Organizzazione Camera: Armadi e Cassetti' %}
+      {% assign eleva_schema_description = 'Soluzioni per organizzare camera, armadi e cassetti con ordine, spazio e stile.' %}
+      {% assign eleva_parent_name = 'Organizzazione Casa' %}
+      {% assign eleva_parent_path = '/collections/organizzazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come organizzare meglio armadi e cassetti?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usa divisori, scatole e organizer per separare categorie diverse. In questo modo vestiti, accessori e piccoli oggetti restano più facili da trovare."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali soluzioni aiutano a mantenere la camera ordinata?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contenitori sottoletto, scatole impilabili e organizer per cassetti aiutano a sfruttare lo spazio senza appesantire l’ambiente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L’organizzazione camera aiuta anche il relax?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Una stanza più ordinata riduce il disordine visivo e rende la camera più calma, accogliente e piacevole da vivere."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'contenitori-bagno' %}
+      {% assign eleva_schema_name = 'Contenitori Bagno e Organizer Moderni' %}
+      {% assign eleva_schema_description = 'Contenitori bagno e organizer moderni per cosmetici, asciugamani e piccoli accessori.' %}
+      {% assign eleva_parent_name = 'Accessori Bagno' %}
+      {% assign eleva_parent_path = '/collections/accessori-bagno' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Cosa mettere nei contenitori bagno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puoi usarli per cosmetici, accessori beauty, asciugamani piccoli, spazzole, profumi e prodotti quotidiani da tenere in ordine."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dove posizionare un organizer bagno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Può essere posizionato su mensole, ripiani, mobili lavabo o dentro armadietti. Scegli la misura in base allo spazio disponibile."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "I contenitori bagno aiutano anche l’estetica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Contenitori coordinati e ordinati rendono il bagno più pulito, moderno e piacevole da vedere."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'specchi-decorativi' %}
+      {% assign eleva_schema_name = 'Specchi Decorativi Moderni da Parete' %}
+      {% assign eleva_schema_description = 'Specchi decorativi moderni da parete per dare luce, profondità e stile agli ambienti.' %}
+      {% assign eleva_parent_name = 'Decorazione Casa' %}
+      {% assign eleva_parent_path = '/collections/decorazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Dove posizionare uno specchio decorativo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Uno specchio decorativo funziona bene in ingresso, soggiorno, camera o bagno. Posizionalo dove può riflettere luce o valorizzare una parete vuota."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gli specchi aiutano a far sembrare una stanza più grande?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Se posizionati correttamente, riflettono luce e profondità, rendendo l’ambiente visivamente più ampio e luminoso."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come abbinare uno specchio allo stile della casa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli forme e finiture coerenti con il resto dell’arredo. Cornici semplici e colori neutri funzionano bene in case moderne."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'quadri-poster' %}
+      {% assign eleva_schema_name = 'Quadri e Poster Moderni per la Casa' %}
+      {% assign eleva_schema_description = 'Quadri e poster moderni per valorizzare pareti, soggiorno, camera e ingresso.' %}
+      {% assign eleva_parent_name = 'Decorazione Casa' %}
+      {% assign eleva_parent_path = '/collections/decorazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere quadri e poster per il soggiorno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli colori e soggetti coerenti con l’ambiente. Formati grandi funzionano bene sopra divani o consolle, mentre più stampe piccole creano composizioni leggere."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso abbinare più poster sulla stessa parete?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Mantieni una palette coerente e alterna dimensioni diverse per creare una composizione equilibrata e moderna."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quadri e poster aiutano a completare l’arredo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Sono dettagli visivi forti che possono dare personalità alla casa senza cambiare mobili o struttura della stanza."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'lampade-terra' %}
+      {% assign eleva_schema_name = 'Lampade da Terra Moderne e Design' %}
+      {% assign eleva_schema_description = 'Lampade da terra moderne per soggiorno, camera, angolo lettura e zona relax.' %}
+      {% assign eleva_parent_name = 'Illuminazione Casa' %}
+      {% assign eleva_parent_path = '/collections/illuminazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Dove posizionare una lampada da terra?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "È ideale accanto al divano, vicino a una poltrona, in camera o in un angolo lettura. Deve illuminare senza ostacolare il passaggio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le lampade da terra servono solo per decorare?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Possono essere decorative ma anche funzionali, soprattutto per lettura, luce d’atmosfera o supporto all’illuminazione principale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come scegliere una lampada da terra moderna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Valuta altezza, stile, tipo di luce e spazio disponibile. Linee semplici e colori neutri si integrano bene in ambienti contemporanei."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'organizzazione-ufficio' %}
+      {% assign eleva_schema_name = 'Organizzazione Ufficio Casa e Scrivania' %}
+      {% assign eleva_schema_description = 'Organizer e accessori per organizzare ufficio casa, scrivania e documenti con stile.' %}
+      {% assign eleva_parent_name = 'Organizzazione Casa' %}
+      {% assign eleva_parent_path = '/collections/organizzazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come organizzare meglio la scrivania?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tieni a portata di mano solo ciò che usi ogni giorno e usa organizer, contenitori e divisori per documenti, cavi e piccoli accessori."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L’organizzazione ufficio aiuta la produttività?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Uno spazio ordinato riduce distrazioni e rende più semplice concentrarsi sulle attività quotidiane."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali accessori sono utili per l’home office?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Organizer scrivania, contenitori per documenti, supporti e soluzioni per piccoli oggetti aiutano a mantenere lo spazio più funzionale."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'salvaspazio-cucina' %}
+      {% assign eleva_schema_name = 'Salvaspazio Cucina: Organizer e Soluzioni Smart' %}
+      {% assign eleva_schema_description = 'Soluzioni salvaspazio cucina per organizzare dispensa, cassetti, mensole e piccoli spazi.' %}
+      {% assign eleva_parent_name = 'Soluzioni Salvaspazio' %}
+      {% assign eleva_parent_path = '/collections/soluzioni-salvaspazio' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come risparmiare spazio in cucina?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Usa contenitori impilabili, organizer verticali e soluzioni per cassetti o mensole. L’obiettivo è sfruttare meglio lo spazio già disponibile."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le soluzioni salvaspazio sono adatte alle cucine piccole?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Sono pensate proprio per ottimizzare ambienti ridotti, rendendo più semplice tenere in ordine dispensa, utensili e piccoli accessori."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Il salvaspazio cucina può essere anche bello da vedere?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Accessori compatti e coordinati aiutano a mantenere una cucina ordinata senza rinunciare a uno stile moderno."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
   {% endcase %}
 
   {% if eleva_schema_name != blank and eleva_parent_name != blank and eleva_parent_path != blank %}

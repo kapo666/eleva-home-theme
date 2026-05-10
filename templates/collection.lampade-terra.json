@@ -17,12 +17,48 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ILLUMINAZIONE CASA",
+        "title": "Lampade da Terra Moderne e Design",
+        "intro": "Lampade da terra per creare atmosfera, lettura e punti luce eleganti in casa."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_tavolo": {
+          "type": "pill",
+          "settings": {
+            "label": "Lampade da Tavolo",
+            "link": "/collections/lampade-tavolo"
+          }
+        },
+        "pill_sospensione": {
+          "type": "pill",
+          "settings": {
+            "label": "Lampade a Sospensione",
+            "link": "/collections/lampade-sospensione"
+          }
+        },
+        "pill_applique": {
+          "type": "pill",
+          "settings": {
+            "label": "Applique",
+            "link": "/collections/applique-lampade-parete"
+          }
+        }
+      },
+      "block_order": [
+        "pill_tavolo",
+        "pill_sospensione",
+        "pill_applique"
+      ],
+      "settings": {
+        "parent_label": "← Tutta l’Illuminazione Casa",
+        "parent_link": "/collections/illuminazione-casa",
+        "siblings_label": "Altre luci:"
       }
     },
     "product_grid": {
@@ -44,11 +80,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Lampade da terra per soggiorno, camera e zona relax",
+        "text_1": "Le lampade da terra ELEVA HOME aggiungono luce, verticalità e stile agli ambienti senza occupare spazio sui mobili. Perfette per soggiorno, camera, angoli lettura o zona relax, creano un punto luce pratico e decorativo.",
+        "text_2": "Scegli lampade da terra moderne per completare l’illuminazione della casa con linee pulite, forme essenziali e luce piacevole. Sono ideali per creare atmosfera e rendere gli spazi più accoglienti.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Illuminazione Casa",
+        "link_parent": "/collections/illuminazione-casa",
+        "text_3_middle": " per abbinare lampade da terra, ",
+        "link_sibling_1_label": "Lampade da Tavolo",
+        "link_sibling_1": "/collections/lampade-tavolo",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Lampade a Sospensione",
+        "link_sibling_2": "/collections/lampade-sospensione",
+        "text_3_suffix": ", applique e altri punti luce."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove posizionare una lampada da terra?",
+            "answer": "È ideale accanto al divano, vicino a una poltrona, in camera o in un angolo lettura. Deve illuminare senza ostacolare il passaggio."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le lampade da terra servono solo per decorare?",
+            "answer": "No. Possono essere decorative ma anche funzionali, soprattutto per lettura, luce d’atmosfera o supporto all’illuminazione principale."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere una lampada da terra moderna?",
+            "answer": "Valuta altezza, stile, tipo di luce e spazio disponibile. Linee semplici e colori neutri si integrano bene in ambienti contemporanei."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sulle lampade da terra"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare l’illuminazione della casa?",
+        "button_label": "Scopri tutta l’Illuminazione Casa",
+        "button_link": "/collections/illuminazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

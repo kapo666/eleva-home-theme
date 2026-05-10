@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "DECORAZIONE CASA",
+        "title": "Specchi Decorativi Moderni da Parete",
+        "intro": "Specchi decorativi per dare luce, profondità e stile agli ambienti della casa."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_vasi": {
+          "type": "pill",
+          "settings": {
+            "label": "Vasi Decorativi",
+            "link": "/collections/vasi-decorativi"
+          }
+        },
+        "pill_quadri": {
+          "type": "pill",
+          "settings": {
+            "label": "Quadri e Poster",
+            "link": "/collections/quadri-poster"
+          }
+        },
+        "pill_candele": {
+          "type": "pill",
+          "settings": {
+            "label": "Candele e Portacandele",
+            "link": "/collections/candele-portacandele"
+          }
+        },
+        "pill_cuscini": {
+          "type": "pill",
+          "settings": {
+            "label": "Cuscini Decorativi",
+            "link": "/collections/cuscini-decorativi"
+          }
+        }
+      },
+      "block_order": [
+        "pill_vasi",
+        "pill_quadri",
+        "pill_candele",
+        "pill_cuscini"
+      ],
+      "settings": {
+        "parent_label": "← Tutta la Decorazione Casa",
+        "parent_link": "/collections/decorazione-casa",
+        "siblings_label": "Altri complementi:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Specchi decorativi per luce, spazio e stile",
+        "text_1": "Gli specchi decorativi ELEVA HOME aggiungono luminosità, profondità e personalità agli ambienti. Perfetti per ingresso, soggiorno, camera o bagno, aiutano a rendere gli spazi più ampi e curati senza interventi complessi.",
+        "text_2": "Scegli specchi moderni da parete per completare l’arredo con forme pulite, cornici essenziali e dettagli eleganti. Uno specchio ben posizionato può valorizzare la luce naturale e dare equilibrio alla stanza.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Decorazione Casa",
+        "link_parent": "/collections/decorazione-casa",
+        "text_3_middle": " per abbinare specchi, ",
+        "link_sibling_1_label": "Vasi Decorativi",
+        "link_sibling_1": "/collections/vasi-decorativi",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Quadri e Poster",
+        "link_sibling_2": "/collections/quadri-poster",
+        "text_3_suffix": ", candele e cuscini decorativi."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove posizionare uno specchio decorativo?",
+            "answer": "Uno specchio decorativo funziona bene in ingresso, soggiorno, camera o bagno. Posizionalo dove può riflettere luce o valorizzare una parete vuota."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Gli specchi aiutano a far sembrare una stanza più grande?",
+            "answer": "Sì. Se posizionati correttamente, riflettono luce e profondità, rendendo l’ambiente visivamente più ampio e luminoso."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come abbinare uno specchio allo stile della casa?",
+            "answer": "Scegli forme e finiture coerenti con il resto dell’arredo. Cornici semplici e colori neutri funzionano bene in case moderne."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sugli specchi decorativi"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la decorazione della casa?",
+        "button_label": "Scopri tutta la Decorazione Casa",
+        "button_link": "/collections/decorazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

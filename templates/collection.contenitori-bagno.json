@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ACCESSORI BAGNO",
+        "title": "Contenitori Bagno e Organizer Moderni",
+        "intro": "Contenitori e organizer per cosmetici, asciugamani e piccoli accessori bagno."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_dispenser": {
+          "type": "pill",
+          "settings": {
+            "label": "Dispenser e Portasapone",
+            "link": "/collections/dispenser-portasapone"
+          }
+        },
+        "pill_tappetini": {
+          "type": "pill",
+          "settings": {
+            "label": "Tappetini Bagno",
+            "link": "/collections/tappetini-bagno"
+          }
+        }
+      },
+      "block_order": [
+        "pill_dispenser",
+        "pill_tappetini"
+      ],
+      "settings": {
+        "parent_label": "← Tutti gli Accessori Bagno",
+        "parent_link": "/collections/accessori-bagno",
+        "siblings_label": "Altri accessori bagno:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Contenitori bagno per cosmetici, asciugamani e ordine",
+        "text_1": "I contenitori bagno ELEVA HOME aiutano a mantenere cosmetici, prodotti beauty, asciugamani e piccoli accessori sempre ordinati. Soluzioni compatte e pratiche permettono di sfruttare meglio mensole, ripiani e zona lavabo.",
+        "text_2": "Scegli organizer bagno moderni per ridurre il disordine e creare un ambiente più pulito visivamente. Forme essenziali, materiali facili da gestire e colori neutri si integrano bene in bagni contemporanei.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Accessori Bagno",
+        "link_parent": "/collections/accessori-bagno",
+        "text_3_middle": " per completare il tuo ambiente con ",
+        "link_sibling_1_label": "Dispenser e Portasapone",
+        "link_sibling_1": "/collections/dispenser-portasapone",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Tappetini Bagno",
+        "link_sibling_2": "/collections/tappetini-bagno",
+        "text_3_suffix": " coordinati."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Cosa mettere nei contenitori bagno?",
+            "answer": "Puoi usarli per cosmetici, accessori beauty, asciugamani piccoli, spazzole, profumi e prodotti quotidiani da tenere in ordine."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove posizionare un organizer bagno?",
+            "answer": "Può essere posizionato su mensole, ripiani, mobili lavabo o dentro armadietti. Scegli la misura in base allo spazio disponibile."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "I contenitori bagno aiutano anche l’estetica?",
+            "answer": "Sì. Contenitori coordinati e ordinati rendono il bagno più pulito, moderno e piacevole da vedere."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui contenitori bagno"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare il bagno con altri accessori?",
+        "button_label": "Scopri tutti gli Accessori Bagno",
+        "button_link": "/collections/accessori-bagno"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

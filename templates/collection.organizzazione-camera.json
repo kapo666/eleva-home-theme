@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ORGANIZZAZIONE CASA",
+        "title": "Organizzazione Camera: Armadi e Cassetti",
+        "intro": "Soluzioni per camera, armadio e cassetti pensate per ordine, spazio e semplicità."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Cucina",
+            "link": "/collections/organizzazione-cucina"
+          }
+        },
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Bagno",
+            "link": "/collections/organizzazione-bagno"
+          }
+        },
+        "pill_ufficio": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ufficio",
+            "link": "/collections/organizzazione-ufficio"
+          }
+        },
+        "pill_ingresso": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ingresso",
+            "link": "/collections/organizzazione-ingresso"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_bagno",
+        "pill_ufficio",
+        "pill_ingresso"
+      ],
+      "settings": {
+        "parent_label": "← Tutta l’Organizzazione Casa",
+        "parent_link": "/collections/organizzazione-casa",
+        "siblings_label": "Altri ambienti:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Organizzazione camera per armadi, cassetti e guardaroba",
+        "text_1": "L’organizzazione camera ELEVA HOME è pensata per rendere armadi, cassetti e comodini più ordinati e funzionali. Scatole, contenitori e organizer aiutano a separare abiti, accessori e piccoli oggetti, riducendo il disordine quotidiano.",
+        "text_2": "Scegli soluzioni per organizzare la camera da letto con uno stile pulito e moderno. Una camera ordinata rende più semplice prepararsi, trovare ciò che serve e mantenere l’ambiente rilassante.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Organizzazione Casa",
+        "link_parent": "/collections/organizzazione-casa",
+        "text_3_middle": " per completare l’ordine in ",
+        "link_sibling_1_label": "Organizzazione Bagno",
+        "link_sibling_1": "/collections/organizzazione-bagno",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Organizzazione Ingresso",
+        "link_sibling_2": "/collections/organizzazione-ingresso",
+        "text_3_suffix": ", cucina e ufficio."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come organizzare meglio armadi e cassetti?",
+            "answer": "Usa divisori, scatole e organizer per separare categorie diverse. In questo modo vestiti, accessori e piccoli oggetti restano più facili da trovare."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali soluzioni aiutano a mantenere la camera ordinata?",
+            "answer": "Contenitori sottoletto, scatole impilabili e organizer per cassetti aiutano a sfruttare lo spazio senza appesantire l’ambiente."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "L’organizzazione camera aiuta anche il relax?",
+            "answer": "Sì. Una stanza più ordinata riduce il disordine visivo e rende la camera più calma, accogliente e piacevole da vivere."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’organizzazione camera"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi organizzare tutta la casa?",
+        "button_label": "Scopri tutta l’Organizzazione Casa",
+        "button_link": "/collections/organizzazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }
