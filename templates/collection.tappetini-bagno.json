@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ACCESSORI BAGNO",
+        "title": "Tappetini Bagno Antiscivolo e Assorbenti",
+        "intro": "Tappetini bagno morbidi e pratici per comfort, sicurezza e stile quotidiano."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_dispenser": {
+          "type": "pill",
+          "settings": {
+            "label": "Dispenser e Portasapone",
+            "link": "/collections/dispenser-portasapone"
+          }
+        },
+        "pill_contenitori": {
+          "type": "pill",
+          "settings": {
+            "label": "Contenitori Bagno",
+            "link": "/collections/contenitori-bagno"
+          }
+        }
+      },
+      "block_order": [
+        "pill_dispenser",
+        "pill_contenitori"
+      ],
+      "settings": {
+        "parent_label": "← Tutti gli Accessori Bagno",
+        "parent_link": "/collections/accessori-bagno",
+        "siblings_label": "Altri accessori bagno:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Tappetini bagno per comfort, sicurezza e ordine",
+        "text_1": "I tappetini bagno ELEVA HOME uniscono comfort, praticità e stile moderno. Pensati per la zona doccia, lavabo o vasca, aiutano ad assorbire l’umidità, rendere il pavimento più sicuro e completare il bagno con un dettaglio morbido e ordinato.",
+        "text_2": "Scegli tappetini bagno antiscivolo e assorbenti per migliorare l’esperienza quotidiana senza rinunciare all’estetica. Colori neutri, texture piacevoli e materiali facili da gestire si integrano bene in bagni moderni e minimal.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Accessori Bagno",
+        "link_parent": "/collections/accessori-bagno",
+        "text_3_middle": " per completare il tuo ambiente con ",
+        "link_sibling_1_label": "Dispenser e Portasapone",
+        "link_sibling_1": "/collections/dispenser-portasapone",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Contenitori Bagno",
+        "link_sibling_2": "/collections/contenitori-bagno",
+        "text_3_suffix": " coordinati."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere un tappetino bagno antiscivolo?",
+            "answer": "Valuta dimensione, materiale e aderenza al pavimento. Un tappetino stabile e assorbente aiuta a rendere il bagno più sicuro e confortevole."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove posizionare i tappetini bagno?",
+            "answer": "Sono ideali davanti alla doccia, alla vasca o al lavabo. Puoi usarne più di uno se il bagno è ampio o diviso in zone."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come mantenere pulito un tappetino bagno?",
+            "answer": "Segui le istruzioni della scheda prodotto. Una pulizia regolare aiuta a mantenere il tappetino morbido, igienico e piacevole da usare."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui tappetini bagno"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare il bagno con altri accessori?",
+        "button_label": "Scopri tutti gli Accessori Bagno",
+        "button_link": "/collections/accessori-bagno"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

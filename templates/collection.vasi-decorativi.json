@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "DECORAZIONE CASA",
+        "title": "Vasi Decorativi Moderni Design",
+        "intro": "Vasi decorativi per fiori, piante e composizioni eleganti in ogni ambiente."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_specchi": {
+          "type": "pill",
+          "settings": {
+            "label": "Specchi Decorativi",
+            "link": "/collections/specchi-decorativi"
+          }
+        },
+        "pill_quadri": {
+          "type": "pill",
+          "settings": {
+            "label": "Quadri e Poster",
+            "link": "/collections/quadri-poster"
+          }
+        },
+        "pill_candele": {
+          "type": "pill",
+          "settings": {
+            "label": "Candele e Portacandele",
+            "link": "/collections/candele-portacandele"
+          }
+        },
+        "pill_cuscini": {
+          "type": "pill",
+          "settings": {
+            "label": "Cuscini Decorativi",
+            "link": "/collections/cuscini-decorativi"
+          }
+        }
+      },
+      "block_order": [
+        "pill_specchi",
+        "pill_quadri",
+        "pill_candele",
+        "pill_cuscini"
+      ],
+      "settings": {
+        "parent_label": "← Tutta la Decorazione Casa",
+        "parent_link": "/collections/decorazione-casa",
+        "siblings_label": "Altri complementi:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Vasi decorativi moderni per casa e zona living",
+        "text_1": "I vasi decorativi ELEVA HOME valorizzano fiori, piante e composizioni con forme pulite e stile contemporaneo. Perfetti per soggiorno, ingresso, tavolo o mensole, aggiungono verticalità, colore e personalità senza appesantire l’ambiente.",
+        "text_2": "Scegli vasi moderni per completare la decorazione della casa con un dettaglio semplice ma d’impatto. Ceramica, vetro e finiture neutre aiutano a creare un look elegante, ordinato e coerente con uno stile minimal.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Decorazione Casa",
+        "link_parent": "/collections/decorazione-casa",
+        "text_3_middle": " per abbinare vasi, ",
+        "link_sibling_1_label": "Candele e Portacandele",
+        "link_sibling_1": "/collections/candele-portacandele",
+        "text_3_connector": ", ",
+        "link_sibling_2_label": "Cuscini Decorativi",
+        "link_sibling_2": "/collections/cuscini-decorativi",
+        "text_3_suffix": ", quadri e specchi."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere un vaso decorativo moderno?",
+            "answer": "Scegli forma, altezza e materiale in base allo spazio. Vasi alti valorizzano angoli e ingressi, mentre vasi bassi funzionano bene su tavoli e mensole."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "I vasi decorativi sono adatti anche senza fiori?",
+            "answer": "Sì. Un vaso può essere usato anche come elemento decorativo autonomo, soprattutto se ha una forma interessante o una finitura elegante."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come abbinare più vasi nello stesso ambiente?",
+            "answer": "Mantieni una palette coerente e varia le altezze. Due o tre vasi con forme diverse possono creare una composizione equilibrata."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui vasi decorativi"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la decorazione della casa?",
+        "button_label": "Scopri tutta la Decorazione Casa",
+        "button_link": "/collections/decorazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

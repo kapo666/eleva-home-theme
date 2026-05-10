@@ -151,5 +151,85 @@ For all 4 templates:
 ### 9. Next recommended batch
 - extend the same subcollection system to the next decor or bagno subcollections after live review of this first lighting/kitchen batch
 
+## Module 9.3 — Batch 2 P0
+
+### 1. Templates created
+- `templates/collection.cuscini-decorativi.json`
+- `templates/collection.coperte-plaid.json`
+- `templates/collection.tappetini-bagno.json`
+- `templates/collection.vasi-decorativi.json`
+- `templates/collection.contenitori-cucina.json`
+
+### 2. Final section order for each
+For all 5 templates:
+1. `collection-breadcrumbs`
+2. `eleva-subcollection-hero`
+3. `eleva-parent-siblings`
+4. `main-collection-product-grid`
+5. `eleva-subcollection-seo-content`
+6. `eleva-subcollection-faq`
+7. `eleva-parent-cta`
+
+### 3. Parent/sibling links for each
+- `Cuscini Decorativi`
+  - parent: `Decorazione Casa`
+  - siblings: `Vasi Decorativi`, `Specchi Decorativi`, `Quadri e Poster`, `Candele e Portacandele`
+- `Coperte e Plaid`
+  - parent: `Tessili Casa`
+  - siblings: `Tappeti Moderni`, `Tende Moderne`
+- `Tappetini Bagno`
+  - parent: `Accessori Bagno`
+  - siblings: `Dispenser e Portasapone`, `Contenitori Bagno`
+- `Vasi Decorativi`
+  - parent: `Decorazione Casa`
+  - siblings: `Specchi Decorativi`, `Quadri e Poster`, `Candele e Portacandele`, `Cuscini Decorativi`
+- `Contenitori Cucina`
+  - parent: `Cucina e Tavola`
+  - siblings: `Utensili Cucina`, `Stoviglie e Piatti`
+
+### 4. SEO content for each
+- `Cuscini Decorativi`
+  - focused on divano, letto and living styling
+- `Coperte e Plaid`
+  - focused on warmth, softness and relaxed living
+- `Tappetini Bagno`
+  - focused on comfort, safety and absorption
+- `Vasi Decorativi`
+  - focused on flowers, plants and modern decorative styling
+- `Contenitori Cucina`
+  - focused on pantry, food storage and order
+
+### 5. FAQ for each
+- each new subcollection now has 3 dedicated FAQ items matching the visible content
+
+### 6. Schema handles added
+- `cuscini-decorativi`
+- `coperte-plaid`
+- `tappetini-bagno`
+- `vasi-decorativi`
+- `contenitori-cucina`
+
+### 7. Validation
+- all 5 templates follow the validated subcollection structure: `PASS`
+- raw `python3 -m json.tool` is blocked by Shopify comment headers: expected
+- JSON validation passes when skipping the Shopify comment header: `PASS`
+- one H1 per template through `eleva-subcollection-hero`: `PASS`
+- `main-collection-product-grid` present in each template: `PASS`
+- `main-collection-banner` absent in each template: `PASS`
+- schema only outputs for supported subcollection handles: `PASS`
+- no duplicate with main collection schema routing: `PASS`
+
+### 8. Dangerous files untouched confirmation
+- main collection templates untouched
+- pilot and batch 1 templates untouched in this pass
+- `sections/main-collection-product-grid.liquid` untouched
+- product cards untouched
+- filters / sorting / pagination untouched
+- cart / product-form / variant files untouched
+- homepage / header / footer untouched visually
+
+### 9. Next recommended batch
+- extend the same system to the remaining bagno, decorazione and cucina subcollections after live review of both batch 1 and batch 2
+
 ## Final Verdict
 - `READY FOR LIVE REVIEW`

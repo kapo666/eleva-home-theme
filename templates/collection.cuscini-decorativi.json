@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "DECORAZIONE CASA",
+        "title": "Cuscini Decorativi e Arredo Moderni",
+        "intro": "Cuscini arredo per divano, letto e zona living con stile morbido e contemporaneo."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_vasi": {
+          "type": "pill",
+          "settings": {
+            "label": "Vasi Decorativi",
+            "link": "/collections/vasi-decorativi"
+          }
+        },
+        "pill_specchi": {
+          "type": "pill",
+          "settings": {
+            "label": "Specchi Decorativi",
+            "link": "/collections/specchi-decorativi"
+          }
+        },
+        "pill_quadri": {
+          "type": "pill",
+          "settings": {
+            "label": "Quadri e Poster",
+            "link": "/collections/quadri-poster"
+          }
+        },
+        "pill_candele": {
+          "type": "pill",
+          "settings": {
+            "label": "Candele e Portacandele",
+            "link": "/collections/candele-portacandele"
+          }
+        }
+      },
+      "block_order": [
+        "pill_vasi",
+        "pill_specchi",
+        "pill_quadri",
+        "pill_candele"
+      ],
+      "settings": {
+        "parent_label": "← Tutta la Decorazione Casa",
+        "parent_link": "/collections/decorazione-casa",
+        "siblings_label": "Altri complementi:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Cuscini decorativi per divano, letto e zona living",
+        "text_1": "I cuscini decorativi ELEVA HOME aggiungono comfort, texture e personalità agli ambienti quotidiani. Perfetti per divano, letto e zona living, aiutano a completare l’arredo con dettagli morbidi, colori equilibrati e uno stile moderno.",
+        "text_2": "Scegli cuscini arredo per rendere più accogliente una stanza senza modificare l’arredo principale. Texture piacevoli, forme pulite e tonalità neutre permettono di creare un effetto elegante, ordinato e contemporaneo.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Decorazione Casa",
+        "link_parent": "/collections/decorazione-casa",
+        "text_3_middle": " per completare gli ambienti con ",
+        "link_sibling_1_label": "Vasi Decorativi",
+        "link_sibling_1": "/collections/vasi-decorativi",
+        "text_3_connector": ", ",
+        "link_sibling_2_label": "Quadri e Poster",
+        "link_sibling_2": "/collections/quadri-poster",
+        "text_3_suffix": " e altri complementi d’arredo."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere cuscini decorativi per il divano?",
+            "answer": "Scegli colori e texture coerenti con il divano e con il resto della stanza. Tonalità neutre e materiali morbidi aiutano a creare un effetto elegante e ordinato."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "I cuscini decorativi vanno bene anche per la camera?",
+            "answer": "Sì. Sul letto aggiungono volume, comfort visivo e un dettaglio decorativo semplice senza appesantire l’ambiente."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come abbinare più cuscini tra loro?",
+            "answer": "Combina massimo due o tre tonalità e alterna texture diverse. Mantieni una palette coerente per evitare un effetto caotico."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui cuscini decorativi"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la decorazione della casa?",
+        "button_label": "Scopri tutta la Decorazione Casa",
+        "button_link": "/collections/decorazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

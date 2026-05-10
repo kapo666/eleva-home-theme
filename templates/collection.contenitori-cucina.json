@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "CUCINA E TAVOLA",
+        "title": "Contenitori Cucina Ermetici e Salvaspazio",
+        "intro": "Contenitori cucina per dispensa, alimenti e organizzazione quotidiana."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_utensili": {
+          "type": "pill",
+          "settings": {
+            "label": "Utensili Cucina",
+            "link": "/collections/utensili-cucina"
+          }
+        },
+        "pill_stoviglie": {
+          "type": "pill",
+          "settings": {
+            "label": "Stoviglie e Piatti",
+            "link": "/collections/stoviglie-piatti"
+          }
+        }
+      },
+      "block_order": [
+        "pill_utensili",
+        "pill_stoviglie"
+      ],
+      "settings": {
+        "parent_label": "← Tutta Cucina e Tavola",
+        "parent_link": "/collections/cucina-tavola",
+        "siblings_label": "Altri accessori cucina:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Contenitori cucina per alimenti, dispensa e ordine",
+        "text_1": "I contenitori cucina ELEVA HOME aiutano a conservare alimenti, organizzare la dispensa e mantenere il piano lavoro più ordinato. Barattoli, contenitori ermetici e soluzioni salvaspazio rendono più semplice gestire ingredienti, pasta, cereali, spezie e piccoli accessori.",
+        "text_2": "Scegli contenitori cucina moderni per proteggere gli alimenti e creare una dispensa più pulita visivamente. Materiali pratici, forme impilabili e design essenziale aiutano a sfruttare meglio ogni spazio.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Cucina e Tavola",
+        "link_parent": "/collections/cucina-tavola",
+        "text_3_middle": " per completare la cucina con ",
+        "link_sibling_1_label": "Utensili Cucina",
+        "link_sibling_1": "/collections/utensili-cucina",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Stoviglie e Piatti",
+        "link_sibling_2": "/collections/stoviglie-piatti",
+        "text_3_suffix": " coordinati."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere contenitori cucina ermetici?",
+            "answer": "Valuta dimensione, chiusura e utilizzo. Contenitori ermetici aiutano a conservare meglio alimenti secchi, ingredienti e prodotti da dispensa."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "I contenitori cucina aiutano davvero a risparmiare spazio?",
+            "answer": "Sì. Forme impilabili e misure coordinate permettono di sfruttare meglio ripiani, cassetti e dispensa, riducendo il disordine visivo."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Dove usare i contenitori cucina?",
+            "answer": "Sono utili in dispensa, frigorifero, cassetti e piano lavoro. Puoi usarli per alimenti, spezie, snack, piccoli accessori e ingredienti quotidiani."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui contenitori cucina"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la tua cucina?",
+        "button_label": "Scopri tutta Cucina e Tavola",
+        "button_link": "/collections/cucina-tavola"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }
