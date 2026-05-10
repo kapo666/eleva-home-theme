@@ -66,8 +66,9 @@
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
@@ -76,7 +77,6 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -87,16 +87,16 @@
         "heading": "Lampade a sospensione per cucina, tavolo e soggiorno",
         "text_1": "Le lampade a sospensione ELEVA HOME definiscono il carattere di un ambiente con luce, forma e proporzioni. Ideali sopra il tavolo da pranzo, l’isola cucina o la zona living, aiutano a creare un punto focale elegante e funzionale.",
         "text_2": "Scegli lampade a sospensione moderne per aggiungere profondità visiva e illuminazione mirata. Linee essenziali, materiali curati e finiture contemporanee rendono ogni lampada una scelta di design per la casa.",
-        "text_3_prefix": "Scopri anche la collezione ",
+        "text_3_prefix": "Scopri anche la collezione",
         "link_parent_label": "Illuminazione Casa",
         "link_parent": "/collections/illuminazione-casa",
-        "text_3_middle": " per completare gli ambienti con ",
+        "text_3_middle": "per completare gli ambienti con",
         "link_sibling_1_label": "Lampade da Tavolo",
         "link_sibling_1": "/collections/lampade-tavolo",
-        "text_3_connector": ", ",
+        "text_3_connector": ",",
         "link_sibling_2_label": "Applique",
         "link_sibling_2": "/collections/applique-lampade-parete",
-        "text_3_suffix": " e altri punti luce coordinati."
+        "text_3_suffix": "e altri punti luce coordinati."
       }
     },
     "eleva_subcollection_faq_main": {
