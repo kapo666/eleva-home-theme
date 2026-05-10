@@ -37,6 +37,9 @@
         {% render 'eleva-collection-schema' %}
       {% endif %}
     {% endif %}
+    {% if request.page_type == 'product' %}
+      {{ 'eleva-product.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>

@@ -1,0 +1,15 @@
+{%- liquid
+  assign eleva_delivery_note = blank
+  if product.metafields.custom.delivery_note != blank
+    assign eleva_delivery_note = product.metafields.custom.delivery_note.value | default: product.metafields.custom.delivery_note
+  endif
+
+  if eleva_delivery_note == blank
+    assign eleva_delivery_note = 'Consegna tracciata in Italia. Se il prodotto non è adatto alla tua casa, hai 30 giorni per effettuare il reso.'
+  endif
+-%}
+
+<div class="eleva-product-note">
+  <p class="eleva-product-note__text">{{ eleva_delivery_note | escape }}</p>
+  <p class="eleva-product-note__subtext">Assistenza ELEVA HOME disponibile via email per dubbi su ordine, spedizione o reso.</p>
+</div>

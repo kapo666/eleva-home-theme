@@ -1,0 +1,16 @@
+{%- liquid
+  assign eleva_summary = blank
+  if product.metafields.custom.short_summary != blank
+    assign eleva_summary = product.metafields.custom.short_summary.value | default: product.metafields.custom.short_summary
+  endif
+
+  if eleva_summary == blank
+    assign eleva_summary = 'Un dettaglio pratico e moderno pensato per rendere la casa più ordinata, elegante e facile da vivere ogni giorno.'
+  endif
+-%}
+
+{%- if eleva_summary != blank -%}
+  <div class="eleva-product-summary rte">
+    <p>{{ eleva_summary | escape }}</p>
+  </div>
+{%- endif -%}
