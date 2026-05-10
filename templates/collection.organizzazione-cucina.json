@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ORGANIZZAZIONE CASA",
+        "title": "Organizzazione Cucina: Soluzioni Pratiche",
+        "intro": "Organizer, contenitori e accessori per rendere la cucina più ordinata e funzionale."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Bagno",
+            "link": "/collections/organizzazione-bagno"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Camera",
+            "link": "/collections/organizzazione-camera"
+          }
+        },
+        "pill_ufficio": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ufficio",
+            "link": "/collections/organizzazione-ufficio"
+          }
+        },
+        "pill_ingresso": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ingresso",
+            "link": "/collections/organizzazione-ingresso"
+          }
+        }
+      },
+      "block_order": [
+        "pill_bagno",
+        "pill_camera",
+        "pill_ufficio",
+        "pill_ingresso"
+      ],
+      "settings": {
+        "parent_label": "← Tutta l’Organizzazione Casa",
+        "parent_link": "/collections/organizzazione-casa",
+        "siblings_label": "Altri ambienti:"
       }
     },
     "product_grid": {
@@ -44,11 +88,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Organizzazione cucina per spazi ordinati e funzionali",
+        "text_1": "L’organizzazione cucina ELEVA HOME aiuta a trasformare cassetti, dispensa e piano lavoro in spazi più pratici e facili da gestire. Organizer, contenitori, divisori e accessori intelligenti permettono di tenere utensili, spezie e piccoli oggetti sempre a portata di mano.",
+        "text_2": "Scegli soluzioni per organizzare la cucina con stile, ridurre il disordine e sfruttare meglio ogni centimetro. Una cucina ordinata rende più semplice cucinare, pulire e vivere l’ambiente ogni giorno.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Organizzazione Casa",
+        "link_parent": "/collections/organizzazione-casa",
+        "text_3_middle": " per trovare soluzioni dedicate a ",
+        "link_sibling_1_label": "Organizzazione Bagno",
+        "link_sibling_1": "/collections/organizzazione-bagno",
+        "text_3_connector": ", ",
+        "link_sibling_2_label": "Organizzazione Camera",
+        "link_sibling_2": "/collections/organizzazione-camera",
+        "text_3_suffix": ", ingresso e ufficio."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Da dove iniziare per organizzare la cucina?",
+            "answer": "Inizia dai cassetti e dalla dispensa. Divisori, contenitori e organizer aiutano a separare gli oggetti e a trovare più velocemente quello che usi ogni giorno."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali accessori aiutano a risparmiare spazio in cucina?",
+            "answer": "Contenitori impilabili, portaspezie, divisori per cassetti e organizer verticali sono tra le soluzioni più utili per ottimizzare piccoli spazi."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "L’organizzazione cucina aiuta anche l’estetica?",
+            "answer": "Sì. Accessori coordinati e contenitori ordinati rendono la cucina più pulita visivamente, oltre che più pratica."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’organizzazione cucina"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi organizzare anche gli altri ambienti?",
+        "button_label": "Scopri tutta l’Organizzazione Casa",
+        "button_link": "/collections/organizzazione-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "CUCINA E TAVOLA",
+        "title": "Utensili Cucina Design e Funzionali",
+        "intro": "Mestoli, spatole e accessori cucina pensati per uso quotidiano, ordine e stile."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_contenitori": {
+          "type": "pill",
+          "settings": {
+            "label": "Contenitori Cucina",
+            "link": "/collections/contenitori-cucina"
+          }
+        },
+        "pill_stoviglie": {
+          "type": "pill",
+          "settings": {
+            "label": "Stoviglie e Piatti",
+            "link": "/collections/stoviglie-piatti"
+          }
+        }
+      },
+      "block_order": [
+        "pill_contenitori",
+        "pill_stoviglie"
+      ],
+      "settings": {
+        "parent_label": "← Tutta Cucina e Tavola",
+        "parent_link": "/collections/cucina-tavola",
+        "siblings_label": "Altri accessori cucina:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Utensili cucina per preparare, servire e organizzare",
+        "text_1": "Gli utensili cucina ELEVA HOME uniscono praticità quotidiana e design pulito. Mestoli, spatole, pinze e accessori funzionali aiutano a preparare, servire e organizzare ogni gesto in cucina con maggiore ordine e semplicità.",
+        "text_2": "Scegli utensili cucina moderni per avere strumenti comodi, resistenti e coerenti con lo stile della tua casa. Materiali pratici e linee essenziali rendono ogni accessorio facile da usare e piacevole da vedere.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Cucina e Tavola",
+        "link_parent": "/collections/cucina-tavola",
+        "text_3_middle": " per completare la tua cucina con ",
+        "link_sibling_1_label": "Contenitori Cucina",
+        "link_sibling_1": "/collections/contenitori-cucina",
+        "text_3_connector": " e ",
+        "link_sibling_2_label": "Stoviglie e Piatti",
+        "link_sibling_2": "/collections/stoviglie-piatti",
+        "text_3_suffix": " coordinati."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali utensili cucina sono più utili ogni giorno?",
+            "answer": "Mestoli, spatole, pinze, cucchiai da cucina e accessori per servire sono tra gli utensili più usati nella preparazione quotidiana."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere utensili cucina pratici e resistenti?",
+            "answer": "Scegli materiali adatti all’uso frequente, impugnature comode e utensili facili da pulire. Verifica sempre le indicazioni nella scheda prodotto."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Gli utensili cucina possono essere anche decorativi?",
+            "answer": "Sì. Utensili coordinati per colore e materiale rendono la cucina più ordinata e piacevole anche quando sono visibili sul piano lavoro."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sugli utensili cucina"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare la tua cucina?",
+        "button_label": "Scopri tutta Cucina e Tavola",
+        "button_link": "/collections/cucina-tavola"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

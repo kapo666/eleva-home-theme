@@ -1,47 +1,20 @@
-{% if request.page_type == 'collection' and collection != blank and collection.handle == 'tappeti-moderni' %}
+{% if request.page_type == 'collection' and collection != blank %}
   {% assign eleva_shop_url = shop.url | default: request.origin %}
   {% assign eleva_home_url = eleva_shop_url | append: routes.root_url %}
-  {% assign eleva_parent_url = eleva_shop_url | append: '/collections/tessili-casa' %}
   {% assign eleva_collection_url = eleva_shop_url | append: collection.url %}
+  {% assign eleva_schema_name = blank %}
+  {% assign eleva_schema_description = blank %}
+  {% assign eleva_parent_name = blank %}
+  {% assign eleva_parent_path = blank %}
+  {% assign eleva_faq_json = blank %}
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": {{ eleva_home_url | json }}
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Tessili Casa",
-              "item": {{ eleva_parent_url | json }}
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "Tappeti Moderni",
-              "item": {{ eleva_collection_url | json }}
-            }
-          ]
-        },
-        {
-          "@type": "CollectionPage",
-          "name": "Tappeti Moderni Soggiorno e Camera",
-          "url": {{ eleva_collection_url | json }},
-          "description": "Tappeti design per soggiorno, camera e zona living con stile moderno e comfort quotidiano.",
-          "isPartOf": {
-            "@type": "WebSite",
-            "name": "ELEVA HOME",
-            "url": {{ eleva_home_url | json }}
-          }
-        },
+  {% case collection.handle %}
+    {% when 'tappeti-moderni' %}
+      {% assign eleva_schema_name = 'Tappeti Moderni Soggiorno e Camera' %}
+      {% assign eleva_schema_description = 'Tappeti design per soggiorno, camera e zona living con stile moderno e comfort quotidiano.' %}
+      {% assign eleva_parent_name = 'Tessili Casa' %}
+      {% assign eleva_parent_path = '/collections/tessili-casa' %}
+      {% capture eleva_faq_json %}
         {
           "@type": "FAQPage",
           "mainEntity": [
@@ -71,7 +44,196 @@
             }
           ]
         }
-      ]
-    }
-  </script>
+      {% endcapture %}
+    {% when 'lampade-tavolo' %}
+      {% assign eleva_schema_name = 'Lampade da Tavolo Moderne e Design' %}
+      {% assign eleva_schema_description = 'Lampade da tavolo moderne per lettura, comodino e scrivania con design elegante e luce funzionale.' %}
+      {% assign eleva_parent_name = 'Illuminazione Casa' %}
+      {% assign eleva_parent_path = '/collections/illuminazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere una lampada da tavolo moderna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Valuta l’uso principale: luce calda per relax e comodino, luce più diretta per lettura o scrivania. Scegli dimensioni proporzionate al piano d’appoggio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le lampade da tavolo sono adatte anche alla camera?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Una lampada da tavolo moderna può funzionare come luce da comodino, punto luce decorativo o supporto per lettura serale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dove posizionare una lampada da tavolo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Puoi posizionarla su comodini, scrivanie, consolle o tavolini laterali. L’importante è che la luce sia comoda e non abbagli direttamente."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'organizzazione-cucina' %}
+      {% assign eleva_schema_name = 'Organizzazione Cucina: Soluzioni Pratiche' %}
+      {% assign eleva_schema_description = 'Organizer, contenitori e accessori per organizzare la cucina con stile, ordine e funzionalità.' %}
+      {% assign eleva_parent_name = 'Organizzazione Casa' %}
+      {% assign eleva_parent_path = '/collections/organizzazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Da dove iniziare per organizzare la cucina?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inizia dai cassetti e dalla dispensa. Divisori, contenitori e organizer aiutano a separare gli oggetti e a trovare più velocemente quello che usi ogni giorno."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quali accessori aiutano a risparmiare spazio in cucina?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Contenitori impilabili, portaspezie, divisori per cassetti e organizer verticali sono tra le soluzioni più utili per ottimizzare piccoli spazi."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L’organizzazione cucina aiuta anche l’estetica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Accessori coordinati e contenitori ordinati rendono la cucina più pulita visivamente, oltre che più pratica."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'lampade-sospensione' %}
+      {% assign eleva_schema_name = 'Lampade a Sospensione e Lampadari Moderni' %}
+      {% assign eleva_schema_description = 'Lampade a sospensione e lampadari moderni per cucina, tavolo e soggiorno.' %}
+      {% assign eleva_parent_name = 'Illuminazione Casa' %}
+      {% assign eleva_parent_path = '/collections/illuminazione-casa' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Dove usare una lampada a sospensione?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le lampade a sospensione sono ideali sopra tavoli, isole cucina, penisole e zone living. Creano un punto luce centrale e decorativo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come scegliere la dimensione di una lampada sospesa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Valuta la grandezza del tavolo o dell’area da illuminare. Una lampada troppo piccola si perde, una troppo grande può appesantire lo spazio."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le lampade a sospensione richiedono installazione?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì, normalmente richiedono fissaggio a soffitto. Prima dell’acquisto verifica sempre misure, attacco e indicazioni presenti nella scheda prodotto."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+    {% when 'utensili-cucina' %}
+      {% assign eleva_schema_name = 'Utensili Cucina Design e Funzionali' %}
+      {% assign eleva_schema_description = 'Utensili cucina moderni e funzionali per preparare, servire e organizzare con stile.' %}
+      {% assign eleva_parent_name = 'Cucina e Tavola' %}
+      {% assign eleva_parent_path = '/collections/cucina-tavola' %}
+      {% capture eleva_faq_json %}
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quali utensili cucina sono più utili ogni giorno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mestoli, spatole, pinze, cucchiai da cucina e accessori per servire sono tra gli utensili più usati nella preparazione quotidiana."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come scegliere utensili cucina pratici e resistenti?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli materiali adatti all’uso frequente, impugnature comode e utensili facili da pulire. Verifica sempre le indicazioni nella scheda prodotto."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Gli utensili cucina possono essere anche decorativi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. Utensili coordinati per colore e materiale rendono la cucina più ordinata e piacevole anche quando sono visibili sul piano lavoro."
+              }
+            }
+          ]
+        }
+      {% endcapture %}
+  {% endcase %}
+
+  {% if eleva_schema_name != blank and eleva_parent_name != blank and eleva_parent_path != blank %}
+    {% assign eleva_parent_url = eleva_shop_url | append: eleva_parent_path %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": {{ eleva_home_url | json }}
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": {{ eleva_parent_name | json }},
+                "item": {{ eleva_parent_url | json }}
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": {{ eleva_schema_name | json }},
+                "item": {{ eleva_collection_url | json }}
+              }
+            ]
+          },
+          {
+            "@type": "CollectionPage",
+            "name": {{ eleva_schema_name | json }},
+            "url": {{ eleva_collection_url | json }},
+            "description": {{ eleva_schema_description | json }},
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "ELEVA HOME",
+              "url": {{ eleva_home_url | json }}
+            }
+          },
+          {{ eleva_faq_json | strip }}
+        ]
+      }
+    </script>
+  {% endif %}
 {% endif %}
