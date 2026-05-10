@@ -66,8 +66,9 @@
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
@@ -76,7 +77,6 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -87,16 +87,16 @@
         "heading": "Lampade da tavolo moderne per ogni ambiente",
         "text_1": "Le lampade da tavolo ELEVA HOME combinano illuminazione funzionale e design contemporaneo. Perfette come lampade da lettura, lampade da comodino o lampade da scrivania, aiutano a creare un punto luce elegante e pratico in soggiorno, camera o zona lavoro.",
         "text_2": "Scegli lampade da tavolo moderne per aggiungere atmosfera, comfort visivo e stile senza appesantire l’ambiente. Linee pulite, materiali curati e luce ben distribuita rendono ogni lampada un dettaglio utile e decorativo.",
-        "text_3_prefix": "Scopri anche la collezione ",
+        "text_3_prefix": "Scopri anche la collezione",
         "link_parent_label": "Illuminazione Casa",
         "link_parent": "/collections/illuminazione-casa",
-        "text_3_middle": " per completare ogni ambiente con ",
+        "text_3_middle": "per completare ogni ambiente con",
         "link_sibling_1_label": "Lampade a Sospensione",
         "link_sibling_1": "/collections/lampade-sospensione",
-        "text_3_connector": " e ",
+        "text_3_connector": "e",
         "link_sibling_2_label": "Applique",
         "link_sibling_2": "/collections/applique-lampade-parete",
-        "text_3_suffix": " e soluzioni luminose coordinate."
+        "text_3_suffix": "e soluzioni luminose coordinate."
       }
     },
     "eleva_subcollection_faq_main": {
