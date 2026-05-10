@@ -1,0 +1,44 @@
+<section class="eleva-collection-page eleva-collection-intro">
+  <div class="eleva-container">
+    <div class="eleva-collection-intro__inner">
+      <h2 class="eleva-collection-intro__heading">{{ section.settings.heading }}</h2>
+      <div class="eleva-collection-intro__content eleva-text eleva-muted rte">
+        <p>{{ section.settings.text_1 }}</p>
+        <p>{{ section.settings.text_2 }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Collection Intro",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Accessori bagno moderni per ordine e stile"
+    },
+    {
+      "type": "textarea",
+      "id": "text_1",
+      "label": "Text 1",
+      "default": "La collezione Accessori Bagno ELEVA HOME raccoglie dispenser, portasapone, contenitori e tappetini pensati per rendere il bagno più ordinato, elegante e funzionale. Materiali come ceramica, vetro e acciaio inox aiutano a creare un ambiente moderno, facile da pulire e piacevole da vivere ogni giorno."
+    },
+    {
+      "type": "textarea",
+      "id": "text_2",
+      "label": "Text 2",
+      "default": "Scegli accessori bagno moderni per coordinare lavabo, doccia e zona beauty con uno stile pulito e contemporaneo. Ogni prodotto è selezionato per unire praticità, design e qualità nel tempo."
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Collection Intro"
+    }
+  ]
+}
+{% endschema %}

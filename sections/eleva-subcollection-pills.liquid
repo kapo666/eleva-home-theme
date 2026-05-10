@@ -1,0 +1,69 @@
+<section class="eleva-collection-page eleva-subcollections">
+  <div class="eleva-container">
+    <div class="eleva-subcollections__scroller">
+      <div class="eleva-subcollections__list" role="list">
+        {% for block in section.blocks %}
+          {% assign eleva_pill_class = 'eleva-subcollections__pill' %}
+          {% if collection.handle == block.settings.active_handle and block.settings.active_handle != blank %}
+            {% assign eleva_pill_class = eleva_pill_class | append: ' is-active' %}
+          {% endif %}
+          <a class="{{ eleva_pill_class }}" href="{{ block.settings.link }}" role="listitem" {{ block.shopify_attributes }}>
+            {{ block.settings.label }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Subcollections",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "pill",
+      "name": "Pill",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Subcollection"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "Link",
+          "default": "/collections/example"
+        },
+        {
+          "type": "text",
+          "id": "active_handle",
+          "label": "Active collection handle",
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Subcollections",
+      "blocks": [
+        {
+          "type": "pill"
+        },
+        {
+          "type": "pill"
+        },
+        {
+          "type": "pill"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

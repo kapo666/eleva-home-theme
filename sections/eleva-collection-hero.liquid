@@ -1,0 +1,101 @@
+{% assign eleva_title = collection.title %}
+{% if section.settings.title_override != blank %}
+  {% assign eleva_title = section.settings.title_override %}
+{% elsif collection.handle == 'accessori-bagno' %}
+  {% assign eleva_title = 'Accessori Bagno Moderni' %}
+{% endif %}
+
+{% assign eleva_description = collection.description %}
+{% if eleva_description == blank and section.settings.subtitle_fallback != blank %}
+  {% assign eleva_description = section.settings.subtitle_fallback %}
+{% endif %}
+
+{% assign eleva_image = collection.image %}
+{% if eleva_image == blank %}
+  {% assign eleva_image = collection.featured_image %}
+{% endif %}
+
+<section class="eleva-collection-page eleva-collection-hero">
+  <div class="eleva-container">
+    <div class="eleva-collection-hero__surface">
+      <div class="eleva-collection-hero__content">
+        <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+        <h1 class="eleva-collection-hero__title">{{ eleva_title }}</h1>
+        {% if eleva_description != blank %}
+          <div class="eleva-collection-hero__description eleva-text eleva-muted rte">
+            {{ eleva_description }}
+          </div>
+        {% endif %}
+        {% if section.settings.show_product_count %}
+          <p class="eleva-collection-hero__meta">
+            {{ collection.products_count }}
+            {% if collection.products_count == 1 %}
+              prodotto
+            {% else %}
+              prodotti
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+
+      <div class="eleva-collection-hero__media{% if eleva_image == blank %} eleva-collection-hero__media--placeholder{% endif %}">
+        {% if eleva_image != blank %}
+          {{
+            eleva_image
+            | image_url: width: 1400
+            | image_tag:
+              class: 'eleva-collection-hero__image',
+              widths: '480, 720, 960, 1200, 1400',
+              sizes: '(min-width: 990px) 32vw, 100vw',
+              loading: 'eager',
+              fetchpriority: 'high',
+              alt: eleva_title
+          }}
+        {% else %}
+          <div class="eleva-collection-hero__placeholder" aria-hidden="true">
+            <span>{{ eleva_title }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Collection Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "COLLEZIONE ELEVA"
+    },
+    {
+      "type": "text",
+      "id": "title_override",
+      "label": "Title override",
+      "default": ""
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle_fallback",
+      "label": "Fallback description",
+      "default": "Dispenser, portasapone e set bagno per un bagno elegante, ordinato e funzionale."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_count",
+      "label": "Show product count",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Collection Hero"
+    }
+  ]
+}
+{% endschema %}

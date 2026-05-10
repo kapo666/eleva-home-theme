@@ -17,12 +17,56 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_collection_hero": {
+      "type": "eleva-collection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ACCESSORI BAGNO",
+        "title_override": "Accessori Bagno Moderni",
+        "subtitle_fallback": "Dispenser, portasapone e set bagno per un bagno elegante, ordinato e funzionale.",
+        "show_product_count": true
+      }
+    },
+    "eleva_subcollections": {
+      "type": "eleva-subcollection-pills",
+      "blocks": {
+        "pill_dispenser": {
+          "type": "pill",
+          "settings": {
+            "label": "Dispenser e Portasapone",
+            "link": "/collections/dispenser-portasapone",
+            "active_handle": ""
+          }
+        },
+        "pill_contenitori": {
+          "type": "pill",
+          "settings": {
+            "label": "Contenitori Bagno",
+            "link": "/collections/contenitori-bagno",
+            "active_handle": ""
+          }
+        },
+        "pill_tappetini": {
+          "type": "pill",
+          "settings": {
+            "label": "Tappetini Bagno",
+            "link": "/collections/tappetini-bagno",
+            "active_handle": ""
+          }
+        }
+      },
+      "block_order": [
+        "pill_dispenser",
+        "pill_contenitori",
+        "pill_tappetini"
+      ],
+      "settings": {}
+    },
+    "eleva_collection_intro": {
+      "type": "eleva-collection-seo-intro",
+      "settings": {
+        "heading": "Accessori bagno moderni per ordine e stile",
+        "text_1": "La collezione Accessori Bagno ELEVA HOME raccoglie dispenser, portasapone, contenitori e tappetini pensati per rendere il bagno più ordinato, elegante e funzionale. Materiali come ceramica, vetro e acciaio inox aiutano a creare un ambiente moderno, facile da pulire e piacevole da vivere ogni giorno.",
+        "text_2": "Scegli accessori bagno moderni per coordinare lavabo, doccia e zona beauty con uno stile pulito e contemporaneo. Ogni prodotto è selezionato per unire praticità, design e qualità nel tempo."
       }
     },
     "product_grid": {
@@ -44,11 +88,142 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_related_collections": {
+      "type": "eleva-related-collections",
+      "blocks": {
+        "related_cucina": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "cucina-tavola",
+            "fallback_title": "Cucina e Tavola",
+            "fallback_link": "/collections/cucina-tavola"
+          }
+        },
+        "related_organizzazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "organizzazione-casa",
+            "fallback_title": "Organizzazione Casa",
+            "fallback_link": "/collections/organizzazione-casa"
+          }
+        },
+        "related_tessili": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "tessili-casa",
+            "fallback_title": "Tessili Casa",
+            "fallback_link": "/collections/tessili-casa"
+          }
+        },
+        "related_decorazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "decorazione-casa",
+            "fallback_title": "Decorazione Casa",
+            "fallback_link": "/collections/decorazione-casa"
+          }
+        }
+      },
+      "block_order": [
+        "related_cucina",
+        "related_organizzazione",
+        "related_tessili",
+        "related_decorazione"
+      ],
+      "settings": {
+        "eyebrow": "COLLEZIONI CORRELATE",
+        "heading": "Esplora altri ambienti ELEVA"
+      }
+    },
+    "eleva_collection_faq": {
+      "type": "eleva-collection-faq",
+      "blocks": {
+        "faq_materiali": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali materiali sono migliori per gli accessori bagno?",
+            "answer": "Ceramica, vetro e acciaio inox sono tra i materiali più adatti perché resistenti all’umidità, facili da pulire e coerenti con un bagno moderno."
+          }
+        },
+        "faq_set": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere un set bagno coordinato?",
+            "answer": "Scegli accessori con materiali, colori e finiture coerenti. Un set coordinato rende lavabo, doccia e zona beauty più armoniosi e ordinati."
+          }
+        },
+        "faq_uso": {
+          "type": "faq",
+          "settings": {
+            "question": "Gli accessori bagno ELEVA HOME sono facili da usare?",
+            "answer": "Sì. Dispenser, portasapone, contenitori e tappetini sono pensati per l’uso quotidiano, con soluzioni pratiche e facili da pulire."
+          }
+        },
+        "faq_reso": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso restituire gli accessori bagno se non sono soddisfatto?",
+            "answer": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+          }
+        }
+      },
+      "block_order": [
+        "faq_materiali",
+        "faq_set",
+        "faq_uso",
+        "faq_reso"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sugli accessori bagno"
+      }
+    },
+    "eleva_collection_trust": {
+      "type": "eleva-collection-trust",
+      "blocks": {
+        "trust_shipping": {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        "trust_return": {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        "trust_warranty": {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        "trust_payment": {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      },
+      "block_order": [
+        "trust_shipping",
+        "trust_return",
+        "trust_warranty",
+        "trust_payment"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_collection_hero",
+    "eleva_subcollections",
+    "eleva_collection_intro",
+    "product_grid",
+    "eleva_related_collections",
+    "eleva_collection_faq",
+    "eleva_collection_trust"
   ]
 }

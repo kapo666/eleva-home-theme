@@ -1,0 +1,67 @@
+<section class="eleva-collection-page eleva-collection-trust">
+  <div class="eleva-container">
+    <div class="eleva-collection-trust__grid" role="list">
+      {% for block in section.blocks %}
+        <article class="eleva-collection-trust__item" role="listitem" {{ block.shopify_attributes }}>
+          <span class="eleva-collection-trust__marker" aria-hidden="true"></span>
+          <p>{{ block.settings.label }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Collection Trust",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Spedizione gratuita oltre 50€"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Collection Trust",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
