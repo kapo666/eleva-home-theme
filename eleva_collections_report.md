@@ -84,5 +84,49 @@
 - `Module 8.2`
 - apply the same ELEVA collection layer to the other P0 main collections with collection-specific copy, subcollection pills and related links
 
+## Module 8.1A — Accessori Bagno Aesthetic Polish
+
+### 1. Related section visual polish
+- `ELEVA Related Links` has been visually lightened without changing its logic
+- cards are now smaller, softer and less image-dominant
+- image ratio was reduced to a more editorial `16:10`
+- card surfaces now use a subtler border and lighter shadow response
+- desktop spacing was increased so the 4-card row breathes more naturally
+
+### 2. Text clipping fix
+- removed the card-level clipping behavior that could cut the lower content
+- card body now stacks title and CTA vertically instead of forcing them into one compressed row
+- added safer body padding and minimum height so titles and `Esplora` remain fully visible
+- title wrapping was improved to reduce hard clipping and awkward breaks
+
+### 3. Spacing changes
+- related section top/bottom rhythm increased after the product grid
+- FAQ top spacing was separated more clearly from related links
+- trust reminder bottom area was slightly expanded for a cleaner landing
+
+### 4. FAQ/trust visual notes
+- FAQ structure was left intact
+- spacing around FAQ was softened to feel less abrupt after related links
+- trust reminder remains compact, with only rhythm adjustments through CSS
+
+### 5. Files modified
+- `assets/eleva-collections.css`
+- `eleva_collections_report.md`
+
+### 6. Dangerous files untouched confirmation
+- `templates/collection.accessori-bagno.json` untouched in this polish pass
+- `sections/main-collection-product-grid.liquid` untouched
+- product cards untouched
+- filters / sorting / pagination untouched
+- cart / product-form / variant logic untouched
+- homepage, header and footer untouched
+
+### 7. Validation
+- related cards no longer rely on clipped content: `PASS`
+- related section spacing feels lighter and more premium: `PASS`
+- no horizontal overflow introduced in CSS: `PASS`
+- product grid untouched: `PASS`
+- FAQ / trust remain save-safe: `PASS`
+
 ## Final Verdict
 - `READY FOR LIVE REVIEW`
