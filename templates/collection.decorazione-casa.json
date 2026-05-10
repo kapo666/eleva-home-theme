@@ -17,12 +17,69 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_collection_hero_main": {
+      "type": "eleva-collection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "DECORAZIONE CASA",
+        "title_override": "Decorazione Casa Moderna",
+        "subtitle_fallback": "Vasi, quadri, candele e complementi d’arredo per dare personalità agli ambienti con equilibrio e stile.",
+        "show_product_count": true
+      }
+    },
+    "eleva_subcollections_main": {
+      "type": "eleva-subcollection-pills",
+      "blocks": {
+        "pill_vasi": {
+          "type": "pill",
+          "settings": {
+            "label": "Vasi e Portavasi",
+            "link": "/collections/vasi-decorativi"
+          }
+        },
+        "pill_specchi": {
+          "type": "pill",
+          "settings": {
+            "label": "Specchi Decorativi",
+            "link": "/collections/specchi-decorativi"
+          }
+        },
+        "pill_quadri": {
+          "type": "pill",
+          "settings": {
+            "label": "Quadri e Poster",
+            "link": "/collections/quadri-poster"
+          }
+        },
+        "pill_candele": {
+          "type": "pill",
+          "settings": {
+            "label": "Candele e Portacandele",
+            "link": "/collections/candele-portacandele"
+          }
+        },
+        "pill_cuscini": {
+          "type": "pill",
+          "settings": {
+            "label": "Cuscini Decorativi",
+            "link": "/collections/cuscini-decorativi"
+          }
+        }
+      },
+      "block_order": [
+        "pill_vasi",
+        "pill_specchi",
+        "pill_quadri",
+        "pill_candele",
+        "pill_cuscini"
+      ],
+      "settings": {}
+    },
+    "eleva_collection_intro_main": {
+      "type": "eleva-collection-seo-intro",
+      "settings": {
+        "heading": "Complementi d’arredo per una casa elegante",
+        "text_1": "La collezione Decorazione Casa ELEVA HOME raccoglie complementi d’arredo moderni pensati per dare carattere agli spazi senza appesantirli. Vasi, specchi, quadri, candele e dettagli decorativi aiutano a creare ambienti più caldi, armoniosi e personali.",
+        "text_2": "Ogni elemento è selezionato per integrarsi in una casa contemporanea, con forme pulite, colori equilibrati e materiali capaci di valorizzare soggiorno, camera, ingresso e zona living. Decorare casa diventa un modo semplice per esprimere stile e ordine visivo."
       }
     },
     "product_grid": {
@@ -44,11 +101,142 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_related_collections_main": {
+      "type": "eleva-related-collections",
+      "blocks": {
+        "related_illuminazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "illuminazione-casa",
+            "fallback_title": "Illuminazione Casa",
+            "fallback_link": "/collections/illuminazione-casa"
+          }
+        },
+        "related_tessili": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "tessili-casa",
+            "fallback_title": "Tessili Casa",
+            "fallback_link": "/collections/tessili-casa"
+          }
+        },
+        "related_cucina": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "cucina-tavola",
+            "fallback_title": "Cucina e Tavola",
+            "fallback_link": "/collections/cucina-tavola"
+          }
+        },
+        "related_organizzazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "organizzazione-casa",
+            "fallback_title": "Organizzazione Casa",
+            "fallback_link": "/collections/organizzazione-casa"
+          }
+        }
+      },
+      "block_order": [
+        "related_illuminazione",
+        "related_tessili",
+        "related_cucina",
+        "related_organizzazione"
+      ],
+      "settings": {
+        "eyebrow": "COLLEZIONI CORRELATE",
+        "heading": "Completa il tuo ambiente"
+      }
+    },
+    "eleva_collection_faq_main": {
+      "type": "eleva-collection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere i complementi d’arredo giusti?",
+            "answer": "Scegli pochi elementi coerenti tra loro per colore, materiale e stile. Vasi, candele, quadri e specchi possono trasformare un ambiente senza appesantirlo."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali accessori rendono una casa più moderna?",
+            "answer": "Linee essenziali, colori neutri, materiali naturali e dettagli ben posizionati aiutano a creare un effetto moderno, ordinato e accogliente."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso abbinare decorazione e organizzazione?",
+            "answer": "Sì. Una casa elegante è anche funzionale: contenitori, cesti e accessori decorativi possono migliorare sia l’estetica sia l’ordine."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso restituire un complemento d’arredo?",
+            "answer": "Sì. Hai 30 giorni per effettuare il reso e i prodotti sono coperti da garanzia di 2 anni sui difetti."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sulla decorazione casa"
+      }
+    },
+    "eleva_collection_trust_main": {
+      "type": "eleva-collection-trust",
+      "blocks": {
+        "trust_shipping": {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        "trust_return": {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        "trust_warranty": {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        "trust_payment": {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      },
+      "block_order": [
+        "trust_shipping",
+        "trust_return",
+        "trust_warranty",
+        "trust_payment"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_collection_hero_main",
+    "eleva_subcollections_main",
+    "eleva_collection_intro_main",
+    "product_grid",
+    "eleva_related_collections_main",
+    "eleva_collection_faq_main",
+    "eleva_collection_trust_main"
   ]
 }

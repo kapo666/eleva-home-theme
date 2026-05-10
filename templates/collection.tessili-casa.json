@@ -17,12 +17,53 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_collection_hero_main": {
+      "type": "eleva-collection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "TESSILI CASA",
+        "title_override": "Tessili Casa Moderni",
+        "subtitle_fallback": "Coperte, cuscini, tappeti e tende per aggiungere comfort, calore e stile agli ambienti quotidiani.",
+        "show_product_count": true
+      }
+    },
+    "eleva_subcollections_main": {
+      "type": "eleva-subcollection-pills",
+      "blocks": {
+        "pill_coperte": {
+          "type": "pill",
+          "settings": {
+            "label": "Coperte e Plaid",
+            "link": "/collections/coperte-plaid"
+          }
+        },
+        "pill_tappeti": {
+          "type": "pill",
+          "settings": {
+            "label": "Tappeti Moderni",
+            "link": "/collections/tappeti-moderni"
+          }
+        },
+        "pill_tende": {
+          "type": "pill",
+          "settings": {
+            "label": "Tende",
+            "link": "/collections/tende-moderne"
+          }
+        }
+      },
+      "block_order": [
+        "pill_coperte",
+        "pill_tappeti",
+        "pill_tende"
+      ],
+      "settings": {}
+    },
+    "eleva_collection_intro_main": {
+      "type": "eleva-collection-seo-intro",
+      "settings": {
+        "heading": "Tessili per una casa morbida e accogliente",
+        "text_1": "La collezione Tessili Casa ELEVA HOME riunisce coperte, plaid, cuscini, tappeti e tende pensati per rendere ogni ambiente più caldo, confortevole e curato. I tessili sono dettagli fondamentali per dare profondità visiva, comfort e personalità alla casa.",
+        "text_2": "Colori neutri, texture piacevoli e materiali selezionati aiutano a creare un’atmosfera equilibrata in soggiorno, camera e zona relax. Scegli tessili casa moderni per completare il tuo stile con eleganza e semplicità."
       }
     },
     "product_grid": {
@@ -44,11 +85,142 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_related_collections_main": {
+      "type": "eleva-related-collections",
+      "blocks": {
+        "related_decorazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "decorazione-casa",
+            "fallback_title": "Decorazione Casa",
+            "fallback_link": "/collections/decorazione-casa"
+          }
+        },
+        "related_illuminazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "illuminazione-casa",
+            "fallback_title": "Illuminazione Casa",
+            "fallback_link": "/collections/illuminazione-casa"
+          }
+        },
+        "related_organizzazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "organizzazione-casa",
+            "fallback_title": "Organizzazione Casa",
+            "fallback_link": "/collections/organizzazione-casa"
+          }
+        },
+        "related_bagno": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "accessori-bagno",
+            "fallback_title": "Accessori Bagno",
+            "fallback_link": "/collections/accessori-bagno"
+          }
+        }
+      },
+      "block_order": [
+        "related_decorazione",
+        "related_illuminazione",
+        "related_organizzazione",
+        "related_bagno"
+      ],
+      "settings": {
+        "eyebrow": "COLLEZIONI CORRELATE",
+        "heading": "Completa il tuo ambiente"
+      }
+    },
+    "eleva_collection_faq_main": {
+      "type": "eleva-collection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere i tessili per la casa?",
+            "answer": "Scegli colori e texture coerenti con lo stile dell’ambiente. Cuscini, tappeti e coperte possono aggiungere calore senza stravolgere l’arredo."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "I tessili sono facili da lavare?",
+            "answer": "Molti tessili sono pensati per una manutenzione semplice. Controlla sempre la scheda prodotto per istruzioni di lavaggio e cura."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali tessili rendono una casa più accogliente?",
+            "answer": "Plaid, cuscini morbidi, tende leggere e tappeti aiutano a rendere soggiorno e camera più confortevoli e armoniosi."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso restituire i tessili se non sono adatti?",
+            "answer": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui tessili casa"
+      }
+    },
+    "eleva_collection_trust_main": {
+      "type": "eleva-collection-trust",
+      "blocks": {
+        "trust_shipping": {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        "trust_return": {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        "trust_warranty": {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        "trust_payment": {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      },
+      "block_order": [
+        "trust_shipping",
+        "trust_return",
+        "trust_warranty",
+        "trust_payment"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_collection_hero_main",
+    "eleva_subcollections_main",
+    "eleva_collection_intro_main",
+    "product_grid",
+    "eleva_related_collections_main",
+    "eleva_collection_faq_main",
+    "eleva_collection_trust_main"
   ]
 }

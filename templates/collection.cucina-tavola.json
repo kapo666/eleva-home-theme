@@ -17,12 +17,53 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_collection_hero_main": {
+      "type": "eleva-collection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "CUCINA E TAVOLA",
+        "title_override": "Cucina e Tavola",
+        "subtitle_fallback": "Organizer cucina, utensili e accessori tavola per rendere ogni gesto quotidiano più pratico, ordinato e bello.",
+        "show_product_count": true
+      }
+    },
+    "eleva_subcollections_main": {
+      "type": "eleva-subcollection-pills",
+      "blocks": {
+        "pill_contenitori": {
+          "type": "pill",
+          "settings": {
+            "label": "Contenitori Cucina",
+            "link": "/collections/contenitori-cucina"
+          }
+        },
+        "pill_utensili": {
+          "type": "pill",
+          "settings": {
+            "label": "Utensili Cucina",
+            "link": "/collections/utensili-cucina"
+          }
+        },
+        "pill_stoviglie": {
+          "type": "pill",
+          "settings": {
+            "label": "Stoviglie e Piatti",
+            "link": "/collections/stoviglie-piatti"
+          }
+        }
+      },
+      "block_order": [
+        "pill_contenitori",
+        "pill_utensili",
+        "pill_stoviglie"
+      ],
+      "settings": {}
+    },
+    "eleva_collection_intro_main": {
+      "type": "eleva-collection-seo-intro",
+      "settings": {
+        "heading": "Accessori cucina e tavola per ordine e funzionalità",
+        "text_1": "La collezione Cucina e Tavola ELEVA HOME riunisce contenitori, utensili, stoviglie e soluzioni pratiche per organizzare la cucina con stile. Dalla dispensa al piano lavoro, ogni accessorio è selezionato per migliorare la routine quotidiana, mantenendo ordine, pulizia e armonia visiva.",
+        "text_2": "Scegli accessori cucina moderni per semplificare la preparazione, conservare meglio gli alimenti e apparecchiare la tavola con un design essenziale. Materiali resistenti e linee pulite aiutano a creare una cucina funzionale, elegante e piacevole da vivere ogni giorno."
       }
     },
     "product_grid": {
@@ -44,11 +85,142 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_related_collections_main": {
+      "type": "eleva-related-collections",
+      "blocks": {
+        "related_bagno": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "accessori-bagno",
+            "fallback_title": "Accessori Bagno",
+            "fallback_link": "/collections/accessori-bagno"
+          }
+        },
+        "related_organizzazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "organizzazione-casa",
+            "fallback_title": "Organizzazione Casa",
+            "fallback_link": "/collections/organizzazione-casa"
+          }
+        },
+        "related_decorazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "decorazione-casa",
+            "fallback_title": "Decorazione Casa",
+            "fallback_link": "/collections/decorazione-casa"
+          }
+        },
+        "related_tessili": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "tessili-casa",
+            "fallback_title": "Tessili Casa",
+            "fallback_link": "/collections/tessili-casa"
+          }
+        }
+      },
+      "block_order": [
+        "related_bagno",
+        "related_organizzazione",
+        "related_decorazione",
+        "related_tessili"
+      ],
+      "settings": {
+        "eyebrow": "COLLEZIONI CORRELATE",
+        "heading": "Completa il tuo ambiente"
+      }
+    },
+    "eleva_collection_faq_main": {
+      "type": "eleva-collection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere gli accessori cucina più utili?",
+            "answer": "Parti dalle abitudini quotidiane: contenitori per la dispensa, utensili pratici e organizer per cassetti aiutano a mantenere la cucina ordinata e funzionale."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali materiali sono più adatti per cucina e tavola?",
+            "answer": "Vetro, acciaio inox, ceramica, silicone e legno sono materiali pratici e resistenti, ideali per l’uso quotidiano e facili da integrare in una cucina moderna."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Gli accessori cucina sono facili da pulire?",
+            "answer": "Sì, molti prodotti sono pensati per una manutenzione semplice. Controlla sempre la scheda prodotto per verificare lavaggio, materiali e modalità d’uso."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso restituire gli accessori cucina se non sono soddisfatto?",
+            "answer": "Sì. Hai 30 giorni per effettuare il reso e tutti i prodotti sono coperti da garanzia di 2 anni sui difetti."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti su cucina e tavola"
+      }
+    },
+    "eleva_collection_trust_main": {
+      "type": "eleva-collection-trust",
+      "blocks": {
+        "trust_shipping": {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        "trust_return": {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        "trust_warranty": {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        "trust_payment": {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      },
+      "block_order": [
+        "trust_shipping",
+        "trust_return",
+        "trust_warranty",
+        "trust_payment"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_collection_hero_main",
+    "eleva_subcollections_main",
+    "eleva_collection_intro_main",
+    "product_grid",
+    "eleva_related_collections_main",
+    "eleva_collection_faq_main",
+    "eleva_collection_trust_main"
   ]
 }

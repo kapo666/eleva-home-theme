@@ -128,5 +128,129 @@
 - product grid untouched: `PASS`
 - FAQ / trust remain save-safe: `PASS`
 
+## Module 8.2 — Apply Layer to Remaining Main Collections
+
+### 1. Templates modified
+- `templates/collection.cucina-tavola.json`
+- `templates/collection.organizzazione-casa.json`
+- `templates/collection.decorazione-casa.json`
+- `templates/collection.illuminazione-casa.json`
+- `templates/collection.tessili-casa.json`
+- `templates/collection.soluzioni-salvaspazio.json`
+
+### 2. Final section order per template
+For all 6 templates:
+1. `collection-breadcrumbs`
+2. `eleva-collection-hero`
+3. `eleva-subcollection-pills`
+4. `eleva-collection-seo-intro`
+5. `main-collection-product-grid`
+6. `eleva-related-collections`
+7. `eleva-collection-faq`
+8. `eleva-collection-trust`
+
+### 3. Content added per collection
+- `Cucina e Tavola`
+  - hero, intro, related links and FAQ focused on kitchen organization, utensils and table use
+- `Organizzazione Casa`
+  - hero, intro, related links and FAQ focused on containers, dividers and space optimization
+- `Decorazione Casa`
+  - hero, intro, related links and FAQ focused on decorative objects and modern interiors
+- `Illuminazione Casa`
+  - hero, intro, related links and FAQ focused on lighting function, ambiance and lamp types
+- `Tessili Casa`
+  - hero, intro, related links and FAQ focused on comfort, texture and warm interiors
+- `Soluzioni Salvaspazio`
+  - hero, intro, related links and FAQ focused on compact organization and small-space living
+
+### 4. Subcollection pills per collection
+- `Cucina e Tavola`
+  - `Contenitori Cucina`
+  - `Utensili Cucina`
+  - `Stoviglie e Piatti`
+- `Organizzazione Casa`
+  - `Organizzazione Cucina`
+  - `Organizzazione Bagno`
+  - `Organizzazione Camera`
+  - `Organizzazione Ufficio`
+  - `Organizzazione Ingresso`
+- `Decorazione Casa`
+  - `Vasi e Portavasi`
+  - `Specchi Decorativi`
+  - `Quadri e Poster`
+  - `Candele e Portacandele`
+  - `Cuscini Decorativi`
+- `Illuminazione Casa`
+  - `Lampade da Tavolo`
+  - `Lampade a Sospensione`
+  - `Lampade da Terra`
+  - `Applique`
+- `Tessili Casa`
+  - `Coperte e Plaid`
+  - `Tappeti Moderni`
+  - `Tende`
+- `Soluzioni Salvaspazio`
+  - `Salvaspazio Cucina`
+  - `Salvaspazio Bagno`
+  - `Salvaspazio Camera`
+
+### 5. Related collections per collection
+- `Cucina e Tavola`
+  - `Accessori Bagno`
+  - `Organizzazione Casa`
+  - `Decorazione Casa`
+  - `Tessili Casa`
+- `Organizzazione Casa`
+  - `Soluzioni Salvaspazio`
+  - `Cucina e Tavola`
+  - `Accessori Bagno`
+  - `Tessili Casa`
+- `Decorazione Casa`
+  - `Illuminazione Casa`
+  - `Tessili Casa`
+  - `Cucina e Tavola`
+  - `Organizzazione Casa`
+- `Illuminazione Casa`
+  - `Decorazione Casa`
+  - `Tessili Casa`
+  - `Organizzazione Casa`
+  - `Cucina e Tavola`
+- `Tessili Casa`
+  - `Decorazione Casa`
+  - `Illuminazione Casa`
+  - `Organizzazione Casa`
+  - `Accessori Bagno`
+- `Soluzioni Salvaspazio`
+  - `Organizzazione Casa`
+  - `Cucina e Tavola`
+  - `Accessori Bagno`
+  - `Tessili Casa`
+
+### 6. FAQ per collection
+- each main collection now has 4 collection-specific FAQ items
+- FAQs are aligned with the collection intent and preserve the existing ELEVA support style
+
+### 7. Product grid preservation confirmation
+- `main-collection-product-grid` remains unchanged in all 6 templates
+- existing filter, sort, pagination and product card behavior were preserved exactly
+- no `main-collection-banner` remains in these 6 templates
+- one collection H1 per page is preserved through `eleva-collection-hero`
+
+### 8. Dangerous files untouched confirmation
+- `sections/main-collection-product-grid.liquid` untouched
+- `snippets/card-product.liquid` untouched
+- filters / sorting / pagination logic untouched
+- cart / product-form / variant files untouched
+- homepage untouched
+- header / footer untouched
+- `assets/eleva-collections.css` unchanged in this module
+
+### 9. Validation
+- all 6 templates now contain the ELEVA collection layer: `PASS`
+- all 6 templates preserve `main-collection-product-grid`: `PASS`
+- JSON validation passed for all 6 templates once the Shopify comment header is skipped: `PASS`
+- no product/card/cart/filter/sort/pagination files touched: `PASS`
+- diff limited to the 6 target templates: `PASS`
+
 ## Final Verdict
 - `READY FOR LIVE REVIEW`

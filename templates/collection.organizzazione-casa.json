@@ -17,12 +17,69 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_collection_hero_main": {
+      "type": "eleva-collection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ORGANIZZAZIONE CASA",
+        "title_override": "Organizzazione Casa",
+        "subtitle_fallback": "Contenitori, organizer e soluzioni intelligenti per trasformare ogni ambiente in uno spazio più ordinato e funzionale.",
+        "show_product_count": true
+      }
+    },
+    "eleva_subcollections_main": {
+      "type": "eleva-subcollection-pills",
+      "blocks": {
+        "pill_cucina": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Cucina",
+            "link": "/collections/organizzazione-cucina"
+          }
+        },
+        "pill_bagno": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Bagno",
+            "link": "/collections/organizzazione-bagno"
+          }
+        },
+        "pill_camera": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Camera",
+            "link": "/collections/organizzazione-camera"
+          }
+        },
+        "pill_ufficio": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ufficio",
+            "link": "/collections/organizzazione-ufficio"
+          }
+        },
+        "pill_ingresso": {
+          "type": "pill",
+          "settings": {
+            "label": "Organizzazione Ingresso",
+            "link": "/collections/organizzazione-ingresso"
+          }
+        }
+      },
+      "block_order": [
+        "pill_cucina",
+        "pill_bagno",
+        "pill_camera",
+        "pill_ufficio",
+        "pill_ingresso"
+      ],
+      "settings": {}
+    },
+    "eleva_collection_intro_main": {
+      "type": "eleva-collection-seo-intro",
+      "settings": {
+        "heading": "Soluzioni per organizzare casa con stile",
+        "text_1": "La collezione Organizzazione Casa ELEVA HOME è pensata per chi vuole ridurre il disordine e valorizzare ogni spazio. Contenitori, divisori, scatole, cesti e organizer aiutano a creare una casa più ordinata, pratica e facile da vivere, senza rinunciare a un’estetica moderna.",
+        "text_2": "Dalla cucina al bagno, dalla camera all’ingresso, ogni soluzione è selezionata per migliorare la funzionalità quotidiana e ottimizzare lo spazio disponibile. Organizzare casa diventa un gesto semplice, elegante e coerente con uno stile contemporaneo."
       }
     },
     "product_grid": {
@@ -44,11 +101,142 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_related_collections_main": {
+      "type": "eleva-related-collections",
+      "blocks": {
+        "related_salvaspazio": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "soluzioni-salvaspazio",
+            "fallback_title": "Soluzioni Salvaspazio",
+            "fallback_link": "/collections/soluzioni-salvaspazio"
+          }
+        },
+        "related_cucina": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "cucina-tavola",
+            "fallback_title": "Cucina e Tavola",
+            "fallback_link": "/collections/cucina-tavola"
+          }
+        },
+        "related_bagno": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "accessori-bagno",
+            "fallback_title": "Accessori Bagno",
+            "fallback_link": "/collections/accessori-bagno"
+          }
+        },
+        "related_tessili": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "tessili-casa",
+            "fallback_title": "Tessili Casa",
+            "fallback_link": "/collections/tessili-casa"
+          }
+        }
+      },
+      "block_order": [
+        "related_salvaspazio",
+        "related_cucina",
+        "related_bagno",
+        "related_tessili"
+      ],
+      "settings": {
+        "eyebrow": "COLLEZIONI CORRELATE",
+        "heading": "Completa il tuo ambiente"
+      }
+    },
+    "eleva_collection_faq_main": {
+      "type": "eleva-collection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Da dove iniziare per organizzare casa?",
+            "answer": "Inizia dagli ambienti più usati, come cucina, bagno e ingresso. Usa contenitori, divisori e organizer per separare gli oggetti e rendere tutto più facile da trovare."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali prodotti aiutano a ottimizzare lo spazio?",
+            "answer": "Scatole impilabili, cesti, divisori per cassetti, organizer verticali e soluzioni salvaspazio sono ideali per sfruttare meglio ogni centimetro."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Organizzazione e design possono stare insieme?",
+            "answer": "Sì. ELEVA HOME seleziona soluzioni pratiche ma curate esteticamente, pensate per integrarsi in case moderne e ordinate."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "I prodotti sono coperti da garanzia?",
+            "answer": "Sì. Tutti i prodotti sono coperti da garanzia di 2 anni sui difetti e puoi effettuare il reso entro 30 giorni."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’organizzazione casa"
+      }
+    },
+    "eleva_collection_trust_main": {
+      "type": "eleva-collection-trust",
+      "blocks": {
+        "trust_shipping": {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        "trust_return": {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        "trust_warranty": {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        "trust_payment": {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      },
+      "block_order": [
+        "trust_shipping",
+        "trust_return",
+        "trust_warranty",
+        "trust_payment"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_collection_hero_main",
+    "eleva_subcollections_main",
+    "eleva_collection_intro_main",
+    "product_grid",
+    "eleva_related_collections_main",
+    "eleva_collection_faq_main",
+    "eleva_collection_trust_main"
   ]
 }

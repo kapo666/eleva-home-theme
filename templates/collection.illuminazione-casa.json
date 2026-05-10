@@ -17,12 +17,61 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_collection_hero_main": {
+      "type": "eleva-collection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "ILLUMINAZIONE CASA",
+        "title_override": "Illuminazione Casa Design",
+        "subtitle_fallback": "Lampade, applique e luci decorative per creare atmosfera, comfort e funzionalità in ogni ambiente.",
+        "show_product_count": true
+      }
+    },
+    "eleva_subcollections_main": {
+      "type": "eleva-subcollection-pills",
+      "blocks": {
+        "pill_tavolo": {
+          "type": "pill",
+          "settings": {
+            "label": "Lampade da Tavolo",
+            "link": "/collections/lampade-tavolo"
+          }
+        },
+        "pill_sospensione": {
+          "type": "pill",
+          "settings": {
+            "label": "Lampade a Sospensione",
+            "link": "/collections/lampade-sospensione"
+          }
+        },
+        "pill_terra": {
+          "type": "pill",
+          "settings": {
+            "label": "Lampade da Terra",
+            "link": "/collections/lampade-terra"
+          }
+        },
+        "pill_applique": {
+          "type": "pill",
+          "settings": {
+            "label": "Applique",
+            "link": "/collections/applique-lampade-parete"
+          }
+        }
+      },
+      "block_order": [
+        "pill_tavolo",
+        "pill_sospensione",
+        "pill_terra",
+        "pill_applique"
+      ],
+      "settings": {}
+    },
+    "eleva_collection_intro_main": {
+      "type": "eleva-collection-seo-intro",
+      "settings": {
+        "heading": "Luci e lampade per una casa contemporanea",
+        "text_1": "La collezione Illuminazione Casa ELEVA HOME propone lampade e soluzioni luminose pensate per valorizzare ogni ambiente con equilibrio e funzionalità. La luce giusta può cambiare la percezione di una stanza, rendendola più accogliente, pratica e coerente con il tuo stile.",
+        "text_2": "Lampade da tavolo, sospensioni, applique e luci decorative aiutano a creare punti luce mirati per soggiorno, camera, cucina e ingresso. Ogni prodotto è scelto per unire design moderno, atmosfera e semplicità d’uso."
       }
     },
     "product_grid": {
@@ -44,11 +93,142 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_related_collections_main": {
+      "type": "eleva-related-collections",
+      "blocks": {
+        "related_decorazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "decorazione-casa",
+            "fallback_title": "Decorazione Casa",
+            "fallback_link": "/collections/decorazione-casa"
+          }
+        },
+        "related_tessili": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "tessili-casa",
+            "fallback_title": "Tessili Casa",
+            "fallback_link": "/collections/tessili-casa"
+          }
+        },
+        "related_organizzazione": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "organizzazione-casa",
+            "fallback_title": "Organizzazione Casa",
+            "fallback_link": "/collections/organizzazione-casa"
+          }
+        },
+        "related_cucina": {
+          "type": "collection",
+          "settings": {
+            "related_collection": "cucina-tavola",
+            "fallback_title": "Cucina e Tavola",
+            "fallback_link": "/collections/cucina-tavola"
+          }
+        }
+      },
+      "block_order": [
+        "related_decorazione",
+        "related_tessili",
+        "related_organizzazione",
+        "related_cucina"
+      ],
+      "settings": {
+        "eyebrow": "COLLEZIONI CORRELATE",
+        "heading": "Completa il tuo ambiente"
+      }
+    },
+    "eleva_collection_faq_main": {
+      "type": "eleva-collection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere l’illuminazione per ogni ambiente?",
+            "answer": "Usa luci diverse per funzioni diverse: luce diffusa per l’ambiente, luce diretta per lavoro o lettura, luce decorativa per atmosfera."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Quali lampade sono più adatte a una casa moderna?",
+            "answer": "Lampade con linee essenziali, colori neutri e materiali resistenti si integrano bene in ambienti contemporanei e minimal."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Le lampade sono facili da installare?",
+            "answer": "Molte lampade da tavolo e da terra non richiedono installazione. Per sospensioni e applique, verifica sempre le indicazioni nella scheda prodotto."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "I prodotti illuminazione sono coperti da garanzia?",
+            "answer": "Sì. Tutti i prodotti sono coperti da garanzia di 2 anni sui difetti e puoi effettuare il reso entro 30 giorni."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sull’illuminazione casa"
+      }
+    },
+    "eleva_collection_trust_main": {
+      "type": "eleva-collection-trust",
+      "blocks": {
+        "trust_shipping": {
+          "type": "item",
+          "settings": {
+            "label": "Spedizione gratuita oltre 50€"
+          }
+        },
+        "trust_return": {
+          "type": "item",
+          "settings": {
+            "label": "Reso gratuito 30 giorni"
+          }
+        },
+        "trust_warranty": {
+          "type": "item",
+          "settings": {
+            "label": "Garanzia prodotto 2 anni"
+          }
+        },
+        "trust_payment": {
+          "type": "item",
+          "settings": {
+            "label": "Pagamento sicuro"
+          }
+        }
+      },
+      "block_order": [
+        "trust_shipping",
+        "trust_return",
+        "trust_warranty",
+        "trust_payment"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_collection_hero_main",
+    "eleva_subcollections_main",
+    "eleva_collection_intro_main",
+    "product_grid",
+    "eleva_related_collections_main",
+    "eleva_collection_faq_main",
+    "eleva_collection_trust_main"
   ]
 }
