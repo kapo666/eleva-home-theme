@@ -17,12 +17,40 @@
         "padding_bottom": 16
       }
     },
-    "collection_banner": {
-      "type": "main-collection-banner",
+    "eleva_subcollection_hero_main": {
+      "type": "eleva-subcollection-hero",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "eyebrow": "TESSILI CASA",
+        "title": "Tappeti Moderni Soggiorno e Camera",
+        "intro": "Tappeti design per dare comfort, ordine e carattere agli ambienti quotidiani."
+      }
+    },
+    "eleva_parent_siblings_main": {
+      "type": "eleva-parent-siblings",
+      "blocks": {
+        "pill_coperte": {
+          "type": "pill",
+          "settings": {
+            "label": "Coperte e Plaid",
+            "link": "/collections/coperte-plaid"
+          }
+        },
+        "pill_tende": {
+          "type": "pill",
+          "settings": {
+            "label": "Tende Moderne",
+            "link": "/collections/tende-moderne"
+          }
+        }
+      },
+      "block_order": [
+        "pill_coperte",
+        "pill_tende"
+      ],
+      "settings": {
+        "parent_label": "← Tutti i Tessili Casa",
+        "parent_link": "/collections/tessili-casa",
+        "siblings_label": "Altri tessili:"
       }
     },
     "product_grid": {
@@ -44,11 +72,76 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "eleva_subcollection_seo_main": {
+      "type": "eleva-subcollection-seo-content",
+      "settings": {
+        "heading": "Tappeti moderni per soggiorno, camera e zona living",
+        "text_1": "I tappeti moderni ELEVA HOME uniscono estetica contemporanea e comfort quotidiano. La selezione include tappeti per soggiorno, camera e zona living con design minimal, geometrici e colori neutri pensati per integrarsi in una casa ordinata ed elegante.",
+        "text_2": "Scegli tappeti moderni per definire gli spazi, rendere più accogliente una stanza e completare l’arredo con texture morbide e linee pulite. Ogni tappeto è pensato per aggiungere calore visivo senza appesantire l’ambiente.",
+        "text_3_prefix": "Scopri anche la collezione ",
+        "link_parent_label": "Tessili Casa",
+        "link_parent": "/collections/tessili-casa",
+        "text_3_middle": " per completare il tuo stile con ",
+        "link_sibling_1_label": "Coperte e Plaid",
+        "link_sibling_1": "/collections/coperte-plaid",
+        "text_3_connector": ", ",
+        "link_sibling_2_label": "Tende Moderne",
+        "link_sibling_2": "/collections/tende-moderne",
+        "text_3_suffix": " e altri dettagli morbidi per la casa."
+      }
+    },
+    "eleva_subcollection_faq_main": {
+      "type": "eleva-subcollection-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere un tappeto moderno per il soggiorno?",
+            "answer": "Scegli la misura in base alla zona da definire: più grande per l’area divano, più compatto per angoli lettura o spazi piccoli. Colori neutri e texture morbide aiutano a mantenere un effetto elegante."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "I tappeti moderni sono adatti anche alla camera?",
+            "answer": "Sì. In camera un tappeto moderno aggiunge comfort ai piedi, calore visivo e rende l’ambiente più accogliente senza modificare l’arredo principale."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Come mantenere pulito un tappeto moderno?",
+            "answer": "Aspira regolarmente la superficie e segui sempre le istruzioni della scheda prodotto. Per l’uso quotidiano, scegli materiali facili da gestire e colori coerenti con il tuo ambiente."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "eyebrow": "SUPPORTO",
+        "heading": "Domande frequenti sui tappeti moderni"
+      }
+    },
+    "eleva_parent_cta_main": {
+      "type": "eleva-parent-cta",
+      "settings": {
+        "text": "Vuoi completare l’ambiente con altri dettagli morbidi?",
+        "button_label": "Scopri tutti i Tessili Casa",
+        "button_link": "/collections/tessili-casa"
+      }
     }
   },
   "order": [
     "breadcrumbs",
-    "collection_banner",
-    "product_grid"
+    "eleva_subcollection_hero_main",
+    "eleva_parent_siblings_main",
+    "product_grid",
+    "eleva_subcollection_seo_main",
+    "eleva_subcollection_faq_main",
+    "eleva_parent_cta_main"
   ]
 }

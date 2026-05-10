@@ -1,0 +1,93 @@
+<section class="eleva-subcollection-page eleva-subcollection-faq eleva-section">
+  <div class="eleva-container">
+    <div class="eleva-section-head">
+      <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="eleva-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="eleva-faq-list">
+      {% for block in section.blocks %}
+        <details class="eleva-faq-item eleva-card eleva-card--soft" {% if forloop.first %}open{% endif %} {{ block.shopify_attributes }}>
+          <summary class="eleva-faq-item__summary">
+            <h3 class="eleva-faq-item__question">{{ block.settings.question }}</h3>
+            <span class="eleva-faq-item__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="eleva-faq-item__answer">
+            <p class="eleva-text eleva-muted">{{ block.settings.answer }}</p>
+          </div>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Sub FAQ",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "SUPPORTO"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Domande frequenti sui tappeti moderni"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Come scegliere un tappeto moderno per il soggiorno?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Scegli la misura in base alla zona da definire: più grande per l’area divano, più compatto per angoli lettura o spazi piccoli. Colori neutri e texture morbide aiutano a mantenere un effetto elegante."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Sub FAQ",
+      "blocks": [
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Come scegliere un tappeto moderno per il soggiorno?",
+            "answer": "Scegli la misura in base alla zona da definire: più grande per l’area divano, più compatto per angoli lettura o spazi piccoli. Colori neutri e texture morbide aiutano a mantenere un effetto elegante."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "I tappeti moderni sono adatti anche alla camera?",
+            "answer": "Sì. In camera un tappeto moderno aggiunge comfort ai piedi, calore visivo e rende l’ambiente più accogliente senza modificare l’arredo principale."
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Come mantenere pulito un tappeto moderno?",
+            "answer": "Aspira regolarmente la superficie e segui sempre le istruzioni della scheda prodotto. Per l’uso quotidiano, scegli materiali facili da gestire e colori coerenti con il tuo ambiente."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

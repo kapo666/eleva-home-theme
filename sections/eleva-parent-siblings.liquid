@@ -1,0 +1,90 @@
+<section class="eleva-subcollection-page eleva-parent-links">
+  <div class="eleva-container">
+    <div class="eleva-parent-links__inner">
+      <a class="eleva-parent-links__parent" href="{{ section.settings.parent_link }}">
+        {{ section.settings.parent_label }}
+      </a>
+
+      <div class="eleva-parent-links__siblings">
+        <p class="eleva-parent-links__label">{{ section.settings.siblings_label }}</p>
+        <div class="eleva-parent-links__pills">
+          {% for block in section.blocks %}
+            <a class="eleva-parent-links__pill" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+              {{ block.settings.label }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Parent Links",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "parent_label",
+      "label": "Parent label",
+      "default": "← Tutti i Tessili Casa"
+    },
+    {
+      "type": "text",
+      "id": "parent_link",
+      "label": "Parent link",
+      "default": "/collections/tessili-casa"
+    },
+    {
+      "type": "text",
+      "id": "siblings_label",
+      "label": "Siblings label",
+      "default": "Altri tessili:"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pill",
+      "name": "Pill",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Coperte e Plaid"
+        },
+        {
+          "type": "text",
+          "id": "link",
+          "label": "Link",
+          "default": "/collections/coperte-plaid"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Parent Links",
+      "blocks": [
+        {
+          "type": "pill",
+          "settings": {
+            "label": "Coperte e Plaid",
+            "link": "/collections/coperte-plaid"
+          }
+        },
+        {
+          "type": "pill",
+          "settings": {
+            "label": "Tende Moderne",
+            "link": "/collections/tende-moderne"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

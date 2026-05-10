@@ -1,0 +1,77 @@
+{% if request.page_type == 'collection' and collection != blank and collection.handle == 'tappeti-moderni' %}
+  {% assign eleva_shop_url = shop.url | default: request.origin %}
+  {% assign eleva_home_url = eleva_shop_url | append: routes.root_url %}
+  {% assign eleva_parent_url = eleva_shop_url | append: '/collections/tessili-casa' %}
+  {% assign eleva_collection_url = eleva_shop_url | append: collection.url %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": {{ eleva_home_url | json }}
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tessili Casa",
+              "item": {{ eleva_parent_url | json }}
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Tappeti Moderni",
+              "item": {{ eleva_collection_url | json }}
+            }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "Tappeti Moderni Soggiorno e Camera",
+          "url": {{ eleva_collection_url | json }},
+          "description": "Tappeti design per soggiorno, camera e zona living con stile moderno e comfort quotidiano.",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "ELEVA HOME",
+            "url": {{ eleva_home_url | json }}
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Come scegliere un tappeto moderno per il soggiorno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Scegli la misura in base alla zona da definire: più grande per l’area divano, più compatto per angoli lettura o spazi piccoli. Colori neutri e texture morbide aiutano a mantenere un effetto elegante."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "I tappeti moderni sono adatti anche alla camera?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì. In camera un tappeto moderno aggiunge comfort ai piedi, calore visivo e rende l’ambiente più accogliente senza modificare l’arredo principale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Come mantenere pulito un tappeto moderno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aspira regolarmente la superficie e segui sempre le istruzioni della scheda prodotto. Per l’uso quotidiano, scegli materiali facili da gestire e colori coerenti con il tuo ambiente."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+{% endif %}

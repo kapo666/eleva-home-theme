@@ -1,0 +1,113 @@
+<section class="eleva-subcollection-page eleva-subcollection-seo">
+  <div class="eleva-container">
+    <div class="eleva-subcollection-seo__inner">
+      <h2 class="eleva-subcollection-seo__heading">{{ section.settings.heading }}</h2>
+      <div class="eleva-subcollection-seo__content eleva-text eleva-muted rte">
+        <p>{{ section.settings.text_1 }}</p>
+        <p>{{ section.settings.text_2 }}</p>
+        <p>
+          {{ section.settings.text_3_prefix }}
+          <a href="{{ section.settings.link_parent }}">{{ section.settings.link_parent_label }}</a>
+          {{ section.settings.text_3_middle }}
+          <a href="{{ section.settings.link_sibling_1 }}">{{ section.settings.link_sibling_1_label }}</a>
+          {{ section.settings.text_3_connector }}
+          <a href="{{ section.settings.link_sibling_2 }}">{{ section.settings.link_sibling_2_label }}</a>
+          {{ section.settings.text_3_suffix }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Sub SEO",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Tappeti moderni per soggiorno, camera e zona living"
+    },
+    {
+      "type": "textarea",
+      "id": "text_1",
+      "label": "Text 1",
+      "default": "I tappeti moderni ELEVA HOME uniscono estetica contemporanea e comfort quotidiano. La selezione include tappeti per soggiorno, camera e zona living con design minimal, geometrici e colori neutri pensati per integrarsi in una casa ordinata ed elegante."
+    },
+    {
+      "type": "textarea",
+      "id": "text_2",
+      "label": "Text 2",
+      "default": "Scegli tappeti moderni per definire gli spazi, rendere più accogliente una stanza e completare l’arredo con texture morbide e linee pulite. Ogni tappeto è pensato per aggiungere calore visivo senza appesantire l’ambiente."
+    },
+    {
+      "type": "text",
+      "id": "text_3_prefix",
+      "label": "Text 3 prefix",
+      "default": "Scopri anche la collezione "
+    },
+    {
+      "type": "text",
+      "id": "link_parent_label",
+      "label": "Parent link label",
+      "default": "Tessili Casa"
+    },
+    {
+      "type": "text",
+      "id": "link_parent",
+      "label": "Parent link",
+      "default": "/collections/tessili-casa"
+    },
+    {
+      "type": "text",
+      "id": "text_3_middle",
+      "label": "Text 3 middle",
+      "default": " per completare il tuo stile con "
+    },
+    {
+      "type": "text",
+      "id": "link_sibling_1_label",
+      "label": "Sibling 1 label",
+      "default": "Coperte e Plaid"
+    },
+    {
+      "type": "text",
+      "id": "link_sibling_1",
+      "label": "Sibling 1 link",
+      "default": "/collections/coperte-plaid"
+    },
+    {
+      "type": "text",
+      "id": "text_3_connector",
+      "label": "Text 3 connector",
+      "default": ", "
+    },
+    {
+      "type": "text",
+      "id": "link_sibling_2_label",
+      "label": "Sibling 2 label",
+      "default": "Tende Moderne"
+    },
+    {
+      "type": "text",
+      "id": "link_sibling_2",
+      "label": "Sibling 2 link",
+      "default": "/collections/tende-moderne"
+    },
+    {
+      "type": "text",
+      "id": "text_3_suffix",
+      "label": "Text 3 suffix",
+      "default": " e altri dettagli morbidi per la casa."
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Sub SEO"
+    }
+  ]
+}
+{% endschema %}

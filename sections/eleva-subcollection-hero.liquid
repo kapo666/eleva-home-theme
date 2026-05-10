@@ -1,0 +1,50 @@
+<section class="eleva-subcollection-page eleva-subcollection-hero">
+  <div class="eleva-container">
+    <div class="eleva-subcollection-hero__inner">
+      <p class="eleva-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="eleva-subcollection-hero__title">{{ section.settings.title }}</h1>
+      <p class="eleva-subcollection-hero__text eleva-text eleva-muted">{{ section.settings.intro }}</p>
+      <p class="eleva-subcollection-hero__meta">
+        {{ collection.products_count }}
+        {% if collection.products_count == 1 %}
+          prodotto
+        {% else %}
+          prodotti
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "ELEVA Sub Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "TESSILI CASA"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tappeti Moderni Soggiorno e Camera"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro",
+      "default": "Tappeti design per dare comfort, ordine e carattere agli ambienti quotidiani."
+    }
+  ],
+  "presets": [
+    {
+      "name": "ELEVA Sub Hero"
+    }
+  ]
+}
+{% endschema %}
