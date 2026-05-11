@@ -22,6 +22,34 @@
     <div class="eleva-sticky-atc__meta">
       <p class="eleva-sticky-atc__title" data-eleva-sticky-title>{{ eleva_sticky_title | escape }}</p>
       <div class="eleva-sticky-atc__price" data-eleva-sticky-price>{{ eleva_sticky_price }}</div>
+      {% unless product.has_only_default_variant %}
+        <div class="eleva-sticky-atc__variant">
+          <label class="visually-hidden" for="ElevaStickyVariant-{{ section.id }}">Scegli variante</label>
+          <div class="eleva-sticky-atc__select-wrap">
+            <select
+              id="ElevaStickyVariant-{{ section.id }}"
+              class="eleva-sticky-atc__select"
+              data-eleva-sticky-select
+              aria-label="Scegli variante prodotto"
+            >
+              {% for variant in product.variants %}
+                <option
+                  value="{{ variant.id }}"
+                  {% if variant.id == eleva_selected_variant.id %}
+                    selected
+                  {% endif %}
+                  {% unless variant.available %}
+                    data-unavailable="true"
+                  {% endunless %}
+                >
+                  {{ variant.title | escape }}
+                </option>
+              {% endfor %}
+            </select>
+            <span class="eleva-sticky-atc__caret" aria-hidden="true">{{- 'icon-caret.svg' | inline_asset_content -}}</span>
+          </div>
+        </div>
+      {% endunless %}
       <p class="eleva-sticky-atc__trust">Reso 30 giorni · Pagamento sicuro</p>
     </div>
     <button
@@ -36,4 +64,9 @@
       {% if eleva_sticky_unavailable %}Esaurito{% else %}Aggiungi{% endif %}
     </button>
   </div>
+  {% unless product.has_only_default_variant %}
+    <script type="application/json" data-eleva-sticky-variants>
+      {{ product.variants | json }}
+    </script>
+  {% endunless %}
 </div>

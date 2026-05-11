@@ -224,7 +224,7 @@
 - if the main button cannot be found, sticky removes itself silently
 
 ## 25. Variant / price safety decision
-- no sticky variant selector added
+- sticky variant selector added in a safe proxy mode
 - source of truth remains the main Dawn variant picker
 - sticky reads initial price from Liquid
 - then syncs from the real main price DOM
@@ -232,13 +232,26 @@
 - also observes the main price area and main submit button disabled state
 - if availability cannot be resolved directly, the real Dawn button still remains the final authority because sticky proxies its click
 
+## 25B. Variant selector extension
+- sticky now includes a compact variant dropdown on mobile for products with multiple variants
+- no second variant engine was created
+- on change, the sticky dropdown maps the selected variant back into the real Dawn `variant-selects` controls
+- it dispatches native `change` events on the real controls
+- this lets Dawn continue to handle:
+  - image/media change
+  - price refresh
+  - availability state
+  - main Add to Cart state
+- sticky select also resyncs from Dawn on `variantChange`
+
 ## 26. Mobile QA notes for sticky ATC
 - desktop stays fully hidden
 - sticky bar uses safe-area bottom padding
 - title is one line with ellipsis
 - price remains visible
+- variant dropdown is available in sticky on mobile
 - CTA meets tap target size
-- no extra variant UI added
+- sticky variant UI stays lightweight and uses Dawn as source of truth
 - sticky sits above page content but below cart drawer behaviorally
 - no horizontal scroll introduced by sticky styling
 
