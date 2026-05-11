@@ -490,6 +490,7 @@
                   -%}
                   {% render 'eleva-product-trust-bullets' %}
                   {% render 'eleva-product-delivery-note', product: product %}
+                  {% render 'eleva-product-proof', product: product %}
                 </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}

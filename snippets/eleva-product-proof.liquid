@@ -1,0 +1,45 @@
+{% liquid
+  assign proof_heading = 'Perché puoi acquistare con fiducia'
+  assign proof_item_1_text = product.metafields.custom.proof_item_1.value | default: product.metafields.custom.proof_item_1
+  assign proof_item_2_text = product.metafields.custom.proof_item_2.value | default: product.metafields.custom.proof_item_2
+  assign proof_item_3_text = product.metafields.custom.proof_item_3.value | default: product.metafields.custom.proof_item_3
+
+  if proof_item_1_text == blank
+    assign proof_item_1_text = 'Selezionato da ELEVA HOME per funzionalità, estetica e uso quotidiano.'
+  endif
+
+  if proof_item_2_text == blank
+    assign proof_item_2_text = 'Pagamento sicuro e reso disponibile entro 30 giorni secondo le condizioni del negozio.'
+  endif
+
+  if proof_item_3_text == blank
+    assign proof_item_3_text = 'Copertura di 2 anni sui difetti del prodotto, secondo le condizioni previste.'
+  endif
+%}
+
+<div class="eleva-product-proof" aria-label="Rassicurazioni acquisto prodotto">
+  <p class="eleva-product-proof__heading">{{ proof_heading }}</p>
+  <div class="eleva-product-proof__grid">
+    <div class="eleva-product-proof__item">
+      <span class="eleva-product-proof__icon" aria-hidden="true"></span>
+      <div class="eleva-product-proof__body">
+        <p class="eleva-product-proof__title">Prodotto selezionato</p>
+        <p class="eleva-product-proof__text">{{ proof_item_1_text | escape }}</p>
+      </div>
+    </div>
+    <div class="eleva-product-proof__item">
+      <span class="eleva-product-proof__icon" aria-hidden="true"></span>
+      <div class="eleva-product-proof__body">
+        <p class="eleva-product-proof__title">Acquisto protetto</p>
+        <p class="eleva-product-proof__text">{{ proof_item_2_text | escape }}</p>
+      </div>
+    </div>
+    <div class="eleva-product-proof__item">
+      <span class="eleva-product-proof__icon" aria-hidden="true"></span>
+      <div class="eleva-product-proof__body">
+        <p class="eleva-product-proof__title">Garanzia inclusa</p>
+        <p class="eleva-product-proof__text">{{ proof_item_3_text | escape }}</p>
+      </div>
+    </div>
+  </div>
+</div>

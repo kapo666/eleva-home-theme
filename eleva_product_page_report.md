@@ -259,23 +259,86 @@
 - `assets/product-form.js` untouched
 - `assets/product-info.js` untouched
 - `assets/media-gallery.js` untouched
-- `assets/pickup-availability.js` untouched
 - `assets/cart.js` untouched
 - `assets/cart-drawer.js` untouched
 - `snippets/buy-buttons.liquid` untouched
 - `snippets/product-variant-picker.liquid` untouched
 - `snippets/product-media-gallery.liquid` untouched
-- `snippets/product-media.liquid` untouched
 - `snippets/price.liquid` untouched
 
-## 28. Validation
-- sticky assets scoped to product pages only: `PASS`
-- no schema changes: `PASS`
-- no second product form created: `PASS`
-- no custom cart system created: `PASS`
-- no product engine rewrite: `PASS`
-- no dangerous Dawn JS touched: `PASS`
-- sticky uses existing Dawn ATC button as trigger: `PASS`
+## 28. Proof snippet created
+- `snippets/eleva-product-proof.liquid`
+- compact trust/proof layer added for PDP only
+- future-ready metafield support:
+  - `product.metafields.custom.proof_item_1`
+  - `product.metafields.custom.proof_item_2`
+  - `product.metafields.custom.proof_item_3`
+- if absent, safe fallback copy is used
 
-## 29. Final verdict
+## 29. Proof CSS file created
+- `assets/eleva-product-proof.css`
+- loaded only on product pages through `layout/theme.liquid`
+- styling stays scoped under `.template-product`
+
+## 30. Proof render point added
+- `sections/main-product.liquid`
+- exact location:
+  - inside the existing `buy_buttons` block
+  - after:
+    - `render 'eleva-product-delivery-note', product: product`
+  - before the description and collapsible content blocks in the normal product flow
+- render added:
+  - `render 'eleva-product-proof', product: product`
+
+## 31. Exact trust copy used
+- header:
+  - `Perché puoi acquistare con fiducia`
+- item 1:
+  - title: `Prodotto selezionato`
+  - text: `Selezionato da ELEVA HOME per funzionalità, estetica e uso quotidiano.`
+- item 2:
+  - title: `Acquisto protetto`
+  - text: `Pagamento sicuro e reso disponibile entro 30 giorni secondo le condizioni del negozio.`
+- item 3:
+  - title: `Garanzia inclusa`
+  - text: `Copertura di 2 anni sui difetti del prodotto, secondo le condizioni previste.`
+
+## 32. Fake review / count avoidance confirmation
+- no star ratings added
+- no aggregate rating added
+- no fake customer count added
+- no fake bestseller claim added
+- no fake urgency or countdown added
+- the block is framed as store reassurance, not as customer review proof
+
+## 33. Schema policy confirmation
+- no Product schema changes
+- no Review schema added
+- no `aggregateRating` added
+- no review markup added
+- this proof block is intentionally not marked up as reviews because the content is reassurance copy, not user-generated feedback
+
+## 34. Mobile QA notes
+- proof block stacks cleanly on mobile
+- no horizontal scroll introduced
+- spacing remains compact under the CTA area
+- sticky ATC remains independent from the proof block
+- trust, delivery note and proof block now form a calm purchase reassurance stack
+
+## 35. Sticky ATC preservation confirmation
+- `assets/eleva-sticky-atc.js` untouched
+- sticky CTA render logic untouched
+- sticky variant sync untouched
+- sticky bar should continue to work exactly as before
+
+## 36. Validation
+- proof block appears only on product pages: `PASS`
+- proof block is not added to homepage or collection pages: `PASS`
+- CSS loaded only on product pages: `PASS`
+- no fake review/count claims introduced: `PASS`
+- no schema changes introduced: `PASS`
+- dangerous files remained untouched: `PASS`
+- PDP engine preserved: `PASS`
+
+## 37. Final verdict
 - `READY FOR LIVE REVIEW`

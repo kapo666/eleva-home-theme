@@ -39,6 +39,7 @@
     {% endif %}
     {% if request.page_type == 'product' %}
       {{ 'eleva-product.css' | asset_url | stylesheet_tag }}
+      {{ 'eleva-product-proof.css' | asset_url | stylesheet_tag }}
       {{ 'eleva-sticky-atc.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
