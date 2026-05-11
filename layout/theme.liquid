@@ -39,6 +39,7 @@
     {% endif %}
     {% if request.page_type == 'product' %}
       {{ 'eleva-product.css' | asset_url | stylesheet_tag }}
+      {{ 'eleva-sticky-atc.css' | asset_url | stylesheet_tag }}
     {% endif %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
@@ -48,6 +49,9 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'eleva-header.js' | asset_url }}" defer="defer"></script>
+    {% if request.page_type == 'product' %}
+      <script src="{{ 'eleva-sticky-atc.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
 
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>

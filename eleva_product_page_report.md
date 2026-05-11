@@ -187,3 +187,82 @@
 
 ## 19. Final verdict
 - `READY FOR LIVE REVIEW`
+
+## 20. Sticky files created
+- `assets/eleva-sticky-atc.css`
+- `assets/eleva-sticky-atc.js`
+- `snippets/eleva-sticky-atc.liquid`
+
+## 21. Sticky render point added
+- render added in `sections/main-product.liquid`
+- location:
+  - near the end of the main product section
+  - after media modal/gallery script handling
+  - before 3D model JSON / product structured data
+- render used:
+  - `render 'eleva-sticky-atc', product: product`
+
+## 22. Asset loading method
+- loaded only on product pages through `layout/theme.liquid`
+- assets:
+  - `eleva-sticky-atc.css`
+  - `eleva-sticky-atc.js`
+
+## 23. Show / hide trigger
+- mobile only:
+  - `max-width: 749px`
+- shown after the user leaves the main purchase area and has scrolled beyond roughly `600px`
+- implemented with `IntersectionObserver`
+- hidden again near the top
+- hidden if the cart drawer is active or the body is in `overflow-hidden` state
+
+## 24. Main Dawn ATC trigger method
+- no second form created
+- no custom cart request created
+- sticky CTA uses JS to trigger:
+  - `#ProductSubmitButton-{{ section.id }}`
+- if the main button cannot be found, sticky removes itself silently
+
+## 25. Variant / price safety decision
+- no sticky variant selector added
+- source of truth remains the main Dawn variant picker
+- sticky reads initial price from Liquid
+- then syncs from the real main price DOM
+- listens to Dawn `PUB_SUB_EVENTS.variantChange` when available
+- also observes the main price area and main submit button disabled state
+- if availability cannot be resolved directly, the real Dawn button still remains the final authority because sticky proxies its click
+
+## 26. Mobile QA notes for sticky ATC
+- desktop stays fully hidden
+- sticky bar uses safe-area bottom padding
+- title is one line with ellipsis
+- price remains visible
+- CTA meets tap target size
+- no extra variant UI added
+- sticky sits above page content but below cart drawer behaviorally
+- no horizontal scroll introduced by sticky styling
+
+## 27. Dangerous files untouched confirmation
+- `assets/product-form.js` untouched
+- `assets/product-info.js` untouched
+- `assets/media-gallery.js` untouched
+- `assets/pickup-availability.js` untouched
+- `assets/cart.js` untouched
+- `assets/cart-drawer.js` untouched
+- `snippets/buy-buttons.liquid` untouched
+- `snippets/product-variant-picker.liquid` untouched
+- `snippets/product-media-gallery.liquid` untouched
+- `snippets/product-media.liquid` untouched
+- `snippets/price.liquid` untouched
+
+## 28. Validation
+- sticky assets scoped to product pages only: `PASS`
+- no schema changes: `PASS`
+- no second product form created: `PASS`
+- no custom cart system created: `PASS`
+- no product engine rewrite: `PASS`
+- no dangerous Dawn JS touched: `PASS`
+- sticky uses existing Dawn ATC button as trigger: `PASS`
+
+## 29. Final verdict
+- `READY FOR LIVE REVIEW`

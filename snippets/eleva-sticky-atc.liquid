@@ -1,0 +1,39 @@
+{%- liquid
+  assign eleva_selected_variant = product.selected_or_first_available_variant
+  assign eleva_sticky_price = eleva_selected_variant.price | money
+  if settings.currency_code_enabled
+    assign eleva_sticky_price = eleva_selected_variant.price | money_with_currency
+  endif
+
+  assign eleva_sticky_title = product.title | strip | truncate: 60
+  assign eleva_sticky_unavailable = false
+  if eleva_selected_variant == null or eleva_selected_variant.available == false
+    assign eleva_sticky_unavailable = true
+  endif
+-%}
+
+<div
+  class="eleva-sticky-atc"
+  data-eleva-sticky-atc
+  data-section-id="{{ section.id }}"
+  aria-label="Acquisto rapido prodotto"
+>
+  <div class="eleva-sticky-atc__inner">
+    <div class="eleva-sticky-atc__meta">
+      <p class="eleva-sticky-atc__title" data-eleva-sticky-title>{{ eleva_sticky_title | escape }}</p>
+      <div class="eleva-sticky-atc__price" data-eleva-sticky-price>{{ eleva_sticky_price }}</div>
+      <p class="eleva-sticky-atc__trust">Reso 30 giorni · Pagamento sicuro</p>
+    </div>
+    <button
+      class="eleva-sticky-atc__button"
+      type="button"
+      data-eleva-sticky-button
+      aria-label="Aggiungi al carrello"
+      {% if eleva_sticky_unavailable %}
+        disabled
+      {% endif %}
+    >
+      {% if eleva_sticky_unavailable %}Esaurito{% else %}Aggiungi{% endif %}
+    </button>
+  </div>
+</div>
