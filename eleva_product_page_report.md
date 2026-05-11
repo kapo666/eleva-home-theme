@@ -69,13 +69,67 @@
   - otherwise uses fallback copy
 
 ## 9. Accordion status
-- no Dawn `collapsible_tab` blocks are present in `templates/product.json` currently
-- no custom accordion system was added
-- product description remains visible
-- recommendation for later module:
-  - introduce Dawn-native collapsible tabs through template/editor configuration or a controlled template update
+- existing product blocks found in `templates/product.json` before this module:
+  - `text` (vendor)
+  - `title`
+  - `price`
+  - `variant_picker`
+  - `quantity_selector`
+  - `buy_buttons`
+  - `description`
+  - `share`
+- Dawn-native collapsible block type confirmed in `sections/main-product.liquid`:
+  - `collapsible_tab`
+- 4 collapsible rows added to `templates/product.json`:
+  - `Dettagli prodotto`
+  - `Materiali e cura`
+  - `Spedizione e resi`
+  - `Garanzia ELEVA HOME`
+- product description remains visible as its own Dawn block
+- no custom accordion JS added
 
-## 10. Related products polish status
+## 10. Content strategy
+- `Dettagli prodotto`
+  - kept generic on purpose to avoid duplicating the full description block
+- `Materiali e cura`
+  - uses `product.metafields.custom.materiali_cura` if present
+  - otherwise uses safe generic fallback
+- `Spedizione e resi`
+  - uses `product.metafields.custom.spedizione_resi` if present
+  - otherwise uses safe generic fallback
+- `Garanzia ELEVA HOME`
+  - uses `product.metafields.custom.garanzia` if present
+  - otherwise uses safe generic fallback
+- implementation path:
+  - `snippets/eleva-product-accordion-content.liquid`
+  - rendered inside the native Dawn `collapsible_tab` output in `sections/main-product.liquid`
+
+## 11. Description duplication handling
+- current `product.description` block remains visible for SEO and UX
+- because of that, `Dettagli prodotto` was kept generic
+- safest option chosen:
+  - keep description visible
+  - avoid duplicating `product.description` inside the accordion
+
+## 12. Metafield future plan
+- recommended future metafields:
+  - `custom.short_summary`
+  - `custom.materiali_cura`
+  - `custom.spedizione_resi`
+  - `custom.garanzia`
+  - `custom.dimensioni`
+  - `custom.contenuto_confezione`
+
+## 13. Visual polish notes
+- accordion cards remain Dawn-native
+- ELEVA product CSS now gives them:
+  - softer card surface
+  - calmer spacing
+  - cleaner title sizing
+  - more premium content rhythm
+- no heavy animation added
+
+## 14. Related products polish status
 - recommendation engine not replaced
 - product cards untouched
 - visual polish added through:
@@ -84,7 +138,7 @@
   - heading changed in `templates/product.json` to:
     - `Completa il tuo ambiente`
 
-## 11. Schema policy / duplicate risk notes
+## 15. Schema policy / duplicate risk notes
 - Dawn product schema output remains in:
   - `sections/main-product.liquid`
   - output:
@@ -94,17 +148,22 @@
 - recommendation for Module 10.4:
   - audit real rendered schema first
   - only then decide whether to keep Dawn output or replace it
+- later schema/content alignment notes:
+  - accordion content can inform richer product description strategy
+  - shipping/returns details may later inform Merchant Center or return-policy work
+  - no schema reflection added in this module
 
-## 12. Mobile QA notes
+## 16. Mobile QA notes
 - title hierarchy tightened via scoped CSS
 - price remains prominent and readable
 - variant area spacing improved through scoped styling only
 - trust bullets use a single-column mobile layout to avoid crowding
+- accordions remain readable and compact on mobile
 - no horizontal scroll introduced by the new wrapper
 - no media gallery logic touched
 - add to cart area remains functional because the form engine is unchanged
 
-## 13. Dangerous files untouched confirmation
+## 17. Dangerous files untouched confirmation
 - product form JS untouched
 - cart JS untouched
 - variant picker logic untouched
@@ -113,14 +172,18 @@
 - price snippet untouched
 - schema untouched
 
-## 14. Validation
+## 18. Validation
 - product page still uses:
   - `main-product`
   - `related-products`
+- native Dawn block type `collapsible_tab` used: `PASS`
+- `templates/product.json` remains valid: `PASS`
 - no schema changes: `PASS`
 - CSS loaded only on product pages through `layout/theme.liquid`: `PASS`
 - metafield absence safe due to fallback logic: `PASS`
 - Liquid syntax kept simple and save-safe: `PASS`
+- product engine preserved: `PASS`
+- add to cart / variants preserved: `PASS`
 
-## 15. Final verdict
+## 19. Final verdict
 - `READY FOR LIVE REVIEW`

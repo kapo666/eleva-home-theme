@@ -49,6 +49,38 @@
           "type": "description",
           "settings": {}
         },
+        "details_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dettagli prodotto",
+            "icon": "check_mark",
+            "content": ""
+          }
+        },
+        "materials_care_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materiali e cura",
+            "icon": "leaf",
+            "content": ""
+          }
+        },
+        "shipping_returns_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Spedizione e resi",
+            "icon": "truck",
+            "content": ""
+          }
+        },
+        "warranty_tab": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Garanzia ELEVA HOME",
+            "icon": "shield",
+            "content": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -64,6 +96,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "details_tab",
+        "materials_care_tab",
+        "shipping_returns_tab",
+        "warranty_tab",
         "share"
       ],
       "settings": {

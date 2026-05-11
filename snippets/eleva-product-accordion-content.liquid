@@ -1,0 +1,33 @@
+{%- liquid
+  assign eleva_heading = block.settings.heading | strip
+  assign eleva_content = blank
+
+  case eleva_heading
+    when 'Dettagli prodotto'
+      assign eleva_content = 'Una selezione pensata per unire funzionalità, estetica e uso quotidiano. Consulta la descrizione prodotto, le immagini e le varianti disponibili per verificare dimensioni, colore e caratteristiche.'
+    when 'Materiali e cura'
+      if product.metafields.custom.materiali_cura != blank
+        assign eleva_content = product.metafields.custom.materiali_cura.value | default: product.metafields.custom.materiali_cura
+      else
+        assign eleva_content = 'I materiali possono variare in base al prodotto e alla variante selezionata. Per mantenere il prodotto in buone condizioni, pulire con un panno morbido e asciutto o leggermente umido. Evitare detergenti aggressivi salvo indicazioni specifiche nella scheda prodotto.'
+      endif
+    when 'Spedizione e resi'
+      if product.metafields.custom.spedizione_resi != blank
+        assign eleva_content = product.metafields.custom.spedizione_resi.value | default: product.metafields.custom.spedizione_resi
+      else
+        assign eleva_content = 'Spedizione tracciata in Italia. La spedizione è gratuita oltre 50€. Se il prodotto non è adatto alla tua casa, hai 30 giorni per effettuare il reso secondo le condizioni del negozio.'
+      endif
+    when 'Garanzia ELEVA HOME'
+      if product.metafields.custom.garanzia != blank
+        assign eleva_content = product.metafields.custom.garanzia.value | default: product.metafields.custom.garanzia
+      else
+        assign eleva_content = 'Ogni prodotto è selezionato per offrire praticità e qualità nel tempo. I prodotti sono coperti da garanzia di 2 anni sui difetti, secondo le condizioni previste.'
+      endif
+  endcase
+-%}
+
+{%- if eleva_content != blank -%}
+  <div class="eleva-product-accordion-content rte">
+    <p>{{ eleva_content | escape }}</p>
+  </div>
+{%- endif -%}

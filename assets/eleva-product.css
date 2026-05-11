@@ -147,10 +147,10 @@
 }
 
 .template-product .eleva-product-shell .product__accordion {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   border: 1px solid var(--eleva-product-border);
   border-radius: 2rem;
-  background: rgba(var(--color-background), 0.7);
+  background: rgba(var(--color-background), 0.74);
   overflow: hidden;
 }
 
@@ -161,6 +161,23 @@
 .template-product .eleva-product-shell .product__accordion .accordion__content {
   padding: 0 2rem 1.8rem;
   color: rgba(var(--color-foreground), 0.78);
+}
+
+.template-product .eleva-product-shell .product__accordion .summary__title {
+  gap: 1rem;
+}
+
+.template-product .eleva-product-shell .product__accordion .accordion__title {
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+}
+
+.template-product .eleva-product-accordion-content p {
+  margin: 0 0 1rem;
+}
+
+.template-product .eleva-product-shell .product__accordion .rte p:last-child {
+  margin-bottom: 0;
 }
 
 .template-product .eleva-product-related {
@@ -207,6 +224,10 @@
 
   .template-product .eleva-product-shell .product__accordion .accordion__content {
     padding: 0 1.6rem 1.6rem;
+  }
+
+  .template-product .eleva-product-shell .product__accordion .accordion__title {
+    font-size: 1.38rem;
   }
 }
 
