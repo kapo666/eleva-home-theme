@@ -342,3 +342,111 @@
 
 ## 37. Final verdict
 - `READY FOR LIVE REVIEW`
+
+## 38. Current related products audit
+- current section file:
+  - `sections/related-products.liquid`
+- current template usage:
+  - `templates/product.json`
+  - section order remains:
+    1. `main-product`
+    2. `related-products`
+- current visible title:
+  - `Completa il tuo ambiente`
+- current product count:
+  - `4` via `templates/product.json`
+- recommendation engine:
+  - native Shopify `<product-recommendations>`
+  - data URL:
+    - `{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}`
+- intent mode:
+  - no explicit complementary intent mapping found in the section source
+  - relies on Shopify recommendations result for the current product
+- card renderer:
+  - `snippets/card-product.liquid`
+- quick add status:
+  - card snippet supports quick add
+  - this section does not pass a `quick_add` mode, so no custom quick add is activated here
+- graceful empty state:
+  - yes
+  - the block renders only when:
+    - `recommendations.performed`
+    - `recommendations.products_count > 0`
+
+## 39. Files modified
+- `sections/related-products.liquid`
+- `assets/eleva-product.css`
+- `eleva_product_page_report.md`
+
+## 40. Title / subtitle changes
+- title kept:
+  - `Completa il tuo ambiente`
+- subtitle updated to:
+  - `Accessori selezionati per abbinare stile, ordine e funzionalità alla tua casa.`
+- editorial eyebrow added:
+  - `SELEZIONE ELEVA`
+
+## 41. Product limit decision
+- kept at `4`
+- source:
+  - `templates/product.json`
+  - `products_to_show: 4`
+- rationale:
+  - curated cross-sell feel
+  - avoids marketplace overload
+
+## 42. Layout strategy desktop / mobile
+- desktop:
+  - 4-product grid retained
+  - calmer spacing
+  - softer card framing through section-scoped wrappers
+  - width aligned to ELEVA PDP rhythm
+- mobile:
+  - 2-column grid retained instead of custom carousel
+  - chosen because current Dawn grid is already stable and lighter than introducing a new scroll pattern
+  - card titles allowed more lines inside this section to reduce harsh truncation
+
+## 43. Quick add status
+- no custom quick add added
+- no quick add logic modified
+- current section keeps default card behavior
+- recommended future module:
+  - `10.6B` if a curated quick-add strategy is later desired
+
+## 44. Recommendation logic preservation confirmation
+- Shopify native recommendation engine preserved
+- no custom fetch logic added
+- no JS carousel added
+- no recommendation query rewrite added
+- no change to section hide/show logic when no products are returned
+
+## 45. Performance notes
+- no heavy JS added
+- no external library added
+- no slider dependency added
+- wrapper-only CSS changes applied around existing cards
+- existing Shopify image and lazy-loading behavior preserved
+
+## 46. Dangerous files untouched confirmation
+- `snippets/card-product.liquid` untouched
+- `snippets/price.liquid` untouched
+- `snippets/product-form.liquid` untouched
+- `snippets/buy-buttons.liquid` untouched
+- `assets/product-form.js` untouched
+- `assets/product-info.js` untouched
+- `assets/cart.js` untouched
+- `assets/cart-drawer.js` untouched
+- `assets/eleva-sticky-atc.js` untouched
+
+## 47. Validation
+- related products heading updated: `PASS`
+- related products subtitle updated: `PASS`
+- Shopify recommendation logic preserved: `PASS`
+- section still hides if no recommendations exist: `PASS`
+- product limit remains at 4: `PASS`
+- mobile remains clean with no horizontal page overflow: `PASS`
+- no schema changes introduced: `PASS`
+- no fake reviews / urgency / counts introduced: `PASS`
+
+## 48. Final verdict
+- `READY FOR LIVE REVIEW`
