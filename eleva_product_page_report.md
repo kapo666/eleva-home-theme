@@ -450,3 +450,138 @@
 
 ## 48. Final verdict
 - `READY FOR LIVE REVIEW`
+
+## 49. Current media gallery audit
+- active gallery render path:
+  - `sections/main-product.liquid`
+  - `snippets/product-media-gallery.liquid`
+- current Dawn gallery type:
+  - native `media-gallery` custom element driven by `assets/media-gallery.js`
+  - main viewer uses:
+    - `slider-component`
+    - `product__media-list`
+    - `slider slider--mobile`
+- thumbnails:
+  - supported conditionally through `GalleryThumbnails-{{ section.id }}`
+  - currently desktop layout in `templates/product.json`:
+    - `gallery_layout: "stacked"`
+  - mobile thumbnails in `templates/product.json`:
+    - `mobile_thumbnails: "hide"`
+- modal / zoom:
+  - native modal exists via `product-media-modal`
+  - current setting in `templates/product.json`:
+    - `image_zoom: "lightbox"`
+- mobile swipe:
+  - yes, native Dawn mobile slider is active
+- variant image switching:
+  - yes, handled by Dawn media gallery logic and variant media targeting
+- lazy loading:
+  - yes
+  - first featured media loads eagerly enough for primary view
+  - later media use lazy loading
+- video / model support:
+  - yes
+  - `video`, `external_video`, and `model` are supported
+- styling hooks available:
+  - `media-gallery`
+  - `.product__media-list`
+  - `.product__media-item`
+  - `.thumbnail-slider`
+  - `.thumbnail-list`
+  - `.thumbnail`
+  - `.slider-buttons`
+  - `.product-media-modal__content`
+
+## 50. Files modified
+- `assets/eleva-product.css`
+- `sections/main-product.liquid`
+- `eleva_product_page_report.md`
+
+## 51. Visual polish applied
+- product media frame softened with:
+  - subtle neutral ELEVA background
+  - softer border
+  - larger radius
+- gallery spacing cleaned up
+- slider controls made calmer and more premium
+- thumbnail buttons given:
+  - stronger tap target
+  - softer surface
+  - clearer active state
+- modal surface lightly polished through CSS only
+- no crop-forcing added
+- no media logic changed
+
+## 52. Mobile hint decision
+- added
+- snippet:
+  - `snippets/eleva-product-media-hint.liquid`
+- text used:
+  - `Scorri per vedere piu dettagli`
+- placement:
+  - directly under the main media gallery
+- visibility:
+  - mobile only
+
+## 53. Thumbnail UX status
+- thumbnails already exist in Dawn when the gallery/settings require them
+- active thumbnail state is now visually clearer
+- tap area increased through CSS
+- no thumbnail logic changed
+- current product template still keeps:
+  - `mobile_thumbnails: "hide"`
+- so on current mobile PDP:
+  - no custom thumbnail system was introduced
+
+## 54. Zoom / modal status
+- native Dawn modal / lightbox support exists
+- current template uses:
+  - `image_zoom: "lightbox"`
+- no custom zoom engine added
+- no modal logic changed
+
+## 55. Variant image switching preservation
+- `assets/media-gallery.js` untouched
+- no changes to gallery JS events or targeting
+- no changes to variant image data wiring
+- variant image switching remains fully Dawn-native
+
+## 56. Image quality recommendations
+- first image should be a clean primary product image
+- second image should show lifestyle or room context
+- third image should show detail, finish or material
+- fourth image should show dimensions or usage when available
+- avoid blurry supplier assets
+- keep backgrounds and image style consistent across a product set
+
+## 57. Performance notes
+- no new JS added
+- no external library added
+- no lazy-loading behavior changed
+- no image URL or file changes made
+- only lightweight CSS transitions added
+- reduced-motion behavior remains respected through scoped CSS
+
+## 58. Dangerous files untouched confirmation
+- `assets/media-gallery.js` untouched
+- `assets/product-form.js` untouched
+- `assets/product-info.js` untouched
+- `assets/cart.js` untouched
+- `assets/cart-drawer.js` untouched
+- `snippets/buy-buttons.liquid` untouched
+- `snippets/product-variant-picker.liquid` untouched
+- `snippets/price.liquid` untouched
+- `snippets/card-product.liquid` untouched
+
+## 59. Validation
+- product media gallery still renders: `PASS`
+- variant image switching preserved: `PASS`
+- native modal / lightbox preserved: `PASS`
+- video / model support preserved: `PASS`
+- sticky ATC unaffected: `PASS`
+- product form / add to cart unaffected: `PASS`
+- no schema changes introduced: `PASS`
+- mobile remains clean with no horizontal page overflow introduced by the polish layer: `PASS`
+
+## 60. Final verdict
+- `READY FOR LIVE REVIEW`
