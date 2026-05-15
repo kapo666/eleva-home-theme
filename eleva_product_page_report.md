@@ -585,3 +585,100 @@
 
 ## 60. Final verdict
 - `READY FOR LIVE REVIEW`
+
+## 61. Current delivery / trust audit
+- current render order near CTA remains:
+  1. Dawn buy buttons
+  2. `eleva-product-trust-bullets`
+  3. `eleva-product-delivery-note`
+  4. `eleva-product-proof`
+  5. description / accordions
+- render point:
+  - inside the `buy_buttons` block in `sections/main-product.liquid`
+- audit findings:
+  - trust bullets, delivery note and proof block all contained reassurance copy
+  - previous wording repeated returns / security / guarantee in a slightly verbose way
+  - mobile stack was credible but a little tall and border-heavy
+
+## 62. Files modified
+- `snippets/eleva-product-delivery-note.liquid`
+- `snippets/eleva-product-trust-bullets.liquid`
+- `assets/eleva-product.css`
+- `eleva_product_page_report.md`
+
+## 63. Final delivery copy
+- primary line:
+  - `Spedizione tracciata in Italia. Gratis oltre 50€.`
+- return line:
+  - `Se il prodotto non è adatto alla tua casa, hai 30 giorni per effettuare il reso secondo le condizioni del negozio.`
+- shipping micro-status:
+  - `Preparazione ordine rapida`
+- tracking subtext:
+  - `Riceverai il tracking via email appena l’ordine viene spedito.`
+- support line:
+  - `Assistenza ELEVA HOME disponibile via email per dubbi su ordine, spedizione o reso.`
+
+## 64. Final trust bullets copy
+- `Spedizione gratis oltre 50€`
+- `Reso entro 30 giorni`
+- `Garanzia 2 anni`
+- `Pagamento sicuro`
+
+## 65. Duplication cleanup
+- bullets shortened so they act as fast reassurance only
+- delivery note now focuses on:
+  - shipping
+  - returns
+  - tracking
+  - support
+- proof block remains the broader brand reassurance layer
+- result:
+  - less verbal repetition
+  - clearer hierarchy
+
+## 66. Metafield fallback behavior
+- `product.metafields.custom.delivery_note` remains supported
+- if present:
+  - it overrides the primary delivery line
+- if absent:
+  - fallback primary line is used safely
+- wrapper remains stable even when the metafield is absent
+
+## 67. Schema policy / deferred shipping schema
+- no `shippingDetails` schema added
+- no `MerchantReturnPolicy` schema added
+- no Product schema changes made
+- shipping and return schema remain deferred to a later dedicated module once store policies are confirmed
+
+## 68. Mobile QA notes
+- trust stack is shorter and less dense on mobile
+- card surfaces are calmer and less repetitive
+- CTA area remains readable and compact
+- no horizontal scroll introduced
+- sticky ATC, accordions, gallery and cross-sell remain unaffected
+
+## 69. Dangerous files untouched confirmation
+- `assets/product-form.js` untouched
+- `assets/product-info.js` untouched
+- `assets/media-gallery.js` untouched
+- `assets/cart.js` untouched
+- `assets/cart-drawer.js` untouched
+- `assets/eleva-sticky-atc.js` untouched
+- `snippets/buy-buttons.liquid` untouched
+- `snippets/product-variant-picker.liquid` untouched
+- `snippets/product-media-gallery.liquid` untouched
+- `snippets/price.liquid` untouched
+- `snippets/card-product.liquid` untouched
+
+## 70. Validation
+- PDP renders with updated trust copy: `PASS`
+- delivery note appears correctly: `PASS`
+- proof block still appears: `PASS`
+- sticky ATC unaffected: `PASS`
+- product form / variants / media gallery unaffected: `PASS`
+- no schema changes introduced: `PASS`
+- no fake urgency / countdown / stock messaging introduced: `PASS`
+- mobile and desktop remain clean: `PASS`
+
+## 71. Final verdict
+- `READY FOR LIVE REVIEW`

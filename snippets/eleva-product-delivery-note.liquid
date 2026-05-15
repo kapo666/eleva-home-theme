@@ -1,15 +1,18 @@
 {%- liquid
-  assign eleva_delivery_note = blank
+  assign eleva_delivery_note_primary = blank
   if product.metafields.custom.delivery_note != blank
-    assign eleva_delivery_note = product.metafields.custom.delivery_note.value | default: product.metafields.custom.delivery_note
+    assign eleva_delivery_note_primary = product.metafields.custom.delivery_note.value | default: product.metafields.custom.delivery_note
   endif
 
-  if eleva_delivery_note == blank
-    assign eleva_delivery_note = 'Consegna tracciata in Italia. Se il prodotto non è adatto alla tua casa, hai 30 giorni per effettuare il reso.'
+  if eleva_delivery_note_primary == blank
+    assign eleva_delivery_note_primary = 'Spedizione tracciata in Italia. Gratis oltre 50€.'
   endif
 -%}
 
 <div class="eleva-product-note">
-  <p class="eleva-product-note__text">{{ eleva_delivery_note | escape }}</p>
-  <p class="eleva-product-note__subtext">Assistenza ELEVA HOME disponibile via email per dubbi su ordine, spedizione o reso.</p>
+  <p class="eleva-product-note__eyebrow">Preparazione ordine rapida</p>
+  <p class="eleva-product-note__text">{{ eleva_delivery_note_primary | escape }}</p>
+  <p class="eleva-product-note__subtext">Se il prodotto non è adatto alla tua casa, hai 30 giorni per effettuare il reso secondo le condizioni del negozio.</p>
+  <p class="eleva-product-note__support">Riceverai il tracking via email appena l’ordine viene spedito.</p>
+  <p class="eleva-product-note__support">Assistenza ELEVA HOME disponibile via email per dubbi su ordine, spedizione o reso.</p>
 </div>
